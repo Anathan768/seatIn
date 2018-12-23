@@ -1,0 +1,57 @@
+21/12/2018 09:31:59 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+21/12/2018 09:31:59 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+21/12/2018 09:32:00 DEBUG seatInServer.JDBC.ExecuteUpdate--> Errore: esecuzione definizione schema Data Base: ERRORE: la relazione "departments" esiste già
+21/12/2018 09:36:04 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+21/12/2018 09:36:04 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+21/12/2018 09:36:04 DEBUG seatInServer.JDBC.ExecuteUpdate--> Errore: esecuzione definizione schema Data Base: ERRORE: la relazione "departments" esiste già
+21/12/2018 09:36:22 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+21/12/2018 09:36:22 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+21/12/2018 09:36:22 DEBUG seatInServer.JDBC.ExecuteUpdate--> Errore: esecuzione definizione schema Data Base: ERRORE: la relazione "departments" esiste già
+21/12/2018 09:39:44 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+21/12/2018 09:39:44 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+21/12/2018 09:39:44 DEBUG seatInServer.JDBC.ExecuteUpdate--> Errore: esecuzione definizione schema Data Base: ERRORE: la relazione "departments" esiste già
+21/12/2018 09:44:00 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+21/12/2018 09:44:00 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+21/12/2018 09:44:01 DEBUG seatInServer.JDBC.ExecuteUpdate--> Errore: esecuzione definizione schema Data Base: ERRORE: la relazione "departments" esiste già
+21/12/2018 09:44:51 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+21/12/2018 09:44:51 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+21/12/2018 09:44:51 DEBUG seatInServer.JDBC.ExecuteUpdate--> Errore: esecuzione definizione schema Data Base: ERRORE: la relazione "departments" esiste già
+21/12/2018 09:45:04 INFO seatInServer.SeatInServer--> Server started: ServerSocket[addr=0.0.0.0/0.0.0.0,localport=8080]
+21/12/2018 09:45:49 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+21/12/2018 09:45:49 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+21/12/2018 09:45:49 DEBUG seatInServer.JDBC.ExecuteUpdate--> Errore: esecuzione definizione schema Data Base: ERRORE: la relazione "departments" esiste già
+21/12/2018 09:45:51 INFO seatInServer.SeatInServer--> Server started: ServerSocket[addr=0.0.0.0/0.0.0.0,localport=8080]
+21/12/2018 09:48:02 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+21/12/2018 09:48:02 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+21/12/2018 09:48:02 DEBUG seatInServer.JDBC.ExecuteUpdate--> Errore: esecuzione definizione schema Data Base: ERRORE: la relazione "departments" esiste già
+21/12/2018 09:48:04 INFO seatInServer.SeatInServer--> Server started: ServerSocket[addr=0.0.0.0/0.0.0.0,localport=8080]
+21/12/2018 09:54:06 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+21/12/2018 09:54:06 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+21/12/2018 09:54:06 DEBUG seatInServer.JDBC.ExecuteUpdate--> Errore: esecuzione definizione schema Data Base: ERRORE: la relazione "departments" esiste già
+21/12/2018 09:54:09 INFO seatInServer.SeatInServer--> Server started: ServerSocket[addr=0.0.0.0/0.0.0.0,localport=8080]
+21/12/2018 14:28:32 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+21/12/2018 14:28:32 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+21/12/2018 14:28:32 DEBUG seatInServer.JDBC.ExecuteUpdate--> Errore: esecuzione definizione schema Data Base: ERRORE: la relazione "departments" esiste già
+21/12/2018 14:28:35 INFO seatInServer.SeatInServer--> Server started: ServerSocket[addr=0.0.0.0/0.0.0.0,localport=8080]
+21/12/2018 14:28:47 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+21/12/2018 14:28:47 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+21/12/2018 14:28:47 DEBUG seatInServer.JDBC.ExecuteUpdate--> Errore: esecuzione definizione schema Data Base: ERRORE: la relazione "departments" esiste già
+21/12/2018 14:29:09 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+21/12/2018 14:29:09 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+21/12/2018 14:29:09 DEBUG seatInServer.JDBC.ExecuteUpdate--> Errore: esecuzione definizione schema Data Base: ERRORE: la relazione "departments" esiste già
+21/12/2018 14:29:11 INFO seatInServer.SeatInServer--> Server started: ServerSocket[addr=0.0.0.0/0.0.0.0,localport=8080]
+21/12/2018 14:29:46 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+21/12/2018 14:29:46 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+21/12/2018 14:29:46 DEBUG seatInServer.JDBC.ExecuteUpdate--> Errore: esecuzione definizione schema Data Base: ERRORE: la relazione "departments" esiste già
+21/12/2018 14:30:25 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+21/12/2018 14:30:25 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+21/12/2018 14:30:25 DEBUG seatInServer.JDBC.ExecuteUpdate--> Errore: esecuzione definizione schema Data Base: ERRORE: la relazione "departments" esiste già
+21/12/2018 14:31:55 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+21/12/2018 14:31:55 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+21/12/2018 14:31:55 DEBUG seatInServer.JDBC.ExecuteUpdate--> Errore: esecuzione definizione schema Data Base: ERRORE: la relazione "departments" esiste già
+21/12/2018 14:32:20 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+21/12/2018 14:32:20 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+21/12/2018 14:32:20 DEBUG seatInServer.JDBC.ExecuteUpdate--> Errore: esecuzione definizione schema Data Base: ERRORE: la relazione "departments" esiste già
+21/12/2018 14:33:43 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+21/12/2018 14:33:43 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+21/12/2018 14:33:43 DEBUG seatInServer.JDBC.ExecuteUpdate--> Errore: esecuzione definizione schema Data Base: ERRORE: la relazione "departments" esiste già

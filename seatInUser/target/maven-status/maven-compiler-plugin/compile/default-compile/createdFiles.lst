@@ -1,0 +1,14 @@
+seatInServer\JDBC\Beans\Resource.class
+seatInServer\JDBC\Beans\Section.class
+seatInServer\JDBC\Beans\User.class
+seatInUser\Proxy.class
+seatInServer\JDBC\Beans\Student.class
+seatInServer\JDBC\Beans\Course.class
+seatInUser\Items.class
+seatInServer\JDBC\Beans\Lecture.class
+seatInServer\JDBC\Beans\Admin.class
+seatInServer\JDBC\Beans\ResourceFile.class
+seatInUser\LectureCommands.class
+seatInUser\SeatInUser.class
+seatInServer\JDBC\Beans\Beans.class
+seatInUser\StudentCommands.class
