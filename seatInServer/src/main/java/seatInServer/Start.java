@@ -1,6 +1,6 @@
 package seatInServer;
 
-import seatInServer.GUI.GUI;
+import seatInServer.GUI.ServerGUI;
 
 public class Start {
 	
@@ -12,7 +12,7 @@ public class Start {
 	 * @param args arguments
 	 */
 	public static void main(String[] args) {
-		new GUI().initializationGUI();		
+		new ServerGUI().initializationGUI();		
 	}
 
 }

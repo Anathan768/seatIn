@@ -19,10 +19,13 @@ import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 import javax.swing.border.EmptyBorder;
 
+
 import seatInServer.JDBC.ConnectionPool.ConnectionPool;
 
+
+
 @SuppressWarnings("serial")
-public class ServerConfig  extends JPanel implements ActionListener{
+public class ServerConfig extends JPanel implements ActionListener {
 
 	// PANELS
 	JPanel panel1 = new JPanel(new GridBagLayout());
@@ -31,11 +34,13 @@ public class ServerConfig  extends JPanel implements ActionListener{
 	// LABELS
 	JLabel title = new JLabel("CONNECTION SETTINGS");
 	JLabel hostLabel = new JLabel("Host: ");
+	//JLabel dbNameLabel = new JLabel("Database Name: ");
 	JLabel userLabel = new JLabel("User: ");
 	JLabel passLabel = new JLabel("Password: ");
 
 	// FIELDS
 	JTextField hostField = new JTextField("localhost",15);
+	//JTextField dbNameField = new JTextField(15);
 	JTextField userField = new JTextField("postgres",15);
 	JTextField passField = new JPasswordField("13579sorc768",15);
 
@@ -74,6 +79,24 @@ public class ServerConfig  extends JPanel implements ActionListener{
 		gbc.insets = new Insets(5, 0, 5, 5);
 		gbc.anchor = GridBagConstraints.LINE_START;
 		panel1.add(hostField, gbc);
+
+		// COMPONENT: COLUMN 0, ROW 1
+
+		gbc = new GridBagConstraints();
+		gbc.gridx = 0;
+		gbc.gridy = 1;
+		gbc.insets = new Insets(5, 5, 5, 5);
+		gbc.anchor = GridBagConstraints.LINE_END;
+		//panel1.add(dbNameLabel, gbc);
+
+		// COMPONENT: COLUMN 1, ROW 1
+
+		gbc = new GridBagConstraints();
+		gbc.gridx = 1;
+		gbc.gridy = 1;
+		gbc.insets = new Insets(5, 0, 5, 5);
+		gbc.anchor = GridBagConstraints.LINE_START;
+		//panel1.add(dbNameField, gbc);
 
 		// COMPONENT: COLUMN 0, ROW 2
 
@@ -124,14 +147,15 @@ public class ServerConfig  extends JPanel implements ActionListener{
 		String db_host = hostField.getText();
 		String db_username = userField.getText();
 		String db_password = passField.getText();
-		boolean temp = false;
+		
+		boolean temp = true;
 		
 		try {
 			ConnectionPool.setConfigurations(db_host, db_username, db_password);
 			temp = true;
 		} catch (SQLException e1) {
 			temp = false;
-		}	
+		}
 		
 		if(temp == true){
 		JFrame frame = (JFrame)SwingUtilities.getWindowAncestor(this);
@@ -141,10 +165,10 @@ public class ServerConfig  extends JPanel implements ActionListener{
 		frame.getContentPane().validate();
 		}
 		else{
-			JOptionPane.showOptionDialog(new JFrame(), "Initialization DataBase connection Failed", "", JOptionPane.DEFAULT_OPTION,
+			JOptionPane.showOptionDialog(new JFrame(), "Server Connection Failed. Input data are wrong!", "", JOptionPane.DEFAULT_OPTION,
 					JOptionPane.ERROR_MESSAGE, null, new Object[] {}, null);
 			
 		}
-	}	
+	}
 
 }

@@ -797,7 +797,7 @@ public class ExecuteUpdate {
 			st = conn.createStatement();
 			st.executeUpdate(initTables);
 		}catch(SQLException e) {
-			logger.debug("Errore: esecuzione definizione schema Data Base: "+e.getMessage());
+			//logger.debug("Errore: esecuzione definizione schema Data Base: "+e.getMessage());
 		}finally{
 			closeResources(st, conn);
 		}

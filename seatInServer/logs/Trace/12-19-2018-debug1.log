@@ -1,4 +1,0 @@
-19/12/2018 13:06:36 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
-19/12/2018 13:06:36 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
-19/12/2018 13:06:36 DEBUG seatInServer.JDBC.ExecuteUpdate--> Errore: esecuzione definizione schema Data Base: ERRORE: la relazione "departments" esiste già
-19/12/2018 13:06:56 INFO seatInServer.SeatInServer--> Server started: ServerSocket[addr=0.0.0.0/0.0.0.0,localport=8080]
