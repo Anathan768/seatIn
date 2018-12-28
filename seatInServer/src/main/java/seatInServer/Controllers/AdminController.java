@@ -120,10 +120,10 @@ public class AdminController extends Thread{
 					result = statistic.getTotalNumberOfAccessesPerCourseInTimeBand(Timestamp.valueOf(command[1]), Timestamp.valueOf(command[2]));
 					break;
 				case "viewAverageConnectionTimeOfStudents":
-					result = statistic.getAverageConnectionTimeOfStudentsPerCourse(Integer.parseInt(command[1]));
+					result = statistic.getAverageConnectionTimeOfStudentsForEachCourse();
 					break;
 				case "viewTotalNumberDownloadsPerCourse":
-					result = statistic.getTotalNumberDownloadsPerCourse(Integer.parseInt(command[1]));
+					result = statistic.getTotalNumberDownloadsForEachCourse();
 					break;
 				default:
 					logger.debug("Comando ricevuto non riconosciuto, AdminController: "+input);

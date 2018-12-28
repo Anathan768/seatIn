@@ -3,10 +3,8 @@ seatInServer\GUI\ServerRegistration.class
 seatInServer\Services\AdminStatistic.class
 seatInServer\JDBC\QueryResources.class
 seatInServer\GUI\ServerMenu$1.class
-seatInServer\GUI\GUI.class
 seatInServer\Services\NewsLetter.class
 seatInServer\GUI\ServerMenu.class
-seatInServer\GUI\ServerMenu$4.class
 seatInServer\JDBC\Beans\Lecture.class
 seatInServer\Controllers\StudentController.class
 seatInServer\JDBC\Beans\Admin.class
@@ -30,6 +28,7 @@ seatInServer\Utilities\Utilities.class
 seatInServer\JDBC\Beans\Section.class
 seatInServer\JDBC\Beans\User.class
 seatInServer\Controllers\AdminController.class
+seatInServer\GUI\ServerGUI.class
 seatInServer\JDBC\Beans\Student.class
 seatInServer\JDBC\Beans\Course.class
 seatInServer\Services\CRUD\ManipolationCourseData.class

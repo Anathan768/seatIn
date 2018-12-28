@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.sql.Timestamp;
 import java.util.Collection;
+import java.util.HashMap;
 
 import static seatInAdmin.Items.getServerConnection;
 
@@ -285,22 +286,22 @@ public class AdminCommands {
         return (int) this.callServer(command);
     }
     /**
-     * Mostra il tempo medio di connesione degli studenti per corso.
-     * @param courseId --l'id del corso.
-     * @return double il tempo medio di connessione.
+     * Deriva il tempo medio di connesione degli studenti per ogni corso.
+     * @return HashMap contenente come chiave il corso e come valore il tempo di connessione per quel corso.
      */
-    public double viewAverageConnectionTimeOfStudentsPerCourse(int courseId){
-        String command = "viewAverageConnectionTimeOfStudents/"+courseId;
-        return (double) this.callServer(command);
+    @SuppressWarnings("unchecked")
+	public HashMap<Course, Double> viewAverageConnectionTimeOfStudentsForEachCourse(){
+        String command = "viewAverageConnectionTimeOfStudents";
+        return  (HashMap<Course, Double>) this.callServer(command);
     }
     /**
-     * Mosrtra il numero complessivo di download per corso.
-     * @param courseId -- l'id del corsi
-     * @return int
+     * Deriva il numero complessivo di download per ogni corso.
+     * @return HashMap contenente come chiave il corso e come valore il numero di download per quel corso.
      */
-    public int viewTotalNumberDownloadsPerCourse(int courseId){
-        String command = "viewTotalNumberDownloadsPerCourse/"+courseId;
-        return (int) this.callServer(command);
+    @SuppressWarnings("unchecked")
+	public HashMap<Course, Integer> viewTotalNumberDownloadsForEachCourse(){
+        String command = "viewTotalNumberDownloadsPerCourse";
+        return  (HashMap<Course, Integer>) this.callServer(command);
     }
     /*
      * Il metodo generale usato per mandare le richieste al server.

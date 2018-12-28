@@ -2,7 +2,6 @@ D:\EclipseJavaProjects\seatIn\seatInServer\src\main\java\seatInServer\Services\R
 D:\EclipseJavaProjects\seatIn\seatInServer\src\main\java\seatInServer\Utilities\Utilities.java
 D:\EclipseJavaProjects\seatIn\seatInServer\src\main\java\seatInServer\JDBC\Beans\Lecture.java
 D:\EclipseJavaProjects\seatIn\seatInServer\src\main\java\seatInServer\JDBC\Beans\Section.java
-D:\EclipseJavaProjects\seatIn\seatInServer\src\main\java\seatInServer\GUI\GUI.java
 D:\EclipseJavaProjects\seatIn\seatInServer\src\main\java\seatInServer\JDBC\Beans\Student.java
 D:\EclipseJavaProjects\seatIn\seatInServer\src\main\java\seatInServer\GUI\ServerNewPassword.java
 D:\EclipseJavaProjects\seatIn\seatInServer\src\main\java\seatInServer\GUI\ServerMenu.java
@@ -38,5 +37,6 @@ D:\EclipseJavaProjects\seatIn\seatInServer\src\main\java\seatInServer\JDBC\Query
 D:\EclipseJavaProjects\seatIn\seatInServer\src\main\java\seatInServer\JDBC\Beans\User.java
 D:\EclipseJavaProjects\seatIn\seatInServer\src\main\java\seatInServer\Services\Login.java
 D:\EclipseJavaProjects\seatIn\seatInServer\src\main\java\seatInServer\GUI\ServerResPsw.java
+D:\EclipseJavaProjects\seatIn\seatInServer\src\main\java\seatInServer\GUI\ServerGUI.java
 D:\EclipseJavaProjects\seatIn\seatInServer\src\main\java\seatInServer\Services\CRUD\Registration.java
 D:\EclipseJavaProjects\seatIn\seatInServer\src\main\java\seatInServer\Services\CRUD\ViewData.java

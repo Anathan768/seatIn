@@ -7,6 +7,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -347,6 +348,39 @@ public class ExecuteSelect {
 			
 		}catch(SQLException e) {
 			logger.debug("Errore: esecuzione allStudentsWhoFollowDeterminedCourse: "+e);
+		}finally {
+			closeResources(rs, stmt, conn);
+		}
+		return result;
+	}
+	/**
+	 * Seleziona tutti i corsi attivi. Il metodo viene usato per il calcolo della statistica.
+	 * @return Collection contenente le informazioni relative ad ogni corso.
+	 */
+	public Collection<Course> selectAllCourses() {
+		Connection conn = null; 
+		Statement stmt = null;
+		ResultSet rs = null;
+		String query = "SELECT * FROM courses;";
+		
+		Collection<Course> result = new LinkedList<Course>();
+		try {
+			conn = ConnectionPool.getConnection();
+			stmt = conn.createStatement();
+			rs = stmt.executeQuery(query);
+		
+			while(rs.next()) {
+				Course course = new Course();
+				course.setId(rs.getInt("id"));
+				course.setName(rs.getString("name"));
+				course.setDescription(rs.getString("description"));
+				course.setActivationDate(rs.getTimestamp("activation_date"));
+				course.setActive(rs.getBoolean("is_active"));
+				course.setDegreeCourse(rs.getString("name"));
+				result.add(course);
+			}
+		}catch(SQLException e) {
+			logger.debug("Errore esecuzione selectAllCourses: "+e.getMessage());
 		}finally {
 			closeResources(rs, stmt, conn);
 		}

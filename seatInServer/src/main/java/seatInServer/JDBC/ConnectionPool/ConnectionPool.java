@@ -19,7 +19,7 @@ public class ConnectionPool {
 	private static LinkedBlockingQueue<Connection> connections = new LinkedBlockingQueue<Connection>(100);
 
 	private ConnectionPool() {
-
+		
 	}
 	
 	public static void setConfigurations(String db_host, String db_username, String db_password) throws SQLException {
@@ -31,6 +31,7 @@ public class ConnectionPool {
 	private static Connection openConnection() throws SQLException{
 		Connection conn = null;
 			logger.debug("Inizializzazione nuova connessione al database.");
+			//setConfigurations("localhost","postgres","13579sorc768");//TODO da togliere dopo la fase di testing
 			conn = DriverManager.getConnection(config.getURL(), config.getUsername(), config.getPassword());
 		return conn;
 	}
