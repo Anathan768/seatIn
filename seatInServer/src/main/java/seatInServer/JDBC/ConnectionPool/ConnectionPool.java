@@ -23,7 +23,8 @@ public class ConnectionPool {
 	}
 	
 	public static void setConfigurations(String db_host, String db_username, String db_password) throws SQLException {
-		config = new Configuration(db_host, db_username, db_password);
+		//config = new InitDataBase(db_host, db_username, db_password).createIfNotExist();
+		config = new Configuration(db_host, "dbSeatIn", db_username, db_password);
 		openConnection();
 		ExecuteUpdate.executeCreationTables();
 	}

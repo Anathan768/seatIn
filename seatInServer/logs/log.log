@@ -1,13 +1,1 @@
-28/12/2018 10:27:13 INFO seatInServer.SeatInServer--> Server started: ServerSocket[addr=0.0.0.0/0.0.0.0,localport=8080]
-28/12/2018 11:04:10 INFO seatInServer.SeatInServer--> Server started: ServerSocket[addr=0.0.0.0/0.0.0.0,localport=8080]
-28/12/2018 11:07:37 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=50554,localport=8080]
-
-28/12/2018 11:09:12 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=50570,localport=8080]
-
-28/12/2018 11:09:37 INFO seatInServer.Controllers.AdminController--> Chiusura connessione cliente! Socket[addr=/127.0.0.1,port=50570,localport=8080]
-28/12/2018 11:09:39 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=50578,localport=8080]
-
-28/12/2018 11:11:01 INFO seatInServer.Controllers.AdminController--> Chiusura connessione cliente! Socket[addr=/127.0.0.1,port=50578,localport=8080]
-28/12/2018 11:11:03 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=50589,localport=8080]
-
-28/12/2018 11:11:37 INFO seatInServer.Controllers.AdminController--> Chiusura connessione cliente! Socket[addr=/127.0.0.1,port=50589,localport=8080]
+04/01/2019 13:52:22 INFO seatInServer.SeatInServer--> Server started: ServerSocket[addr=0.0.0.0/0.0.0.0,localport=8080]

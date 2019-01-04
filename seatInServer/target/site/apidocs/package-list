@@ -1,9 +1,0 @@
-seatInServer
-seatInServer.Controllers
-seatInServer.GUI
-seatInServer.JDBC
-seatInServer.JDBC.Beans
-seatInServer.JDBC.ConnectionPool
-seatInServer.Services
-seatInServer.Services.CRUD
-seatInServer.Utilities

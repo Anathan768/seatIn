@@ -1,0 +1,112 @@
+04/01/2019 14:14:07 INFO seatInServer.SeatInServer--> Server started: ServerSocket[addr=0.0.0.0/0.0.0.0,localport=8080]
+04/01/2019 14:20:53 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=52993,localport=8080]
+
+04/01/2019 14:39:16 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=52995,localport=8080]
+
+04/01/2019 14:40:32 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=52996,localport=8080]
+
+04/01/2019 14:45:21 INFO seatInServer.SeatInServer--> Server started: ServerSocket[addr=0.0.0.0/0.0.0.0,localport=8080]
+04/01/2019 14:45:28 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49691,localport=8080]
+
+04/01/2019 14:46:01 INFO seatInServer.Controllers.AdminController--> Chiusura connessione cliente! Socket[addr=/127.0.0.1,port=49691,localport=8080]
+04/01/2019 14:47:42 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49697,localport=8080]
+
+04/01/2019 14:47:56 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49698,localport=8080]
+
+04/01/2019 14:48:30 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49699,localport=8080]
+
+04/01/2019 14:49:56 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49701,localport=8080]
+
+04/01/2019 14:50:39 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49702,localport=8080]
+
+04/01/2019 14:51:50 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49703,localport=8080]
+
+04/01/2019 14:52:18 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49704,localport=8080]
+
+04/01/2019 14:52:47 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49705,localport=8080]
+
+04/01/2019 14:57:35 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49706,localport=8080]
+
+04/01/2019 14:59:12 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49707,localport=8080]
+
+04/01/2019 14:59:27 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49708,localport=8080]
+
+04/01/2019 15:00:08 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49709,localport=8080]
+
+04/01/2019 15:04:07 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49710,localport=8080]
+
+04/01/2019 15:10:45 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49711,localport=8080]
+
+04/01/2019 15:11:43 INFO seatInServer.SeatInServer--> Server started: ServerSocket[addr=0.0.0.0/0.0.0.0,localport=8080]
+04/01/2019 15:12:32 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49714,localport=8080]
+
+04/01/2019 15:12:53 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49715,localport=8080]
+
+04/01/2019 15:14:47 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49716,localport=8080]
+
+04/01/2019 15:15:26 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49717,localport=8080]
+
+04/01/2019 15:15:59 INFO seatInServer.Controllers.AdminController--> Chiusura connessione cliente! Socket[addr=/127.0.0.1,port=49717,localport=8080]
+04/01/2019 15:17:33 INFO seatInServer.SeatInServer--> Server started: ServerSocket[addr=0.0.0.0/0.0.0.0,localport=8080]
+04/01/2019 15:18:41 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49698,localport=8080]
+
+04/01/2019 15:19:25 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49699,localport=8080]
+
+04/01/2019 15:19:49 INFO seatInServer.Controllers.AdminController--> Chiusura connessione cliente! Socket[addr=/127.0.0.1,port=49699,localport=8080]
+04/01/2019 15:21:08 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49702,localport=8080]
+
+04/01/2019 15:23:39 INFO seatInServer.Controllers.AdminController--> Chiusura connessione cliente! Socket[addr=/127.0.0.1,port=49702,localport=8080]
+04/01/2019 15:24:38 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49704,localport=8080]
+
+04/01/2019 15:25:10 INFO seatInServer.Controllers.AdminController--> Chiusura connessione cliente! Socket[addr=/127.0.0.1,port=49704,localport=8080]
+04/01/2019 15:29:18 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49705,localport=8080]
+
+04/01/2019 15:29:25 INFO seatInServer.Controllers.AdminController--> Chiusura connessione cliente! Socket[addr=/127.0.0.1,port=49705,localport=8080]
+04/01/2019 15:29:27 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49706,localport=8080]
+
+04/01/2019 15:29:41 INFO seatInServer.Controllers.AdminController--> Chiusura connessione cliente! Socket[addr=/127.0.0.1,port=49706,localport=8080]
+04/01/2019 15:42:08 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49707,localport=8080]
+
+04/01/2019 15:42:24 INFO seatInServer.Controllers.AdminController--> Chiusura connessione cliente! Socket[addr=/127.0.0.1,port=49707,localport=8080]
+04/01/2019 15:42:27 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49709,localport=8080]
+
+04/01/2019 15:42:33 INFO seatInServer.Controllers.AdminController--> Chiusura connessione cliente! Socket[addr=/127.0.0.1,port=49709,localport=8080]
+04/01/2019 15:42:35 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49711,localport=8080]
+
+04/01/2019 15:42:42 INFO seatInServer.Controllers.AdminController--> Chiusura connessione cliente! Socket[addr=/127.0.0.1,port=49711,localport=8080]
+04/01/2019 15:45:23 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49716,localport=8080]
+
+04/01/2019 15:45:56 INFO seatInServer.Controllers.AdminController--> Chiusura connessione cliente! Socket[addr=/127.0.0.1,port=49716,localport=8080]
+04/01/2019 15:47:22 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49718,localport=8080]
+
+04/01/2019 15:47:50 INFO seatInServer.Controllers.AdminController--> Chiusura connessione cliente! Socket[addr=/127.0.0.1,port=49718,localport=8080]
+04/01/2019 15:56:23 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49720,localport=8080]
+
+04/01/2019 15:57:07 INFO seatInServer.Controllers.AdminController--> Chiusura connessione cliente! Socket[addr=/127.0.0.1,port=49720,localport=8080]
+04/01/2019 16:00:56 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49846,localport=8080]
+
+04/01/2019 16:01:02 INFO seatInServer.Controllers.AdminController--> Chiusura connessione cliente! Socket[addr=/127.0.0.1,port=49846,localport=8080]
+04/01/2019 16:01:27 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49848,localport=8080]
+
+04/01/2019 16:01:34 INFO seatInServer.Controllers.AdminController--> Chiusura connessione cliente! Socket[addr=/127.0.0.1,port=49848,localport=8080]
+04/01/2019 16:07:08 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49854,localport=8080]
+
+04/01/2019 16:09:51 INFO seatInServer.Controllers.AdminController--> Chiusura connessione cliente! Socket[addr=/127.0.0.1,port=49854,localport=8080]
+04/01/2019 16:10:27 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49859,localport=8080]
+
+04/01/2019 16:35:57 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49883,localport=8080]
+
+04/01/2019 16:36:17 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49884,localport=8080]
+
+04/01/2019 16:36:42 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49885,localport=8080]
+
+04/01/2019 16:38:47 INFO seatInServer.Controllers.AdminController--> Chiusura connessione cliente! Socket[addr=/127.0.0.1,port=49885,localport=8080]
+04/01/2019 16:38:48 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49888,localport=8080]
+
+04/01/2019 16:40:38 INFO seatInServer.Controllers.AdminController--> Chiusura connessione cliente! Socket[addr=/127.0.0.1,port=49888,localport=8080]
+04/01/2019 16:42:37 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49917,localport=8080]
+
+04/01/2019 16:42:41 INFO seatInServer.Controllers.AdminController--> Chiusura connessione cliente! Socket[addr=/127.0.0.1,port=49917,localport=8080]
+04/01/2019 16:43:29 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49918,localport=8080]
+
+04/01/2019 16:45:52 INFO seatInServer.Controllers.AdminController--> Chiusura connessione cliente! Socket[addr=/127.0.0.1,port=49918,localport=8080]

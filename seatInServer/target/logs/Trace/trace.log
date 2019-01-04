@@ -1,0 +1,227 @@
+04/01/2019 14:13:57 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 14:13:57 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 14:14:07 INFO seatInServer.SeatInServer--> Server started: ServerSocket[addr=0.0.0.0/0.0.0.0,localport=8080]
+04/01/2019 14:20:53 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=52993,localport=8080]
+
+04/01/2019 14:20:53 DEBUG seatInServer.Controllers.Skeleton--> Inizializzo la connessione con il cliente: Socket[addr=/127.0.0.1,port=52993,localport=8080]
+04/01/2019 14:21:03 DEBUG seatInServer.Controllers.Skeleton--> Errore connessione client: java.net.SocketException: Connection reset
+04/01/2019 14:39:16 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=52995,localport=8080]
+
+04/01/2019 14:39:16 DEBUG seatInServer.Controllers.Skeleton--> Inizializzo la connessione con il cliente: Socket[addr=/127.0.0.1,port=52995,localport=8080]
+04/01/2019 14:40:32 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=52996,localport=8080]
+
+04/01/2019 14:40:32 DEBUG seatInServer.Controllers.Skeleton--> Inizializzo la connessione con il cliente: Socket[addr=/127.0.0.1,port=52996,localport=8080]
+04/01/2019 14:45:18 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 14:45:19 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 14:45:21 INFO seatInServer.SeatInServer--> Server started: ServerSocket[addr=0.0.0.0/0.0.0.0,localport=8080]
+04/01/2019 14:45:28 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49691,localport=8080]
+
+04/01/2019 14:45:28 DEBUG seatInServer.Controllers.Skeleton--> Inizializzo la connessione con il cliente: Socket[addr=/127.0.0.1,port=49691,localport=8080]
+04/01/2019 14:46:01 DEBUG seatInServer.Controllers.AdminController--> Cliente si è disconesso: java.net.SocketException: Connection reset
+04/01/2019 14:46:01 INFO seatInServer.Controllers.AdminController--> Chiusura connessione cliente! Socket[addr=/127.0.0.1,port=49691,localport=8080]
+04/01/2019 14:47:42 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49697,localport=8080]
+
+04/01/2019 14:47:42 DEBUG seatInServer.Controllers.Skeleton--> Inizializzo la connessione con il cliente: Socket[addr=/127.0.0.1,port=49697,localport=8080]
+04/01/2019 14:47:56 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49698,localport=8080]
+
+04/01/2019 14:47:56 DEBUG seatInServer.Controllers.Skeleton--> Inizializzo la connessione con il cliente: Socket[addr=/127.0.0.1,port=49698,localport=8080]
+04/01/2019 14:48:27 DEBUG seatInServer.Controllers.Skeleton--> Errore connessione client: java.net.SocketException: Connection reset
+04/01/2019 14:48:30 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49699,localport=8080]
+
+04/01/2019 14:48:30 DEBUG seatInServer.Controllers.Skeleton--> Inizializzo la connessione con il cliente: Socket[addr=/127.0.0.1,port=49699,localport=8080]
+04/01/2019 14:48:32 DEBUG seatInServer.Controllers.Skeleton--> Errore connessione client: java.net.SocketException: Connection reset
+04/01/2019 14:49:56 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49701,localport=8080]
+
+04/01/2019 14:49:56 DEBUG seatInServer.Controllers.Skeleton--> Inizializzo la connessione con il cliente: Socket[addr=/127.0.0.1,port=49701,localport=8080]
+04/01/2019 14:50:03 DEBUG seatInServer.Controllers.Skeleton--> Errore connessione client: java.net.SocketException: Connection reset
+04/01/2019 14:50:39 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49702,localport=8080]
+
+04/01/2019 14:50:39 DEBUG seatInServer.Controllers.Skeleton--> Inizializzo la connessione con il cliente: Socket[addr=/127.0.0.1,port=49702,localport=8080]
+04/01/2019 14:51:27 DEBUG seatInServer.Controllers.Skeleton--> Errore connessione client: java.net.SocketException: Connection reset
+04/01/2019 14:51:50 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49703,localport=8080]
+
+04/01/2019 14:51:50 DEBUG seatInServer.Controllers.Skeleton--> Inizializzo la connessione con il cliente: Socket[addr=/127.0.0.1,port=49703,localport=8080]
+04/01/2019 14:51:58 DEBUG seatInServer.Controllers.Skeleton--> Errore connessione client: java.net.SocketException: Connection reset
+04/01/2019 14:52:18 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49704,localport=8080]
+
+04/01/2019 14:52:18 DEBUG seatInServer.Controllers.Skeleton--> Inizializzo la connessione con il cliente: Socket[addr=/127.0.0.1,port=49704,localport=8080]
+04/01/2019 14:52:47 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49705,localport=8080]
+
+04/01/2019 14:52:47 DEBUG seatInServer.Controllers.Skeleton--> Inizializzo la connessione con il cliente: Socket[addr=/127.0.0.1,port=49705,localport=8080]
+04/01/2019 14:53:14 DEBUG seatInServer.Controllers.Skeleton--> Errore connessione client: java.net.SocketException: Connection reset
+04/01/2019 14:57:35 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49706,localport=8080]
+
+04/01/2019 14:57:35 DEBUG seatInServer.Controllers.Skeleton--> Inizializzo la connessione con il cliente: Socket[addr=/127.0.0.1,port=49706,localport=8080]
+04/01/2019 14:57:40 DEBUG seatInServer.Controllers.Skeleton--> Errore connessione client: java.net.SocketException: Connection reset
+04/01/2019 14:59:12 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49707,localport=8080]
+
+04/01/2019 14:59:12 DEBUG seatInServer.Controllers.Skeleton--> Inizializzo la connessione con il cliente: Socket[addr=/127.0.0.1,port=49707,localport=8080]
+04/01/2019 14:59:17 DEBUG seatInServer.Controllers.Skeleton--> Errore connessione client: java.net.SocketException: Connection reset
+04/01/2019 14:59:27 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49708,localport=8080]
+
+04/01/2019 14:59:27 DEBUG seatInServer.Controllers.Skeleton--> Inizializzo la connessione con il cliente: Socket[addr=/127.0.0.1,port=49708,localport=8080]
+04/01/2019 14:59:32 DEBUG seatInServer.Controllers.Skeleton--> Errore connessione client: java.net.SocketException: Connection reset
+04/01/2019 15:00:08 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49709,localport=8080]
+
+04/01/2019 15:00:08 DEBUG seatInServer.Controllers.Skeleton--> Inizializzo la connessione con il cliente: Socket[addr=/127.0.0.1,port=49709,localport=8080]
+04/01/2019 15:00:17 DEBUG seatInServer.Controllers.Skeleton--> Errore connessione client: java.net.SocketException: Connection reset
+04/01/2019 15:04:07 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49710,localport=8080]
+
+04/01/2019 15:04:07 DEBUG seatInServer.Controllers.Skeleton--> Inizializzo la connessione con il cliente: Socket[addr=/127.0.0.1,port=49710,localport=8080]
+04/01/2019 15:04:26 DEBUG seatInServer.Controllers.Skeleton--> Errore connessione client: java.net.SocketException: Connection reset
+04/01/2019 15:10:45 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49711,localport=8080]
+
+04/01/2019 15:10:45 DEBUG seatInServer.Controllers.Skeleton--> Inizializzo la connessione con il cliente: Socket[addr=/127.0.0.1,port=49711,localport=8080]
+04/01/2019 15:11:01 DEBUG seatInServer.Services.ResetPassword--> Esecuzione ResetPassword...
+04/01/2019 15:11:01 DEBUG seatInServer.Services.EmailSender--> Impostazione indirizzo per inviare mail, fallito: javax.mail.internet.AddressException: Illegal address in string ``''
+04/01/2019 15:11:25 DEBUG seatInServer.Controllers.Skeleton--> Errore connessione client: java.net.SocketException: Connection reset
+04/01/2019 15:11:41 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 15:11:41 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 15:11:43 INFO seatInServer.SeatInServer--> Server started: ServerSocket[addr=0.0.0.0/0.0.0.0,localport=8080]
+04/01/2019 15:12:32 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49714,localport=8080]
+
+04/01/2019 15:12:32 DEBUG seatInServer.Controllers.Skeleton--> Inizializzo la connessione con il cliente: Socket[addr=/127.0.0.1,port=49714,localport=8080]
+04/01/2019 15:12:38 DEBUG seatInServer.Controllers.Skeleton--> Errore connessione client: java.net.SocketException: Connection reset
+04/01/2019 15:12:53 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49715,localport=8080]
+
+04/01/2019 15:12:53 DEBUG seatInServer.Controllers.Skeleton--> Inizializzo la connessione con il cliente: Socket[addr=/127.0.0.1,port=49715,localport=8080]
+04/01/2019 15:14:47 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49716,localport=8080]
+
+04/01/2019 15:14:47 DEBUG seatInServer.Controllers.Skeleton--> Inizializzo la connessione con il cliente: Socket[addr=/127.0.0.1,port=49716,localport=8080]
+04/01/2019 15:14:55 DEBUG seatInServer.Controllers.Skeleton--> Errore connessione client: java.net.SocketException: Connection reset
+04/01/2019 15:14:57 DEBUG seatInServer.Controllers.Skeleton--> Errore connessione client: java.net.SocketException: Connection reset
+04/01/2019 15:15:26 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49717,localport=8080]
+
+04/01/2019 15:15:26 DEBUG seatInServer.Controllers.Skeleton--> Inizializzo la connessione con il cliente: Socket[addr=/127.0.0.1,port=49717,localport=8080]
+04/01/2019 15:15:59 DEBUG seatInServer.Controllers.AdminController--> Cliente si è disconesso: java.net.SocketException: Connection reset
+04/01/2019 15:15:59 INFO seatInServer.Controllers.AdminController--> Chiusura connessione cliente! Socket[addr=/127.0.0.1,port=49717,localport=8080]
+04/01/2019 15:17:01 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 15:17:01 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 15:17:30 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 15:17:30 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 15:17:33 INFO seatInServer.SeatInServer--> Server started: ServerSocket[addr=0.0.0.0/0.0.0.0,localport=8080]
+04/01/2019 15:18:41 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49698,localport=8080]
+
+04/01/2019 15:18:41 DEBUG seatInServer.Controllers.Skeleton--> Inizializzo la connessione con il cliente: Socket[addr=/127.0.0.1,port=49698,localport=8080]
+04/01/2019 15:18:53 DEBUG seatInServer.Controllers.Skeleton--> Errore connessione client: java.net.SocketException: Connection reset
+04/01/2019 15:19:25 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49699,localport=8080]
+
+04/01/2019 15:19:25 DEBUG seatInServer.Controllers.Skeleton--> Inizializzo la connessione con il cliente: Socket[addr=/127.0.0.1,port=49699,localport=8080]
+04/01/2019 15:19:49 DEBUG seatInServer.Controllers.AdminController--> Cliente si è disconesso: java.net.SocketException: Connection reset
+04/01/2019 15:19:49 INFO seatInServer.Controllers.AdminController--> Chiusura connessione cliente! Socket[addr=/127.0.0.1,port=49699,localport=8080]
+04/01/2019 15:21:08 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49702,localport=8080]
+
+04/01/2019 15:21:08 DEBUG seatInServer.Controllers.Skeleton--> Inizializzo la connessione con il cliente: Socket[addr=/127.0.0.1,port=49702,localport=8080]
+04/01/2019 15:23:39 DEBUG seatInServer.Controllers.AdminController--> Cliente si è disconesso: java.net.SocketException: Connection reset
+04/01/2019 15:23:39 INFO seatInServer.Controllers.AdminController--> Chiusura connessione cliente! Socket[addr=/127.0.0.1,port=49702,localport=8080]
+04/01/2019 15:24:38 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49704,localport=8080]
+
+04/01/2019 15:24:38 DEBUG seatInServer.Controllers.Skeleton--> Inizializzo la connessione con il cliente: Socket[addr=/127.0.0.1,port=49704,localport=8080]
+04/01/2019 15:25:10 DEBUG seatInServer.Controllers.AdminController--> Cliente si è disconesso: java.net.SocketException: Connection reset
+04/01/2019 15:25:10 INFO seatInServer.Controllers.AdminController--> Chiusura connessione cliente! Socket[addr=/127.0.0.1,port=49704,localport=8080]
+04/01/2019 15:29:18 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49705,localport=8080]
+
+04/01/2019 15:29:18 DEBUG seatInServer.Controllers.Skeleton--> Inizializzo la connessione con il cliente: Socket[addr=/127.0.0.1,port=49705,localport=8080]
+04/01/2019 15:29:25 DEBUG seatInServer.Controllers.AdminController--> Cliente si è disconesso: java.net.SocketException: Connection reset
+04/01/2019 15:29:25 INFO seatInServer.Controllers.AdminController--> Chiusura connessione cliente! Socket[addr=/127.0.0.1,port=49705,localport=8080]
+04/01/2019 15:29:27 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49706,localport=8080]
+
+04/01/2019 15:29:27 DEBUG seatInServer.Controllers.Skeleton--> Inizializzo la connessione con il cliente: Socket[addr=/127.0.0.1,port=49706,localport=8080]
+04/01/2019 15:29:41 DEBUG seatInServer.Controllers.AdminController--> Cliente si è disconesso: java.net.SocketException: Connection reset
+04/01/2019 15:29:41 INFO seatInServer.Controllers.AdminController--> Chiusura connessione cliente! Socket[addr=/127.0.0.1,port=49706,localport=8080]
+04/01/2019 15:42:08 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49707,localport=8080]
+
+04/01/2019 15:42:08 DEBUG seatInServer.Controllers.Skeleton--> Inizializzo la connessione con il cliente: Socket[addr=/127.0.0.1,port=49707,localport=8080]
+04/01/2019 15:42:10 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 15:42:24 DEBUG seatInServer.Controllers.AdminController--> Cliente si è disconesso: java.net.SocketException: Connection reset
+04/01/2019 15:42:24 INFO seatInServer.Controllers.AdminController--> Chiusura connessione cliente! Socket[addr=/127.0.0.1,port=49707,localport=8080]
+04/01/2019 15:42:27 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49709,localport=8080]
+
+04/01/2019 15:42:27 DEBUG seatInServer.Controllers.Skeleton--> Inizializzo la connessione con il cliente: Socket[addr=/127.0.0.1,port=49709,localport=8080]
+04/01/2019 15:42:31 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 15:42:33 DEBUG seatInServer.Controllers.AdminController--> Cliente si è disconesso: java.net.SocketException: Connection reset
+04/01/2019 15:42:33 INFO seatInServer.Controllers.AdminController--> Chiusura connessione cliente! Socket[addr=/127.0.0.1,port=49709,localport=8080]
+04/01/2019 15:42:35 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49711,localport=8080]
+
+04/01/2019 15:42:35 DEBUG seatInServer.Controllers.Skeleton--> Inizializzo la connessione con il cliente: Socket[addr=/127.0.0.1,port=49711,localport=8080]
+04/01/2019 15:42:39 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 15:42:42 DEBUG seatInServer.Controllers.AdminController--> Cliente si è disconesso: java.net.SocketException: Connection reset
+04/01/2019 15:42:42 INFO seatInServer.Controllers.AdminController--> Chiusura connessione cliente! Socket[addr=/127.0.0.1,port=49711,localport=8080]
+04/01/2019 15:45:23 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49716,localport=8080]
+
+04/01/2019 15:45:23 DEBUG seatInServer.Controllers.Skeleton--> Inizializzo la connessione con il cliente: Socket[addr=/127.0.0.1,port=49716,localport=8080]
+04/01/2019 15:45:24 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 15:45:56 DEBUG seatInServer.Controllers.AdminController--> Cliente si è disconesso: java.net.SocketException: Connection reset
+04/01/2019 15:45:56 INFO seatInServer.Controllers.AdminController--> Chiusura connessione cliente! Socket[addr=/127.0.0.1,port=49716,localport=8080]
+04/01/2019 15:47:22 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49718,localport=8080]
+
+04/01/2019 15:47:22 DEBUG seatInServer.Controllers.Skeleton--> Inizializzo la connessione con il cliente: Socket[addr=/127.0.0.1,port=49718,localport=8080]
+04/01/2019 15:47:24 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 15:47:50 DEBUG seatInServer.Controllers.AdminController--> Cliente si è disconesso: java.net.SocketException: Connection reset
+04/01/2019 15:47:50 INFO seatInServer.Controllers.AdminController--> Chiusura connessione cliente! Socket[addr=/127.0.0.1,port=49718,localport=8080]
+04/01/2019 15:56:23 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49720,localport=8080]
+
+04/01/2019 15:56:23 DEBUG seatInServer.Controllers.Skeleton--> Inizializzo la connessione con il cliente: Socket[addr=/127.0.0.1,port=49720,localport=8080]
+04/01/2019 15:56:25 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 15:57:07 DEBUG seatInServer.Controllers.AdminController--> Cliente si è disconesso: java.net.SocketException: Connection reset
+04/01/2019 15:57:07 INFO seatInServer.Controllers.AdminController--> Chiusura connessione cliente! Socket[addr=/127.0.0.1,port=49720,localport=8080]
+04/01/2019 16:00:56 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49846,localport=8080]
+
+04/01/2019 16:00:56 DEBUG seatInServer.Controllers.Skeleton--> Inizializzo la connessione con il cliente: Socket[addr=/127.0.0.1,port=49846,localport=8080]
+04/01/2019 16:00:58 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 16:01:02 DEBUG seatInServer.Controllers.AdminController--> Cliente si è disconesso: java.net.SocketException: Connection reset
+04/01/2019 16:01:02 INFO seatInServer.Controllers.AdminController--> Chiusura connessione cliente! Socket[addr=/127.0.0.1,port=49846,localport=8080]
+04/01/2019 16:01:27 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49848,localport=8080]
+
+04/01/2019 16:01:27 DEBUG seatInServer.Controllers.Skeleton--> Inizializzo la connessione con il cliente: Socket[addr=/127.0.0.1,port=49848,localport=8080]
+04/01/2019 16:01:29 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 16:01:34 DEBUG seatInServer.Controllers.AdminController--> Cliente si è disconesso: java.net.SocketException: Connection reset
+04/01/2019 16:01:34 INFO seatInServer.Controllers.AdminController--> Chiusura connessione cliente! Socket[addr=/127.0.0.1,port=49848,localport=8080]
+04/01/2019 16:07:08 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49854,localport=8080]
+
+04/01/2019 16:07:08 DEBUG seatInServer.Controllers.Skeleton--> Inizializzo la connessione con il cliente: Socket[addr=/127.0.0.1,port=49854,localport=8080]
+04/01/2019 16:07:10 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 16:07:22 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 16:09:51 DEBUG seatInServer.Controllers.AdminController--> Cliente si è disconesso: java.net.SocketException: Connection reset
+04/01/2019 16:09:51 INFO seatInServer.Controllers.AdminController--> Chiusura connessione cliente! Socket[addr=/127.0.0.1,port=49854,localport=8080]
+04/01/2019 16:10:27 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49859,localport=8080]
+
+04/01/2019 16:10:27 DEBUG seatInServer.Controllers.Skeleton--> Inizializzo la connessione con il cliente: Socket[addr=/127.0.0.1,port=49859,localport=8080]
+04/01/2019 16:10:57 DEBUG seatInServer.Controllers.Skeleton--> Errore connessione client: java.net.SocketException: Connection reset
+04/01/2019 16:35:57 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49883,localport=8080]
+
+04/01/2019 16:35:57 DEBUG seatInServer.Controllers.Skeleton--> Inizializzo la connessione con il cliente: Socket[addr=/127.0.0.1,port=49883,localport=8080]
+04/01/2019 16:35:59 DEBUG seatInServer.Controllers.Skeleton--> Errore connessione client: java.net.SocketException: Connection reset
+04/01/2019 16:36:17 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49884,localport=8080]
+
+04/01/2019 16:36:17 DEBUG seatInServer.Controllers.Skeleton--> Inizializzo la connessione con il cliente: Socket[addr=/127.0.0.1,port=49884,localport=8080]
+04/01/2019 16:36:19 DEBUG seatInServer.Controllers.Skeleton--> Errore connessione client: java.net.SocketException: Connection reset
+04/01/2019 16:36:42 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49885,localport=8080]
+
+04/01/2019 16:36:42 DEBUG seatInServer.Controllers.Skeleton--> Inizializzo la connessione con il cliente: Socket[addr=/127.0.0.1,port=49885,localport=8080]
+04/01/2019 16:36:44 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 16:38:47 DEBUG seatInServer.Controllers.AdminController--> Cliente si è disconesso: java.net.SocketException: Connection reset
+04/01/2019 16:38:47 INFO seatInServer.Controllers.AdminController--> Chiusura connessione cliente! Socket[addr=/127.0.0.1,port=49885,localport=8080]
+04/01/2019 16:38:48 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49888,localport=8080]
+
+04/01/2019 16:38:48 DEBUG seatInServer.Controllers.Skeleton--> Inizializzo la connessione con il cliente: Socket[addr=/127.0.0.1,port=49888,localport=8080]
+04/01/2019 16:38:49 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 16:38:51 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 16:38:51 DEBUG seatInServer.Controllers.AdminController--> View Content 
+04/01/2019 16:40:38 DEBUG seatInServer.Controllers.AdminController--> Cliente si è disconesso: java.net.SocketException: Connection reset
+04/01/2019 16:40:38 INFO seatInServer.Controllers.AdminController--> Chiusura connessione cliente! Socket[addr=/127.0.0.1,port=49888,localport=8080]
+04/01/2019 16:42:37 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49917,localport=8080]
+
+04/01/2019 16:42:37 DEBUG seatInServer.Controllers.Skeleton--> Inizializzo la connessione con il cliente: Socket[addr=/127.0.0.1,port=49917,localport=8080]
+04/01/2019 16:42:39 DEBUG seatInServer.Controllers.AdminController--> View Content 
+04/01/2019 16:42:41 DEBUG seatInServer.Controllers.AdminController--> Cliente si è disconesso: java.net.SocketException: Connection reset
+04/01/2019 16:42:41 INFO seatInServer.Controllers.AdminController--> Chiusura connessione cliente! Socket[addr=/127.0.0.1,port=49917,localport=8080]
+04/01/2019 16:43:29 INFO seatInServer.SeatInServer--> Connesione del cliente: Socket[addr=/127.0.0.1,port=49918,localport=8080]
+
+04/01/2019 16:43:29 DEBUG seatInServer.Controllers.Skeleton--> Inizializzo la connessione con il cliente: Socket[addr=/127.0.0.1,port=49918,localport=8080]
+04/01/2019 16:43:31 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 16:43:32 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 16:43:32 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 16:43:32 DEBUG seatInServer.Controllers.AdminController--> View Content 
+04/01/2019 16:45:52 DEBUG seatInServer.Controllers.AdminController--> Cliente si è disconesso: java.net.SocketException: Connection reset
+04/01/2019 16:45:52 INFO seatInServer.Controllers.AdminController--> Chiusura connessione cliente! Socket[addr=/127.0.0.1,port=49918,localport=8080]

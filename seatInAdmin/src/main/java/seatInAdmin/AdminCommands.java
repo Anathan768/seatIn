@@ -16,9 +16,17 @@ import static seatInAdmin.Items.getServerConnection;
 public class AdminCommands {
 
     private Proxy server = getServerConnection();
+    private static AdminCommands commands = new AdminCommands();
 
-    public AdminCommands(){
+    private AdminCommands(){
 
+    }
+    
+    public static AdminCommands getInstance() {
+    	if(commands == null)
+    		commands = new AdminCommands();
+    	
+    	return commands;
     }
     /**
      * Operazione di autenticazione di un utente.
