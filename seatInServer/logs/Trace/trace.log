@@ -1,3 +1,80 @@
 04/01/2019 13:52:19 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
 04/01/2019 13:52:19 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
 04/01/2019 13:52:22 INFO seatInServer.SeatInServer--> Server started: ServerSocket[addr=0.0.0.0/0.0.0.0,localport=8080]
+04/01/2019 18:20:05 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 18:20:09 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 18:22:06 INFO seatInServer.JDBC.ConnectionPool.ConnectionPool--> Configurazione effettuata...
+04/01/2019 18:22:06 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 18:22:06 INFO seatInServer.JDBC.ConnectionPool.ConnectionPool--> Connessione operta...
+04/01/2019 18:22:06 INFO seatInServer.JDBC.ConnectionPool.ConnectionPool--> Configurazione andata a buon fine.
+04/01/2019 18:22:06 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 18:23:52 INFO seatInServer.JDBC.ConnectionPool.ConnectionPool--> Configurazione effettuata...
+04/01/2019 18:23:52 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 18:23:52 INFO seatInServer.JDBC.ConnectionPool.ConnectionPool--> Connessione operta...
+04/01/2019 18:23:52 INFO seatInServer.JDBC.ConnectionPool.ConnectionPool--> Configurazione andata a buon fine.
+04/01/2019 18:23:52 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 18:29:55 INFO seatInServer.JDBC.ConnectionPool.ConnectionPool--> Configurazione effettuata...
+04/01/2019 18:29:55 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 18:29:55 INFO seatInServer.JDBC.ConnectionPool.ConnectionPool--> Connessione operta...
+04/01/2019 18:29:58 INFO seatInServer.JDBC.ConnectionPool.ConnectionPool--> Configurazione andata a buon fine.
+04/01/2019 18:29:58 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 18:32:01 INFO seatInServer.JDBC.ConnectionPool.ConnectionPool--> Configurazione effettuata...
+04/01/2019 18:32:01 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 18:32:01 INFO seatInServer.JDBC.ConnectionPool.ConnectionPool--> Connessione operta...
+04/01/2019 18:32:04 INFO seatInServer.JDBC.ConnectionPool.ConnectionPool--> Configurazione andata a buon fine.
+04/01/2019 18:32:04 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 18:32:38 INFO seatInServer.JDBC.ConnectionPool.ConnectionPool--> Configurazione effettuata...
+04/01/2019 18:32:38 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 18:32:38 INFO seatInServer.JDBC.ConnectionPool.ConnectionPool--> Connessione operta...
+04/01/2019 18:32:40 INFO seatInServer.JDBC.ConnectionPool.ConnectionPool--> Configurazione andata a buon fine.
+04/01/2019 18:32:40 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 18:55:17 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 19:01:33 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 19:05:17 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 19:09:51 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 19:10:38 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 19:15:29 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 19:16:39 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 19:18:40 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 19:20:23 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 19:21:49 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 19:23:33 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 19:26:16 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 19:28:50 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 19:29:37 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 19:30:29 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 19:31:42 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 19:32:51 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 19:33:47 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 19:34:09 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 19:37:08 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 19:49:32 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 19:50:07 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 19:51:04 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 19:51:44 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 19:52:46 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 19:53:32 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 19:54:35 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 19:57:31 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 20:48:09 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 20:50:01 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 20:50:35 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 20:51:38 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 20:54:08 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 20:54:25 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 20:54:25 INFO seatInServer.SeatInServer--> Server started: ServerSocket[addr=0.0.0.0/0.0.0.0,localport=8080]
+04/01/2019 20:54:34 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 20:54:56 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 20:54:58 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 20:54:58 INFO seatInServer.SeatInServer--> Server started: ServerSocket[addr=0.0.0.0/0.0.0.0,localport=8080]
+04/01/2019 20:55:06 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 20:55:09 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 20:55:10 INFO seatInServer.SeatInServer--> Server started: ServerSocket[addr=0.0.0.0/0.0.0.0,localport=8080]
+04/01/2019 21:01:19 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 21:01:34 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 21:11:17 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 21:11:22 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 21:11:22 INFO seatInServer.SeatInServer--> Server started: ServerSocket[addr=0.0.0.0/0.0.0.0,localport=8080]
+04/01/2019 21:13:20 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 21:13:25 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+04/01/2019 21:13:25 INFO seatInServer.SeatInServer--> Server started: ServerSocket[addr=0.0.0.0/0.0.0.0,localport=8080]

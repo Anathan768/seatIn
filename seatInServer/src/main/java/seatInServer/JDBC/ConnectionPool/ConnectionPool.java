@@ -10,8 +10,6 @@ import java.util.concurrent.LinkedBlockingQueue;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import seatInServer.JDBC.ExecuteUpdate;
-
 public class ConnectionPool {
 	
 	private final static Logger logger = LogManager.getLogger(getCurrentClassName());
@@ -21,12 +19,17 @@ public class ConnectionPool {
 	private ConnectionPool() {
 		
 	}
-	
+	/**
+	 * Imposta i dati necessari per la connessione al data base.
+	 * @param db_host -- host del data base.
+	 * @param db_username -- nome profilo del data base.
+	 * @param db_password -- password del profilo utente del db.
+	 * @throws SQLException se i dati inseriti sono sbagliati. 
+	 */
 	public static void setConfigurations(String db_host, String db_username, String db_password) throws SQLException {
-		//config = new InitDataBase(db_host, db_username, db_password).createIfNotExist();
-		config = new Configuration(db_host, "dbSeatIn", db_username, db_password);
-		openConnection();
-		ExecuteUpdate.executeCreationTables();
+		config = new Configuration(db_host, "template1", db_username, db_password);
+		Connection testConn = openConnection();
+		config = new InitDataBase(db_host, db_username, db_password).createIfNotExist(testConn);
 	}
 	
 	private static Connection openConnection() throws SQLException{
