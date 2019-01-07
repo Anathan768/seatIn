@@ -35,6 +35,7 @@ public class ExecuteSelect {
 	
 	private final static Logger logger = LogManager.getLogger(getCurrentClassName());
 	private static ExecuteSelect select;
+	private ConnectionPool pool = ConnectionPool.getInstance();
 	
 	private ExecuteSelect() {
 		
@@ -61,7 +62,7 @@ public class ExecuteSelect {
 		int userType = 0;
 		
 		try {
-			conn = ConnectionPool.getConnection();
+			conn = pool.getConnection();
 			stmt = conn.prepareStatement(query);
 			stmt.setInt(1, userId);
 			
@@ -98,7 +99,7 @@ public class ExecuteSelect {
 				+" WHERE u.email=?;";
 				
 		try {
-			conn = ConnectionPool.getConnection();
+			conn = pool.getConnection();
 			stmt = conn.prepareStatement(query);
 			stmt.setString(1, email);
 			rs = stmt.executeQuery();
@@ -148,7 +149,7 @@ public class ExecuteSelect {
 			}
 		}
 		try {			
-			conn = ConnectionPool.getConnection();
+			conn = pool.getConnection();
 			stmt = conn.prepareStatement(query);
 			stmt.setInt(1, userId);
 			rs = stmt.executeQuery();
@@ -209,7 +210,7 @@ public class ExecuteSelect {
 		Course course = null;
 		
 		try {
-			conn = ConnectionPool.getConnection();
+			conn = pool.getConnection();
 			stmt = conn.prepareStatement(query);
 			stmt.setInt(1, courseId);
 			rs = stmt.executeQuery();
@@ -245,7 +246,7 @@ public class ExecuteSelect {
 		Integer id_degreeCourse = null;
 		
 		try {
-			conn = ConnectionPool.getConnection();
+			conn = pool.getConnection();
 			stmt = conn.prepareStatement(query);
 			stmt.setString(1, degreeCourseName);
 			rs = stmt.executeQuery();
@@ -274,7 +275,7 @@ public class ExecuteSelect {
 		Integer departmentId = null;
 		
 		try {
-			conn = ConnectionPool.getConnection();
+			conn = pool.getConnection();
 			stmt = conn.prepareStatement(query);
 			stmt.setString(1, departmentName);
 			rs = stmt.executeQuery();
@@ -305,7 +306,7 @@ public class ExecuteSelect {
 		Collection<String> lecturesEmail = new LinkedList<String>();
 		
 		try {
-			conn = ConnectionPool.getConnection();
+			conn = pool.getConnection();
 			stmt = conn.prepareStatement(query);
 			stmt.setInt(1, courseId);
 			rs = stmt.executeQuery();
@@ -335,7 +336,7 @@ public class ExecuteSelect {
 					   "WHERE users.group_id=3 AND courses.id=? AND courses.is_active;";
 		Collection<String> result = new LinkedList<String>();
 		try {
-			conn = ConnectionPool.getConnection();
+			conn = pool.getConnection();
 			conn.setAutoCommit(false);
 			stmt = conn.prepareStatement(query);
 			stmt.setInt(1, courseId);
@@ -364,7 +365,7 @@ public class ExecuteSelect {
 		
 		Collection<Course> result = new LinkedList<Course>();
 		try {
-			conn = ConnectionPool.getConnection();
+			conn = pool.getConnection();
 			stmt = conn.createStatement();
 			rs = stmt.executeQuery(query);
 		
@@ -412,7 +413,7 @@ public class ExecuteSelect {
 		}
 		Collection<Course> result = new ArrayList<Course>();
 		try {
-			conn = ConnectionPool.getConnection();
+			conn = pool.getConnection();
 			conn.setAutoCommit(false);
 			stmt = conn.prepareStatement(query);
 			stmt.setInt(1, userId);
@@ -448,7 +449,7 @@ public class ExecuteSelect {
 		Collection<Section> result = new ArrayList<Section>();
 		
 		try {
-			conn = ConnectionPool.getConnection();
+			conn = pool.getConnection();
 			stmt = conn.prepareStatement(query);
 			stmt.setInt(1, courseId);
 			rs = stmt.executeQuery();
@@ -488,7 +489,7 @@ public class ExecuteSelect {
 		Collection<Resource> result = new LinkedList<Resource>();
 		
 		try {
-			conn = ConnectionPool.getConnection();
+			conn = pool.getConnection();
 			stmt = conn.prepareStatement(query);
 			stmt.setInt(1, sectionId);
 			rs = stmt.executeQuery();
@@ -525,7 +526,7 @@ public class ExecuteSelect {
 		Collection<ResourceFile> result = null;
 		String query = "SELECT * FROM files WHERE resource_id = ?;";
 		try {
-			conn = ConnectionPool.getConnection();
+			conn = pool.getConnection();
 			stmt = conn.prepareStatement(query);
 			stmt.setInt(1, resourceId);
 			rs = stmt.executeQuery();
@@ -565,7 +566,7 @@ public class ExecuteSelect {
 		String result = null;
 		
 		try {
-			conn = ConnectionPool.getConnection();
+			conn = pool.getConnection();
 			stmt = conn.prepareStatement(query);
 			stmt.setInt(1, fileId);
 			rs = stmt.executeQuery();
@@ -594,7 +595,7 @@ public class ExecuteSelect {
 					   " WHERE is_logged_in;";
 		int result = -1;
 		try {
-			conn = ConnectionPool.getConnection();
+			conn = pool.getConnection();
 			stmt = conn.prepareStatement(query);
 			rs = stmt.executeQuery();
 			
@@ -626,7 +627,7 @@ public class ExecuteSelect {
 					   " WHERE date BETWEEN ? AND ?;";
 		int result = -1;
 		try {
-			conn = ConnectionPool.getConnection();
+			conn = pool.getConnection();
 			stmt = conn.prepareStatement(query);
 			stmt.setTimestamp(1, start);
 			stmt.setTimestamp(2, end);
@@ -658,7 +659,7 @@ public class ExecuteSelect {
 
 		double result = -1;
 		try {
-			conn = ConnectionPool.getConnection();
+			conn = pool.getConnection();
 			stmt = conn.prepareStatement(query);
 			rs = stmt.executeQuery();
 						
@@ -688,7 +689,7 @@ public class ExecuteSelect {
 					   " WHERE logged_in BETWEEN ? AND ?;";
 		int result = -1;
 		try {
-			conn = ConnectionPool.getConnection();
+			conn = pool.getConnection();
 			stmt = conn.prepareStatement(query);
 			stmt.setTimestamp(1, start);
 			stmt.setTimestamp(2, end);
@@ -722,7 +723,7 @@ public class ExecuteSelect {
 					  "	GROUP BY id) as innerq;";
 		double result = -1;
 		try {
-			conn = ConnectionPool.getConnection();
+			conn = pool.getConnection();
 			stmt = conn.prepareStatement(query);
 			stmt.setInt(1, courseId);
 			rs = stmt.executeQuery();
@@ -757,7 +758,7 @@ public class ExecuteSelect {
 					   		"WHERE modules.course_id=?);";
 		int result = -1;
 		try {
-			conn = ConnectionPool.getConnection();
+			conn = pool.getConnection();
 			stmt = conn.prepareStatement(query);
 			stmt.setInt(1, courseId);
 			

@@ -18,7 +18,7 @@ import seatInServer.JDBC.ConnectionPool.ConnectionPool;
 public class QueryResources {
 		
 	private final static Logger logger = LogManager.getLogger(getCurrentClassName());
-	
+	private static ConnectionPool pool = ConnectionPool.getInstance();
 	
 	private QueryResources() {
 		
@@ -27,7 +27,7 @@ public class QueryResources {
 	protected static void closeResources(Statement st, Connection conn) {
 		try {
 			st.close();
-			ConnectionPool.putbackConnection(conn);
+			pool.putbackConnection(conn);
 		}catch(SQLException e) {
 			logger.debug("Errore: chiusura \"Statement\": "+conn+"\t "+st+"\n"+e);
 		}	

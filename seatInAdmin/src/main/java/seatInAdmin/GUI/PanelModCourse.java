@@ -135,11 +135,7 @@ public class PanelModCourse extends JPanel {
 				courseToMod.setId(course.getId());
 				courseToMod.setName(nameField.getText());
 				courseToMod.setActive(isActiveBox.isSelected());
-				
-				System.out.println("IsActive: "+isActiveBox.isSelected());
-				System.out.println("IsActive: "+courseToMod.isActive());
-				
-				//TODO seguenti due righe sono da tolgiere dopo la fase di testing 
+	
 				courseToMod.setDegreeCourse(degreeField.getText());
 				courseToMod.setDescription(descriptionArea.getText()); 
 				String temp = commands.modifyCourseData(courseToMod);

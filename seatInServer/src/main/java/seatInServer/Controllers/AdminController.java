@@ -43,6 +43,7 @@ public class AdminController extends Thread{
 			Object result = null;
 						
 			try {
+				logger.debug("Admin Controller");
 				//1) Ricevimento del comando da parte del cliente
 				input = (String) objectInput.readObject();
 				

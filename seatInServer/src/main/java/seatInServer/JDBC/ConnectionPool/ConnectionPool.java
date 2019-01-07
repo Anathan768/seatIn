@@ -14,11 +14,20 @@ public class ConnectionPool {
 	
 	private final static Logger logger = LogManager.getLogger(getCurrentClassName());
 	private static Configuration config= new Configuration("localhost","dbSeatIn","postgres","13579sorc768");
+	private static ConnectionPool pool = new ConnectionPool();
 	private static LinkedBlockingQueue<Connection> connections = new LinkedBlockingQueue<Connection>(100);
-	private static int countActiveConnections = 0;
+	private int usedConnections = 0;
+	
 
 	private ConnectionPool() {
 		
+	}
+	
+	public static ConnectionPool getInstance() {
+		if(pool == null)
+			pool = new ConnectionPool();
+		
+		return pool;
 	}
 	/**
 	 * Imposta i dati necessari per la connessione al data base.
@@ -33,9 +42,8 @@ public class ConnectionPool {
 		//config = new InitDataBase(db_host, db_username, db_password).createIfNotExist(testConn);
 	}
 	
-	private static Connection openConnection() throws SQLException{
+	private Connection openConnection() throws SQLException{
 		Connection conn = null;
-			logger.debug("Inizializzazione nuova connessione al database.");
 			conn = DriverManager.getConnection(config.getURL(), config.getUsername(), config.getPassword());
 		return conn;
 	}
@@ -43,18 +51,24 @@ public class ConnectionPool {
 	 * Prende il riferimento ad una connessione e la restituisce al chiamante.
 	 * @return una connessione al data base
 	 */
-	public static synchronized Connection getConnection() {
+	public synchronized Connection getConnection() {
 		Connection newConn = null;
 		
 		try {
-			if(countActiveConnections <= 100) {
-				if(connections.size() > 0) {
-					newConn = connections.take();
-					logger.debug("Get connection...");
-				}else {
-					newConn = openConnection();
+			while(true) {
+				if(usedConnections < 100) {
+					if(connections.size() >= 1) {
+						newConn = connections.take();
+						logger.debug("Get connection...");
+					}else {
+						newConn = openConnection();
+						logger.debug("Open connection...");
+					}
+					usedConnections++;
+					break;
+				}else {	
+					wait();					
 				}
-				countActiveConnections++;
 			}
 		} catch (SQLException e) {
 			logger.debug("Errore: connessione non trovata nella Connection Pool: "+e.getMessage());
@@ -68,11 +82,12 @@ public class ConnectionPool {
 	 * @param conn Connections
 	 * @throws NullPointerException se il riferimento passato è null
 	 */
-	public static synchronized void putbackConnection(Connection conn) {
+	public synchronized void putbackConnection(Connection conn) {
 		try {
 			connections.add(conn);
-			countActiveConnections--;
 			logger.debug("Putback connection");
+			usedConnections--;
+			notify();
 		}catch(NullPointerException e) {
 			logger.debug("Errore restituzione connessione al ConnctionPool: "+e);
 		}

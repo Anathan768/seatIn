@@ -29,6 +29,7 @@ public class ExecuteUpdate {
 	private static ExecuteUpdate insert;
 	private static ExecuteSelect select = ExecuteSelect.getInstance();
 	private final static Logger logger = LogManager.getLogger(getCurrentClassName());
+	private ConnectionPool pool = ConnectionPool.getInstance();
 	
 	private ExecuteUpdate() {
 		
@@ -58,7 +59,7 @@ public class ExecuteUpdate {
 				+ " INSERT INTO profiles(activation_code, created, modified, is_active, department_id, degree_course_id, career_status, user_id)"
 				+ "VALUES(?, ?, ?, false, ?, ?, ?, (SELECT id FROM insert));";
 		try {
-			conn = ConnectionPool.getConnection();
+			conn = pool.getConnection();
 			stmt = conn.prepareStatement(query);
 			stmt.setString(1, user.getSurname());
 			stmt.setString(2, user.getName());
@@ -106,7 +107,7 @@ public class ExecuteUpdate {
 		String query = "INSERT INTO courses(name,description,activation_date,is_active,degree_course_id)VALUES(?,?,?,?,?);";
 		String result = negative;
 		try {
-			conn = ConnectionPool.getConnection();
+			conn = pool.getConnection();
 			stmt = conn.prepareStatement(query);
 			stmt.setString(1, course.getName());
 			stmt.setString(2, course.getDescription());
@@ -143,7 +144,7 @@ public class ExecuteUpdate {
 		String query = "UPDATE profiles SET is_active=false, wrong_logins=? "
 				 +" WHERE user_id = (SELECT u.id FROM users u WHERE email=?);";
 		try {
-			conn = ConnectionPool.getConnection();
+			conn = pool.getConnection();
 			stmt = conn.prepareStatement(query);
 			stmt.setInt(1, wrongLogins);
 			stmt.setString(2, email);
@@ -169,7 +170,7 @@ public class ExecuteUpdate {
 		String query = "UPDATE profiles SET is_active = true, wrong_logins = 0 WHERE user_id = ?;";
 		String result = negative;
 		try {
-			conn = ConnectionPool.getConnection();
+			conn = pool.getConnection();
 			stmt = conn.prepareStatement(query);
 			stmt.setInt(1, userId);
 			
@@ -199,7 +200,7 @@ public class ExecuteUpdate {
 		String updateActivationCode = "UPDATE profiles SET activation_code= ?, is_active = false " 
 					+" WHERE user_id = (SELECT u.id FROM users u WHERE u.email = ?);"; 
 		try {
-			conn = ConnectionPool.getConnection();
+			conn = pool.getConnection();
 			stmtPswd = conn.prepareStatement(apdatePassword);
 			stmtPswd.setString(1, password);
 			stmtPswd.setString(2, email);
@@ -231,9 +232,7 @@ public class ExecuteUpdate {
 					 + "WHERE id = ?;";
 		String result = negative;
 		try {
-			logger.debug("Get connection");
-			conn = ConnectionPool.getConnection();
-			logger.debug("had connestion");
+			conn = pool.getConnection();
 			stmt = conn.prepareStatement(query);
 			stmt.setString(1, course.getName());
 			stmt.setString(2, course.getDescription());
@@ -266,7 +265,7 @@ public class ExecuteUpdate {
 					 + "WHERE id=?;";
 		String result = negative;
 		try {
-			conn = ConnectionPool.getConnection();
+			conn = pool.getConnection();
 			stmt = conn.prepareStatement(query);
 			if(section.getParentId() == null)
 				stmt.setNull(1, java.sql.Types.INTEGER);
@@ -301,7 +300,7 @@ public class ExecuteUpdate {
 					 + "WHERE id = ?";
 		String result = negative;
 		try {
-			conn = ConnectionPool.getConnection();
+			conn = pool.getConnection();
 			stmt = conn.prepareStatement(query);
 			stmt.setString(1, resource.getTitle());
 			stmt.setString(2, resource.getDescription());
@@ -327,7 +326,7 @@ public class ExecuteUpdate {
 		String query = "DELETE FROM modules WHERE id = ?;";
 		String result = negative;
 		try {
-			conn = ConnectionPool.getConnection();
+			conn = pool.getConnection();
 			stmt = conn.prepareStatement(query);
 			stmt.setInt(1, sectionId);
 			
@@ -352,7 +351,7 @@ public class ExecuteUpdate {
 		String query = "DELETE FROM resources WHERE id = ?;";
 		String result = negative;
 		try {
-			conn = ConnectionPool.getConnection();
+			conn = pool.getConnection();
 			stmt = conn.prepareStatement(query);
 			stmt.setInt(1, resourceId);
 			
@@ -377,7 +376,7 @@ public class ExecuteUpdate {
 		String query = "DELETE FROM files WHERE id = ?;";
 		String result = negative;
 		try {
-			conn = ConnectionPool.getConnection();
+			conn = pool.getConnection();
 			stmt = conn.prepareStatement(query);
 			stmt.setInt(1, fileId);
 			
@@ -406,7 +405,7 @@ public class ExecuteUpdate {
 	String result = negative;
 
 	try {
-		conn = ConnectionPool.getConnection();
+		conn = pool.getConnection();
 		stmt = conn.prepareStatement(userQuery);
 		stmt.setString(1, user.getSurname());
 		stmt.setString(2, user.getName());
@@ -451,7 +450,7 @@ public class ExecuteUpdate {
 		PreparedStatement stmt = null;
 		String query = "UPDATE users SET group_id = ? WHERE id = ?;";
 		try {
-			conn = ConnectionPool.getConnection();
+			conn = pool.getConnection();
 			stmt = conn.prepareStatement(query);
 			stmt.setInt(1, userType);
 			stmt.setInt(2, userId);
@@ -488,7 +487,7 @@ public class ExecuteUpdate {
 			}
 		}
 		try {
-			conn = ConnectionPool.getConnection();
+			conn = pool.getConnection();
 			stmt = conn.prepareStatement(query);
 			stmt.setInt(1, userId);
 			stmt.setInt(2, courseId);
@@ -516,7 +515,7 @@ public class ExecuteUpdate {
 		String query = "WITH insert AS(INSERT INTO modules(parent_id, title, description, is_active, active_from, active_to, course_id) "
 				+ " VALUES(?, ?, ?, ?, ?, ?, ?) RETURNING id) SELECT id FROM insert;";
 		try {
-			conn = ConnectionPool.getConnection();
+			conn = pool.getConnection();
 			stmt = conn.prepareStatement(query);
 			
 			if(section.getParentId() == null)
@@ -556,7 +555,7 @@ public class ExecuteUpdate {
 		String query = "WITH insert AS(INSERT INTO resources(title, description, module_id) " + 
 					   "VALUES(?, ?, ?) RETURNING id) SELECT id FROM insert;";
 		try {
-			conn = ConnectionPool.getConnection();
+			conn = pool.getConnection();
 			stmt = conn.prepareStatement(query);
 			stmt.setString(1, resource.getTitle());
 			stmt.setString(2, resource.getDescription());
@@ -588,7 +587,7 @@ public class ExecuteUpdate {
 		String query = "WITH insert AS(INSERT INTO files(file, resource_id) VALUES(?, ?) RETURNING id) "
 				+ "SELECT id FROM insert;";
 		try {
-			conn = ConnectionPool.getConnection();
+			conn = pool.getConnection();
 			stmt = conn.prepareStatement(query);
 			stmt.setString(1, path);
 			stmt.setInt(2, resourceId);
@@ -619,7 +618,7 @@ public class ExecuteUpdate {
 				+ " UPDATE profiles SET is_active = true WHERE user_id = (SELECT id FROM update);";
 		String result = null;
 		try {
-			conn = ConnectionPool.getConnection();
+			conn = pool.getConnection();
 			stmt = conn.prepareStatement(query);
 			stmt.setString(1, password);
 			stmt.setInt(2, userId);
