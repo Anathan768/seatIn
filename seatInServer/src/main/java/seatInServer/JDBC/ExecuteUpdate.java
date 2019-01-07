@@ -103,8 +103,7 @@ public class ExecuteUpdate {
 	public String insertCourse(Course course, Integer degreeCourseId) {
 		Connection conn = null;
 		PreparedStatement stmt = null;
-		String query = "INSERT INTO courses(name, description, activation_date, is_active, degree_course_id) "
-				 +" VALUES(?,?,?,?,?)";
+		String query = "INSERT INTO courses(name,description,activation_date,is_active,degree_course_id)VALUES(?,?,?,?,?);";
 		String result = negative;
 		try {
 			conn = ConnectionPool.getConnection();
@@ -123,7 +122,6 @@ public class ExecuteUpdate {
 				stmt.setNull(5, java.sql.Types.INTEGER);
 			else
 				stmt.setInt(5, degreeCourseId);
-			
 			stmt.executeUpdate();
 			result = positive;
 		}catch(SQLException e) {
@@ -143,7 +141,7 @@ public class ExecuteUpdate {
 		Connection conn = null;
 		PreparedStatement stmt = null;
 		String query = "UPDATE profiles SET is_active=false, wrong_logins=? "
-				 +" WHERE user_id = (SELECT u.id FROM users u WHERE email=?)";
+				 +" WHERE user_id = (SELECT u.id FROM users u WHERE email=?);";
 		try {
 			conn = ConnectionPool.getConnection();
 			stmt = conn.prepareStatement(query);
@@ -168,7 +166,7 @@ public class ExecuteUpdate {
 	public String unlockAccount(int userId) {
 		Connection conn = null;
 		PreparedStatement stmt = null;
-		String query = "UPDATE profiles SET is_active = true, wrong_logins = 0 WHERE user_id = ?";
+		String query = "UPDATE profiles SET is_active = true, wrong_logins = 0 WHERE user_id = ?;";
 		String result = negative;
 		try {
 			conn = ConnectionPool.getConnection();
@@ -199,7 +197,7 @@ public class ExecuteUpdate {
 		PreparedStatement stmtCode = null;
 		String apdatePassword = "UPDATE users SET password = ? WHERE email = ?;";
 		String updateActivationCode = "UPDATE profiles SET activation_code= ?, is_active = false " 
-					+" WHERE user_id = (SELECT u.id FROM users u WHERE u.email = ?)"; 
+					+" WHERE user_id = (SELECT u.id FROM users u WHERE u.email = ?);"; 
 		try {
 			conn = ConnectionPool.getConnection();
 			stmtPswd = conn.prepareStatement(apdatePassword);
@@ -230,7 +228,7 @@ public class ExecuteUpdate {
 		Connection conn = null;
 		PreparedStatement stmt = null;
 		String query = "UPDATE courses SET name=?,description=?,activation_date=?,is_active=?,degree_course_id =? "
-					 + "WHERE id = ?";
+					 + "WHERE id = ?;";
 		String result = negative;
 		try {
 			logger.debug("Get connection");
@@ -265,7 +263,7 @@ public class ExecuteUpdate {
 		PreparedStatement stmt = null;
 		String query = "UPDATE modules "
 					 + "SET parent_id=?,title=?,description=?,is_active=?,active_from=?,active_to=? " 
-					 + "WHERE id=?";
+					 + "WHERE id=?;";
 		String result = negative;
 		try {
 			conn = ConnectionPool.getConnection();
@@ -326,7 +324,7 @@ public class ExecuteUpdate {
 	public String deleteCourseSection(int sectionId) {
 		Connection conn = null;
 		PreparedStatement stmt = null;
-		String query = "DELETE FROM modules WHERE id = ?";
+		String query = "DELETE FROM modules WHERE id = ?;";
 		String result = negative;
 		try {
 			conn = ConnectionPool.getConnection();
@@ -351,7 +349,7 @@ public class ExecuteUpdate {
 	public String deleteSectionResource(int resourceId) {
 		Connection conn = null;
 		PreparedStatement stmt = null;
-		String query = "DELETE FROM resources WHERE id = ?";
+		String query = "DELETE FROM resources WHERE id = ?;";
 		String result = negative;
 		try {
 			conn = ConnectionPool.getConnection();
@@ -376,7 +374,7 @@ public class ExecuteUpdate {
 	public String deleteResourceFile(int fileId) {
 		Connection conn = null;
 		PreparedStatement stmt = null;
-		String query = "DELETE FROM files WHERE id = ?";
+		String query = "DELETE FROM files WHERE id = ?;";
 		String result = negative;
 		try {
 			conn = ConnectionPool.getConnection();
@@ -403,7 +401,7 @@ public class ExecuteUpdate {
 	Connection conn = null;
 	PreparedStatement stmt = null;
 	String userQuery = "UPDATE users SET surname=?, first_name=?, email=?"
-				+ " WHERE id=?";
+				+ " WHERE id=?;";
 	String profileQuery = null;
 	String result = negative;
 
@@ -417,7 +415,7 @@ public class ExecuteUpdate {
 		stmt.executeUpdate();
 		
 		if(user instanceof Student) {
-			profileQuery = "UPDATE profiles SET degree_course_id=?, career_status=? WHERE user_id=?";
+			profileQuery = "UPDATE profiles SET degree_course_id=?, career_status=? WHERE user_id=?;";
 			stmt = conn.prepareStatement(profileQuery);
 			Student st = (Student) user;
 			int degreeCourseId = select.selectDegreeCourseIdByName(st.getDegreeCourse());
@@ -427,7 +425,7 @@ public class ExecuteUpdate {
 			stmt.executeUpdate();
 		}
 		if(user instanceof Lecture || user instanceof Admin) {
-			profileQuery = "UPDATE profiles SET department_id = ? WHERE user_id=?";
+			profileQuery = "UPDATE profiles SET department_id = ? WHERE user_id=?;";
 			stmt = conn.prepareStatement(profileQuery);
 			Lecture prof = (Lecture) user;
 			int departmentId = select.selectDepartementIdByName(prof.getDepartment());
@@ -451,7 +449,7 @@ public class ExecuteUpdate {
 	public void modifyUserType(int userId, int userType) {
 		Connection conn = null;
 		PreparedStatement stmt = null;
-		String query = "UPDATE users SET group_id = ? WHERE id = ?";
+		String query = "UPDATE users SET group_id = ? WHERE id = ?;";
 		try {
 			conn = ConnectionPool.getConnection();
 			stmt = conn.prepareStatement(query);
@@ -482,11 +480,11 @@ public class ExecuteUpdate {
 		
 		if(userType == 2 || userType == 1) {
 			query = "INSERT INTO lectures_courses(user_id, course_id) "+
-					"VALUES(?, ?)";
+					"VALUES(?, ?);";
 		}else {
 			if(userType == 3) {
 				query = "INSERT INTO study_plans(user_id, course_id) "
-					   +"VALUES(?, ?)";
+					   +"VALUES(?, ?);";
 			}
 		}
 		try {

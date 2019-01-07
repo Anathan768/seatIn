@@ -95,7 +95,7 @@ public class Registration {
      * Esempio: ACCEPT - andata a buon fine, DENIED - fallita.
 	 */
 	public String createCourseInstance(Course course) { 
-		Integer degreeCourseId = this.executeSelect.selectDegreeCourseIdByName(course.getDegreeCourse());		
+		Integer degreeCourseId = this.executeSelect.selectDegreeCourseIdByName(course.getDegreeCourse());
 		return this.executeUpdate.insertCourse(course, degreeCourseId);
 	}
 	

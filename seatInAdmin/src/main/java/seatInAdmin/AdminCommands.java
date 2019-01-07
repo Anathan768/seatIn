@@ -170,7 +170,7 @@ public class AdminCommands {
      */
     public String regisrationUsersFromCSVFile(String path) {
         BasicCSVReader read = new BasicCSVReader();
-        String command = "RegistrationFromCSVFile";
+        String command = "RegistrationFromCSVFile/";
         server.sendCommand(command);
         Collection<User> objects = read.readFile(path);
         server.sendCommand(objects);
@@ -184,7 +184,7 @@ public class AdminCommands {
      * Esempio: ACCEPT - andata a buon fine, DENIED - fallita.
      */
     public String modifyUserData(User user) {
-        String command = "ModifyUserData";
+        String command = "ModifyUserData/";
         server.sendCommand(command);
         server.sendCommand(user);
         return(String) server.getResult();
@@ -299,7 +299,7 @@ public class AdminCommands {
      */
     @SuppressWarnings("unchecked")
 	public HashMap<Course, Double> viewAverageConnectionTimeOfStudentsForEachCourse(){
-        String command = "viewAverageConnectionTimeOfStudents";
+        String command = "viewAverageConnectionTimeOfStudents/";
         return  (HashMap<Course, Double>) this.callServer(command);
     }
     /**
@@ -308,14 +308,14 @@ public class AdminCommands {
      */
     @SuppressWarnings("unchecked")
 	public HashMap<Course, Integer> viewTotalNumberDownloadsForEachCourse(){
-        String command = "viewTotalNumberDownloadsPerCourse";
+        String command = "viewTotalNumberDownloadsPerCourse/";
         return  (HashMap<Course, Integer>) this.callServer(command);
     }
     /**
      * Chiusura connessione al server.
      */
     public void close() {
-    	String command = "Close";
+    	String command = "Close/";
     	this.callServer(command);
     }
     /*

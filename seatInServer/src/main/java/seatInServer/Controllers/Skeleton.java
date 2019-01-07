@@ -40,29 +40,33 @@ public class Skeleton extends Thread{
 			Object result = null;
 			
 			try {
+				logger.debug("Skeleton Start work...");
 				//1) Ricevimento della chiamata da parte del cliente
 				input = (String) objectInput.readObject();
 				
 				//2) Parsing della chiamata ricevuta
 				command = requestParser(input);
 
-				Login login = new Login();; 
+				Login login = new Login();
 				ResetPassword reset = new ResetPassword();
 				ManipolationUserData execute = new ManipolationUserData();
 				
 				//3) Esecuzione della richiesta effettuata
 				switch(command[0]) {
 				case "Login":
+						logger.debug("Execute Login: "+command[1]+" - "+command[2]);
 						result = login.verifyUserData(command[1],command[2]);
 					break;
 				case "ResetPassword":
+						logger.debug("Execute ResetPassword...");
 						reset.execute(command[1]);
 					break;
 				case "ActivationAccount":
+					logger.debug("Execute ActivationAccount...");
 					result = execute.activationUserAccount(Integer.parseInt(command[1]), command[2]);
 					break;				
 				default: 
-					logger.debug("Comando ricevuto non riconosciuto, Skeleton: "+input);
+					logger.debug("Comando ricevuto non riconosciuto-----Skeleton: "+input);
 					result = negative;
 				}
 			

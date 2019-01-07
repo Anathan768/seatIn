@@ -57,7 +57,7 @@ public class ExecuteSelect {
 		Connection conn = null;
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
-		String query = "SELECT group_id FROM users WHERE id = ?";
+		String query = "SELECT group_id FROM users WHERE id = ?;";
 		int userType = 0;
 		
 		try {
@@ -72,7 +72,7 @@ public class ExecuteSelect {
 		}catch(SQLException e) {
 			logger.debug("errore esecuzione selectUserType: "+e);
 		}finally {
-			
+			closeResources(rs, stmt, conn);
 		}
 		return userType;
 	}
@@ -137,7 +137,7 @@ public class ExecuteSelect {
 		if(userType == 3) {
 			query = "SELECT u.id, u.surname, u.first_name, u.email, u.password, g.name as type, p.is_active, p.activation_code, p.created, p.career_status, d.name "
 					+" FROM profiles p INNER JOIN users u ON p.user_id=u.id INNER JOIN degree_courses d ON p.degree_course_id=d.id INNER JOIN groups g ON u.group_id=g.id "
-					+" WHERE u.id = ?" ;
+					+" WHERE u.id = ?;" ;
 		}else {
 			if(userType == 2 || userType == 1) {
 				query = "SELECT u.id, u.surname, u.first_name, u.email, u.password, g.name as type, p.is_active, p.activation_code, d.name "
@@ -205,7 +205,7 @@ public class ExecuteSelect {
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
 		String query = "SELECT c.id, c.name, c.description, c.activation_date, c.is_active, d.name AS dep "
-					 + "FROM courses c, degree_courses d WHERE c.id = ?";
+					 + "FROM courses c, degree_courses d WHERE c.id = ?;";
 		Course course = null;
 		
 		try {
@@ -241,7 +241,7 @@ public class ExecuteSelect {
 		Connection conn = null;
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
-		String query = "SELECT id FROM degree_courses WHERE name = ?";
+		String query = "SELECT id FROM degree_courses WHERE name = ?;";
 		Integer id_degreeCourse = null;
 		
 		try {
@@ -249,7 +249,6 @@ public class ExecuteSelect {
 			stmt = conn.prepareStatement(query);
 			stmt.setString(1, degreeCourseName);
 			rs = stmt.executeQuery();
-			
 			while(rs.next()) {
 				id_degreeCourse = rs.getInt("id");
 			}
@@ -271,7 +270,7 @@ public class ExecuteSelect {
 		Connection conn = null;
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
-		String query = "SELECT id FROM departments WHERE name = ?";
+		String query = "SELECT id FROM departments WHERE name = ?;";
 		Integer departmentId = null;
 		
 		try {
@@ -485,7 +484,7 @@ public class ExecuteSelect {
 		Connection conn = null; 
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
-		String query = "SELECT * FROM resources WHERE module_id = ?";
+		String query = "SELECT * FROM resources WHERE module_id = ?;";
 		Collection<Resource> result = new LinkedList<Resource>();
 		
 		try {
@@ -524,7 +523,7 @@ public class ExecuteSelect {
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
 		Collection<ResourceFile> result = null;
-		String query = "SELECT * FROM files WHERE resource_id = ?";
+		String query = "SELECT * FROM files WHERE resource_id = ?;";
 		try {
 			conn = ConnectionPool.getConnection();
 			stmt = conn.prepareStatement(query);
@@ -562,7 +561,7 @@ public class ExecuteSelect {
 		Connection conn = null; 
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
-		String query = "SELECT file FROM files WHERE id = ?";
+		String query = "SELECT file FROM files WHERE id = ?;";
 		String result = null;
 		
 		try {

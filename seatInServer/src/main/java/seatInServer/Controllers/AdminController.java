@@ -35,7 +35,6 @@ public class AdminController extends Thread{
 	
 	@SuppressWarnings("unchecked")
 	public void run() {
-		
 		boolean isActive = true;
 		
 		while(isActive) {			
@@ -57,7 +56,6 @@ public class AdminController extends Thread{
 				
 				//2) Parsing del comando ricevuto
 				command = requestParser(input);
-				
 				//3) Esecuzione comando
 				switch(command[0]) {
 				case "ViewUserProfileData":
@@ -66,17 +64,16 @@ public class AdminController extends Thread{
 				case "ViewCourseData":
 					result = courseData.viewCourseData(Integer.parseInt(command[1]));
 					break;
-				case "ViewCourses":				
+				case "ViewCourses":	
 					result = view.viewAllCourses(Integer.parseInt(command[1]));		
 					break;
-				case "ViewCourseContent":					
+				case "ViewCourseContent":
 					result = view.viewCourseContent(Integer.parseInt(command[1]), Boolean.parseBoolean(command[2]));
-					logger.debug("View Content ");
 					break;
 				case "RegistrationAtCourse":
 					result = userData.registrationUserAtCourse(Integer.parseInt(command[1]), Integer.parseInt(command[2]));
 					break;
-				case "DownloadFile": 					
+				case "DownloadFile": 
 					result = download.downloadFile(Integer.parseInt(command[1]));
 					break;
 				case "DownloadZip":
@@ -104,13 +101,14 @@ public class AdminController extends Thread{
 				case "sendEmailToCourseStudents":
 					result = email.allertAllCourseStudents(command[1], command[2], Integer.parseInt(command[3]), command[4], command[5]);
 					break;
-				case "sendEmailToASelectionOfStudents":Collection<Integer> students = (Collection<Integer>) this.objectInput.readObject();
+				case "sendEmailToASelectionOfStudents":
+					Collection<Integer> students = (Collection<Integer>) this.objectInput.readObject();
 					result = email.allertASelectionOfStudents(command[1], command[2], students, command[3], command[4]);
 					break;
 				case "viewTotalNumberConnectedUsers":
 					result = statistic.getTotalNumberConnectedUsers();
 					break;
-				case "usersHaveDownloadOneOrMoreResources":					
+				case "usersHaveDownloadOneOrMoreResources":	
 					result = statistic.getTotalNumberOfUsersHaveDownloadOneOrMoreResoursesInTimeIntervals(Timestamp.valueOf(command[1]), Timestamp.valueOf(command[2]));
 					break;
 				case "averageConnectionTime":
@@ -133,7 +131,6 @@ public class AdminController extends Thread{
 					logger.debug("Comando ricevuto non riconosciuto, AdminController: "+input);
 					result = negative;
 				}	
-				
 				registration = null;
 				view = null;
 				userData = null;
@@ -141,11 +138,10 @@ public class AdminController extends Thread{
 				email = null;
 				download = null;
 				statistic = null;
-								
+				
 				//5) Restituzione del risultato dell'operazione eseguita
 				objectOutput.writeObject(result);
 				objectOutput.flush();
-				
 			}catch(NullPointerException e) {
 				logger.debug("Errore: Parsing comando "+e);
 			}catch (ClassNotFoundException e) {
