@@ -4,7 +4,6 @@ package seatInAdmin.GUI;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Component;
-import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -13,14 +12,12 @@ import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 import javax.swing.border.EmptyBorder;
 
 import seatInAdmin.AdminCommands;
-import seatInAdmin.Items;
 
 @SuppressWarnings("serial")
 public class PanelRedeem extends JPanel {
@@ -71,6 +68,7 @@ public class PanelRedeem extends JPanel {
 				frame.getContentPane().removeAll();
 				frame.getContentPane().add(new PanelLogin());
 				frame.pack();
+				frame.setLocationRelativeTo(null);
 				frame.getContentPane().validate();
 			}
 

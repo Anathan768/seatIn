@@ -8,13 +8,13 @@ import seatInAdmin.GUI.GUI;
 
 import static seatInAdmin.Items.setServerConnection;
 
-public class SeatInAdmin {
+public class SeatInAdmin{
 
 	private InetAddress addr;
 	private Socket socket;
 	private final int PORT = 8080;
 	
-	private SeatInAdmin() throws IOException {
+	public SeatInAdmin() throws IOException {
 		addr = InetAddress.getByName(null);
 		socket = new Socket(addr, PORT);
 		Proxy connection = new Proxy(socket);
@@ -24,7 +24,5 @@ public class SeatInAdmin {
 	
 	public static void main(String[] args) throws IOException {
 		new SeatInAdmin();
-		
 	}
-
 }

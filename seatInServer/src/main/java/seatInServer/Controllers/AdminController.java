@@ -125,6 +125,10 @@ public class AdminController extends Thread{
 				case "viewTotalNumberDownloadsPerCourse":
 					result = statistic.getTotalNumberDownloadsForEachCourse();
 					break;
+				case "Close":
+					isActive=false;
+					logger.info("Chiusura connessione cliente! "+clientSocket);
+					break;
 				default:
 					logger.debug("Comando ricevuto non riconosciuto, AdminController: "+input);
 					result = negative;
@@ -152,9 +156,11 @@ public class AdminController extends Thread{
 				try {
 					logger.info("Chiusura connessione cliente! "+clientSocket);
 					clientSocket.close();
+					isActive=false;
 					break;
 				} catch (IOException e1) {
 					logger.debug("Errore durante chiusura connessione: "+e);
+					isActive=false;
 				}
 			}
 		}

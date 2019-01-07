@@ -16,6 +16,9 @@ import javax.swing.SwingUtilities;
 import javax.swing.border.EmptyBorder;
 
 import seatInAdmin.AdminCommands;
+import seatInServer.JDBC.Beans.Admin;
+import seatInServer.JDBC.Beans.Lecture;
+import seatInServer.JDBC.Beans.Student;
 import seatInServer.JDBC.Beans.User;
 
 @SuppressWarnings("serial")
@@ -49,27 +52,42 @@ public class PanelViewUser extends JPanel {
 
 		searchButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				int a = 0;
-				
+
 				String userId = idField.getText();
+				
+				if(userId.equals(""))
+					return;
+				
 				int id = Integer.parseInt(userId);
-				
-				User userData = commands.viewUserProfileData(id);		
-			
-				
-				if (a == 1) {
+
+				User userData = commands.viewUserProfileData(id);
+
+				if (userData instanceof Lecture) {
 					JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(c);
 					frame.getContentPane().removeAll();
-					frame.getContentPane().add(new PanelProfileTeach("a","b","c","d","e"));
+					frame.getContentPane().add(new PanelProfileTeach((Lecture)userData));
 					frame.pack();
+					frame.setLocationRelativeTo(null);
 					frame.getContentPane().validate();
-				} else {
+				}
+
+				if (userData instanceof Student) {
 					JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(c);
 					frame.getContentPane().removeAll();
-					frame.getContentPane().add(new PanelProfileStd("a","b","c","d","e","f","g"));
+					frame.getContentPane().add(new PanelProfileStd((Student)userData));
 					frame.pack();
+					frame.setLocationRelativeTo(null);
 					frame.getContentPane().validate();
 
+				}
+				
+				if (userData instanceof Admin) { 
+					JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(c);
+					frame.getContentPane().removeAll();
+					frame.getContentPane().add(new PanelProfileAdmin((Admin)userData));
+					frame.pack();
+					frame.setLocationRelativeTo(null);
+					frame.getContentPane().validate();
 				}
 			}
 

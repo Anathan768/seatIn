@@ -113,13 +113,16 @@ public class PanelLogin extends JPanel implements ActionListener {
 							JOptionPane.ERROR_MESSAGE, null, new Object[] {}, null);
 					return;
 
-				} else {			
-					Items.setUserData((User)result);
-					JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(c);
-					frame.getContentPane().removeAll();
-					frame.getContentPane().add(new PanelMenu());
-					frame.pack();
-					frame.getContentPane().validate();
+				} else {
+					if(result instanceof User) {
+						Items.setUserData((User)result);
+						JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(c);
+						frame.getContentPane().removeAll();
+						frame.getContentPane().add(new PanelMenu());
+						frame.pack();
+						frame.setLocationRelativeTo(null);
+						frame.getContentPane().validate();
+					}
 				}
 
 			}
@@ -136,6 +139,7 @@ public class PanelLogin extends JPanel implements ActionListener {
 		frame.getContentPane().removeAll();
 		frame.getContentPane().add(new PanelRedeem());
 		frame.pack();
+		frame.setLocationRelativeTo(null);
 		frame.getContentPane().validate();
 
 	}

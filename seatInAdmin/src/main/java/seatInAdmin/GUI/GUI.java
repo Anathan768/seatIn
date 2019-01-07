@@ -7,7 +7,7 @@ public class GUI  {
 	public void initalizeGUI() {
 		
 		JFrame frame = new JFrame();
-		frame.setTitle("Seat In Admin");
+		frame.setTitle("SeatInAdmin");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.add(new PanelLogin());
 		frame.pack();

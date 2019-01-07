@@ -10,40 +10,37 @@ import javax.swing.JLabel;
 import javax.swing.SwingUtilities;
 
 import seatInAdmin.AdminCommands;
-import seatInServer.JDBC.Beans.Lecture;
+import seatInServer.JDBC.Beans.Admin;
 
 @SuppressWarnings("serial")
-public class PanelProfileTeach extends PanelProfile {
+public class PanelProfileAdmin extends PanelProfile {
 	
 	AdminCommands commands;
-	Lecture lecture;
 
 	JLabel department = new JLabel("Department: ");
 	JLabel depField = new JLabel();
 
-	public PanelProfileTeach(Lecture lecture) {
+	public PanelProfileAdmin(Admin admin) {
 		super();
-		
-		this.lecture = lecture;
 		
 		commands = AdminCommands.getInstance();
 		
-		setTable();
-		title.setText("PROFESSOR");
-		setValues(lecture.getName(), lecture.getSurname(), lecture.getEmail(), String.valueOf(lecture.getId()));
-		depField.setText(lecture.getDepartment());
+		setTable(admin.getDepartment());
+		title.setText("ADMINISTRAOR");
+		setValues(admin.getName(), admin.getSurname(), admin.getEmail(), String.valueOf(admin.getId()));
+		depField.setText(admin.getDepartment());
 
 		
 	}
 
-	private void setTable(){
+	private void setTable(String dep){
 		
 		
 		modifyButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(c);
 				frame.getContentPane().removeAll();
-				frame.getContentPane().add(new PanelModTeachProf(lecture));
+				frame.getContentPane().add(new PanelModAdminProf());
 				frame.pack();
 				frame.setLocationRelativeTo(null);
 				frame.getContentPane().validate();

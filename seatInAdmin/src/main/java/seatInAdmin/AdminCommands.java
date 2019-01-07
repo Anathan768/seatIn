@@ -197,7 +197,7 @@ public class AdminCommands {
      * Esempio: ACCEPT - andata a buon fine, DENIED - fallita.
      */
     public String unlockAccount(int userId) {
-        String command = "UnlockAccount" + "/" + userId;
+        String command = "UnlockAccount/"+userId;
         return (String) this.callServer(command);
     }
 
@@ -221,7 +221,7 @@ public class AdminCommands {
      * Esempio: ACCEPT - andata a buon fine, DENIED - fallita.
      */
     public String modifyCourseData(Course course) {
-        String command = "ModifyCourseData";
+        String command = "ModifyCourseData/";
         server.sendCommand(command);
         server.sendCommand(course);
         return (String)server.getResult();
@@ -310,6 +310,13 @@ public class AdminCommands {
 	public HashMap<Course, Integer> viewTotalNumberDownloadsForEachCourse(){
         String command = "viewTotalNumberDownloadsPerCourse";
         return  (HashMap<Course, Integer>) this.callServer(command);
+    }
+    /**
+     * Chiusura connessione al server.
+     */
+    public void close() {
+    	String command = "Close";
+    	this.callServer(command);
     }
     /*
      * Il metodo generale usato per mandare le richieste al server.

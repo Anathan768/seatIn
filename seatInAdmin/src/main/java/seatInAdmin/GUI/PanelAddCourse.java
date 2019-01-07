@@ -14,16 +14,21 @@ import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 import javax.swing.border.EmptyBorder;
 
+import seatInAdmin.AdminCommands;
+import seatInServer.JDBC.Beans.Course;
+
 @SuppressWarnings("serial")
 public class PanelAddCourse extends JPanel {
-	
+
 	Component c = this;
+	AdminCommands commands;
 
 	// PANELS
 	JPanel titlePanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
@@ -34,7 +39,6 @@ public class PanelAddCourse extends JPanel {
 	JLabel titleLabel = new JLabel("Add Course");
 	JLabel nameLabel = new JLabel("Name:");
 	JLabel descriptionLabel = new JLabel("Description:");
-	JLabel toLabel = new JLabel("Active from:");
 	JLabel courseLabel = new JLabel("Course Degree:");
 
 	// BUTTONS
@@ -44,32 +48,49 @@ public class PanelAddCourse extends JPanel {
 	// FIELDS & AREAS
 	JTextArea descriptionArea = new JTextArea(10, 20);
 	JTextField nameField = new JTextField(20);
-	JTextField fromField = new JTextField(20);
 	JTextField courseField = new JTextField(20);
 
 	// CHECKBOX
 	JCheckBox isActiveBox = new JCheckBox("Active");
 
 	protected PanelAddCourse() {
-		
+
+		commands = AdminCommands.getInstance();
+
 		titleLabel.setFont(titleLabel.getFont().deriveFont(20.0f));
 
 		this.setLayout(new BorderLayout());
 		this.setBorder((new EmptyBorder(5, 5, 5, 5)));
-		
+
 		addButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(c);
-				frame.getContentPane().removeAll();
-				frame.getContentPane().add(new PanelMenu());
-				frame.pack();
-				frame.getContentPane().validate();
+
+				Course course = new Course();
+				course.setName(nameField.getText());
+				course.setDescription(descriptionArea.getText());
+				course.setActive(isActiveBox.isSelected());
+				course.setDegreeCourse(courseField.getText());
+
+				String result = commands.createCourseInstance(course);
+
+				if (result.equals("ACCEPT")) {
+
+					JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(c);
+					frame.getContentPane().removeAll();
+					frame.getContentPane().add(new PanelMenu());
+					frame.pack();
+					frame.setLocationRelativeTo(null);
+					frame.getContentPane().validate();
+				} else {
+					JOptionPane.showOptionDialog(new JFrame(), "Modifie not Legal", "", JOptionPane.DEFAULT_OPTION,
+							JOptionPane.ERROR_MESSAGE, null, new Object[] {}, null);
+				}
 			}
 
 		});
 
 		backButton.addActionListener(new ToMenuAction(c));
-		
+
 		GridBagConstraints gbc = new GridBagConstraints();
 
 		// COMPONENT: COLUMN 0, ROW 0
@@ -131,24 +152,6 @@ public class PanelAddCourse extends JPanel {
 		gbc = new GridBagConstraints();
 		gbc.gridx = 1;
 		gbc.gridy = 3;
-		gbc.insets = new Insets(5, 0, 5, 5);
-		gbc.anchor = GridBagConstraints.LINE_START;
-		generalPanel.add(fromField, gbc);
-
-		// COMPONENT: COLUMN 0, ROW 4
-
-		gbc = new GridBagConstraints();
-		gbc.gridx = 0;
-		gbc.gridy = 4;
-		gbc.insets = new Insets(5, 5, 5, 5);
-		gbc.anchor = GridBagConstraints.LINE_START;
-		generalPanel.add(toLabel, gbc);
-
-		// COMPONENT: COLUMN 1, ROW 4
-
-		gbc = new GridBagConstraints();
-		gbc.gridx = 1;
-		gbc.gridy = 4;
 		gbc.insets = new Insets(5, 0, 5, 5);
 		gbc.anchor = GridBagConstraints.LINE_START;
 		generalPanel.add(courseField, gbc);

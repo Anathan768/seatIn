@@ -5,6 +5,8 @@ import java.awt.Component;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+import java.io.IOException;
 import java.util.Collection;
 
 import javax.swing.BorderFactory;
@@ -24,6 +26,7 @@ import javax.swing.table.DefaultTableModel;
 
 import seatInAdmin.AdminCommands;
 import seatInAdmin.Items;
+import seatInAdmin.SeatInAdmin;
 import seatInServer.JDBC.Beans.Course;
 import seatInServer.JDBC.Beans.User;
 
@@ -81,6 +84,8 @@ public class PanelMenu extends JPanel {
 		coursesList = commands.viewCourseList(user.getId());
 		//Salvataggio della lista dei corsi ricevuti dal server nell'oggetto "Items"
 		Items.setUserCourses(coursesList);
+		
+		
 		
 		tableInitalization();
 		fillTable(model);
@@ -175,7 +180,9 @@ public class PanelMenu extends JPanel {
 	private void fillTable(DefaultTableModel model) {
 		
 		for(Course c: coursesList) {
-			model.addRow(new Object[] { c.getId(), c.getName(), c.getActivationDate(), c.getDegreeCourse() });
+			
+			
+			model.addRow(new Object[] { c.getId(), c.getName(), c.getActivationDate() , c.getDegreeCourse() });
 		}
 	}
 
@@ -186,6 +193,7 @@ public class PanelMenu extends JPanel {
 				frame.getContentPane().removeAll();
 				frame.getContentPane().add(new PanelMailCourse());
 				frame.pack();
+				frame.setLocationRelativeTo(null);
 				frame.getContentPane().validate();
 			}
 
@@ -197,6 +205,7 @@ public class PanelMenu extends JPanel {
 				frame.getContentPane().removeAll();
 				frame.getContentPane().add(new PanelMailMulti());
 				frame.pack();
+				frame.setLocationRelativeTo(null);
 				frame.getContentPane().validate();
 			}
 
@@ -208,6 +217,7 @@ public class PanelMenu extends JPanel {
 				frame.getContentPane().removeAll();
 				frame.getContentPane().add(new PanelAddCourse());
 				frame.pack();
+				frame.setLocationRelativeTo(null);
 				frame.getContentPane().validate();
 			}
 
@@ -219,6 +229,7 @@ public class PanelMenu extends JPanel {
 				frame.getContentPane().removeAll();
 				frame.getContentPane().add(new PanelUnlockUser());
 				frame.pack();
+				frame.setLocationRelativeTo(null);
 				frame.getContentPane().validate();
 			}
 
@@ -230,6 +241,7 @@ public class PanelMenu extends JPanel {
 				frame.getContentPane().removeAll();
 				frame.getContentPane().add(new PanelActivateUser());
 				frame.pack();
+				frame.setLocationRelativeTo(null);
 				frame.getContentPane().validate();
 			}
 
@@ -241,6 +253,7 @@ public class PanelMenu extends JPanel {
 				frame.getContentPane().removeAll();
 				frame.getContentPane().add(new PanelUserReg());
 				frame.pack();
+				frame.setLocationRelativeTo(null);
 				frame.getContentPane().validate();
 			}
 
@@ -248,11 +261,9 @@ public class PanelMenu extends JPanel {
 
 		logoutButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				commands.close();
 				JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(c);
-				frame.getContentPane().removeAll();
-				frame.getContentPane().add(new PanelLogin());
-				frame.pack();
-				frame.getContentPane().validate();
+				frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));								
 			}
 
 		});
@@ -263,6 +274,7 @@ public class PanelMenu extends JPanel {
 				frame.getContentPane().removeAll();
 				frame.getContentPane().add(new PanelViewUser());
 				frame.pack();
+				frame.setLocationRelativeTo(null);
 				frame.getContentPane().validate();
 
 
@@ -276,6 +288,7 @@ public class PanelMenu extends JPanel {
 				frame.getContentPane().removeAll();
 				frame.getContentPane().add(new PanelGeneralStats());
 				frame.pack();
+				frame.setLocationRelativeTo(null);
 				frame.getContentPane().validate();
 
 

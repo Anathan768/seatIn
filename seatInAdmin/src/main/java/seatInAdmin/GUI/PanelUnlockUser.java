@@ -15,10 +15,13 @@ import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 import javax.swing.border.EmptyBorder;
 
+import seatInAdmin.AdminCommands;
+
 @SuppressWarnings("serial")
 public class PanelUnlockUser extends JPanel {
 
 	Component c = this;
+	AdminCommands commands;
 
 	// PANELS
 	JPanel titlePanel = new JPanel();
@@ -38,6 +41,8 @@ public class PanelUnlockUser extends JPanel {
 
 	protected PanelUnlockUser() {
 
+		commands = AdminCommands.getInstance();
+		
 		this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
 		this.setBorder((new EmptyBorder(5, 5, 10, 5)));
@@ -45,9 +50,13 @@ public class PanelUnlockUser extends JPanel {
 		unlockButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(c);
+				
+				String result = commands.unlockAccount(Integer.parseInt(idField.getText()));
+				
 				frame.getContentPane().removeAll();
 				frame.getContentPane().add(new PanelMenu());
 				frame.pack();
+				frame.setLocationRelativeTo(null);
 				frame.getContentPane().validate();
 			}
 

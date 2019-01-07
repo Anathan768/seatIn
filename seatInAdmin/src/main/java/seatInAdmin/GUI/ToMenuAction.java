@@ -23,6 +23,7 @@ public class ToMenuAction extends AbstractAction {
 		frame.getContentPane().add(new PanelMenu());
 		frame.pack();
 		frame.setLocationRelativeTo(null);
+		frame.setLocationRelativeTo(null);
 		frame.getContentPane().validate();
 
 	}

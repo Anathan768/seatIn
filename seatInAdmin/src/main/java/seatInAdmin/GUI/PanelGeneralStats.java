@@ -8,6 +8,9 @@ import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Timestamp;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
@@ -19,10 +22,14 @@ import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 import javax.swing.border.EmptyBorder;
 
+import seatInAdmin.AdminCommands;
+import seatInServer.JDBC.Beans.Course;
+
 @SuppressWarnings("serial")
 public class PanelGeneralStats extends JPanel {
 
 	Component c = this;
+	AdminCommands commands;
 
 	// PANELS
 	JPanel titlePanel = new JPanel();
@@ -48,10 +55,15 @@ public class PanelGeneralStats extends JPanel {
 	JButton backButton = new JButton("Back");
 
 	// FIELDS
-	JTextField fromfield = new JTextField(20);
-	JTextField tofield = new JTextField(20);
+	JTextField fromField = new JTextField(20);
+	JTextField toField = new JTextField(20);
 
 	protected PanelGeneralStats() {
+
+		commands = AdminCommands.getInstance();
+
+		title1.setText(title1.getText() + String.valueOf(commands.viewTotalNumberConnectedUsers()));
+
 
 		this.setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
 		this.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -102,7 +114,7 @@ public class PanelGeneralStats extends JPanel {
 		gbc.gridy = 2;
 		gbc.insets = new Insets(5, 0, 5, 5);
 		gbc.anchor = GridBagConstraints.LINE_START;
-		gridPanel.add(fromfield, gbc);
+		gridPanel.add(fromField, gbc);
 
 		// COMPONENT: COLUMN 0, ROW 3
 
@@ -120,7 +132,7 @@ public class PanelGeneralStats extends JPanel {
 		gbc.gridy = 3;
 		gbc.insets = new Insets(5, 0, 5, 5);
 		gbc.anchor = GridBagConstraints.LINE_START;
-		gridPanel.add(tofield, gbc);
+		gridPanel.add(toField, gbc);
 
 		// COMPONENT: COLUMN 1, ROW 4
 
@@ -130,24 +142,45 @@ public class PanelGeneralStats extends JPanel {
 		gbc.insets = new Insets(5, 0, 5, 5);
 		gbc.anchor = GridBagConstraints.LINE_START;
 		gridPanel.add(searchButton, gbc);
-		
+
+		searchButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				SimpleDateFormat sdf = new SimpleDateFormat("yyyy-mm-dd");
+				Timestamp fromTime = null;
+				Timestamp toTime = null;
+				try {
+					fromTime = new Timestamp(sdf.parse(fromField.getText()).getTime());
+					toTime = new Timestamp(sdf.parse(toField.getText()).getTime());
+				} catch (ParseException ex) {
+					ex.printStackTrace();
+				}
+
+				users.setText("Connected Users in a period of time: "
+						+ String.valueOf(commands.viewTotalNumberOfAccessesPerCourseInTimeBand(fromTime, toTime)));
+			}
+
+		});
+
 		showAvgButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(c);
 				frame.getContentPane().removeAll();
 				frame.getContentPane().add(new PanelAvgStats());
 				frame.pack();
+				frame.setLocationRelativeTo(null);
 				frame.getContentPane().validate();
 			}
 
 		});
-		
+
 		showDownloadButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(c);
 				frame.getContentPane().removeAll();
 				frame.getContentPane().add(new PanelDownloadStats());
 				frame.pack();
+				frame.setLocationRelativeTo(null);
 				frame.getContentPane().validate();
 			}
 

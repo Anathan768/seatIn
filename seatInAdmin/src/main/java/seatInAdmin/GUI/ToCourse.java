@@ -22,6 +22,7 @@ public class ToCourse {
 		frame.getContentPane().removeAll();
 		frame.getContentPane().add(new PanelCourseAdmin(course));
 		frame.pack();
+		frame.setLocationRelativeTo(null);
 		frame.getContentPane().validate();
 
 	}

@@ -18,11 +18,14 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 
+import seatInAdmin.AdminCommands;
+
 
 @SuppressWarnings("serial")
 public class PanelActivateUser extends JPanel {
 	
 	Component c = this;
+	AdminCommands commands;
 	
 	// PANELS
 	JPanel titlePanel = new JPanel();
@@ -36,7 +39,7 @@ public class PanelActivateUser extends JPanel {
 
 	// FILEDS
 	JTextField idField = new JTextField(15);
-	JTextField passwordField = new JPasswordField(15);
+	JPasswordField passwordField = new JPasswordField(15);
 
 	// JBUTTON
 	JButton activateButton = new JButton("Activate");
@@ -44,15 +47,21 @@ public class PanelActivateUser extends JPanel {
 	
 	protected PanelActivateUser(){
 		
+		commands = AdminCommands.getInstance();
 		
 		this.setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
 		
 		activateButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
+				char[] passwordArray = passwordField.getPassword();
+				String admin_password = String.copyValueOf(passwordArray);
+				commands.activationAccount(Integer.parseInt(idField.getText()), admin_password);
 				JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(c);
 				frame.getContentPane().removeAll();
 				frame.getContentPane().add(new PanelMenu());
 				frame.pack();
+				frame.setLocationRelativeTo(null);
 				frame.getContentPane().validate();
 			}
 

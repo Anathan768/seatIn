@@ -9,8 +9,14 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingUtilities;
 
+import seatInAdmin.AdminCommands;
+import seatInServer.JDBC.Beans.Student;
+
 @SuppressWarnings("serial")
 public class PanelProfileStd extends PanelProfile {
+	
+	AdminCommands commands;
+	Student student;
 
 	//LABELS
 	JLabel adr = new JLabel("Adress: ");
@@ -20,28 +26,30 @@ public class PanelProfileStd extends PanelProfile {
 	JLabel stat = new JLabel("Career Status: ");
 	JLabel statField = new JLabel();
 
-	public PanelProfileStd(String name, String surname, String email, String id, String adress, String registration,
-			String status) {
+	public PanelProfileStd(Student student) {
 		super();
-		setTable(adress, registration, status);
+		setTable();
+		this.student = student;
+		commands = AdminCommands.getInstance();
 		title.setText("STUDENT");
-		setValues(name, surname, email, id);
-		adrField.setText(adress);
-		regField.setText(registration);
-		statField.setText(status);
+		setValues(student.getName(), student.getSurname(), student.getEmail(), String.valueOf(student.getId()));
+		adrField.setText(student.getDegreeCourse());
+		regField.setText(String.valueOf(student.getRegistrationYear()));
+		statField.setText(String.valueOf(student.getCareerStatus()));
 		
 
 	}
 
-	private void setTable(String adress, String registration, String status) {
+	private void setTable() {
 		
 		
 		modifyButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(c);
 				frame.getContentPane().removeAll();
-				frame.getContentPane().add(new PanelModStdProf());
+				frame.getContentPane().add(new PanelModStdProf(student));
 				frame.pack();
+				frame.setLocationRelativeTo(null);
 				frame.getContentPane().validate();
 			}
 

@@ -175,7 +175,8 @@ public class ExecuteUpdate {
 			stmt = conn.prepareStatement(query);
 			stmt.setInt(1, userId);
 			
-			stmt.executeUpdate();
+			int result1 = stmt.executeUpdate();
+			logger.debug("Result: "+result1);
 			result = positive;
 		}catch(SQLException e) {
 			logger.debug("unlockAccount è fallito: "+e);
@@ -232,7 +233,9 @@ public class ExecuteUpdate {
 					 + "WHERE id = ?";
 		String result = negative;
 		try {
+			logger.debug("Get connection");
 			conn = ConnectionPool.getConnection();
+			logger.debug("had connestion");
 			stmt = conn.prepareStatement(query);
 			stmt.setString(1, course.getName());
 			stmt.setString(2, course.getDescription());
@@ -242,9 +245,10 @@ public class ExecuteUpdate {
 			stmt.setInt(6, course.getId());
 			
 			stmt.executeUpdate();
+			//TODO da testare il funzionamento  
 			result = positive;
 		}catch(SQLException e) {
-			logger.debug("errore esecuzione updateCourseInfo: "+e);
+			logger.debug("Errore esecuzione updateCourseInfo: "+e);
 		}finally {
 			closeResources(stmt, conn);
 		}

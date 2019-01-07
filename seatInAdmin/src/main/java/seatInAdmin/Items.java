@@ -48,5 +48,9 @@ public class Items {
 	public static Collection<Section> getSectionOfCourse() {
 		return sections;
 	}
+	
+	public static void closeConnection() {
+		connection.close();
+	}
 
 }

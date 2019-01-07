@@ -1,11 +1,11 @@
 package seatInAdmin.GUI;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+
 
 import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.SwingUtilities;
+
+
+import seatInServer.JDBC.Beans.Section;
 
 @SuppressWarnings("serial")
 public class PanelSectionAdmin extends PanelSection {
@@ -20,80 +20,9 @@ public class PanelSectionAdmin extends PanelSection {
 	
 	
 
-	protected PanelSectionAdmin(String name, String id) {
-		super(name, id);
-		
-		resButtonPanel.add(addResButton);
-		resButtonPanel.add(modifyResButton);
-		resButtonPanel.add(deleteResButton);
-		
-		secButtonPanel.add(addSecButton);
-		secButtonPanel.add(modifySecButton);
-		secButtonPanel.add(deleteSecButton);
-	  
-		deleteResButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				//TODO delete action
-
-			}
-		});
-		
-		modifyResButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				JFrame frame = (JFrame)SwingUtilities.getWindowAncestor(c);
-				frame.getContentPane().removeAll();
-				frame.getContentPane().add(new PanelModResource());
-				frame.pack();
-				frame.getContentPane().validate();
-				
-
-			}
-		});
-		
-		addResButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				JFrame frame = (JFrame)SwingUtilities.getWindowAncestor(c);
-				frame.getContentPane().removeAll();
-				frame.getContentPane().add(new PanelAddResource());
-				frame.pack();
-				frame.getContentPane().validate();
-				
-
-			}
-		});
-		
-		deleteSecButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				//TODO delete action
-
-			}
-		});
-		
-		modifySecButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				JFrame frame = (JFrame)SwingUtilities.getWindowAncestor(c);
-				frame.getContentPane().removeAll();
-				frame.getContentPane().add(new PanelModSection());
-				frame.pack();
-				frame.getContentPane().validate();
-				
-
-			}
-		});
-		
-		addSecButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				JFrame frame = (JFrame)SwingUtilities.getWindowAncestor(c);
-				frame.getContentPane().removeAll();
-				frame.getContentPane().add(new PanelAddSection());
-				frame.pack();
-				frame.getContentPane().validate();
-				
-
-			}
-		});
-		
-		
+	protected PanelSectionAdmin(Section newSection) {
+		super(newSection);
+		  		
 		
 	}
 

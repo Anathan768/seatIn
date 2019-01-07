@@ -5,16 +5,27 @@ import java.awt.FlowLayout;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.SwingUtilities;
 import javax.swing.border.EmptyBorder;
+
+import seatInAdmin.AdminCommands;
+import seatInServer.JDBC.Beans.Admin;
+import seatInServer.JDBC.Beans.Lecture;
 
 @SuppressWarnings("serial")
 public class PanelModTeachProf extends JPanel {
+	
+	AdminCommands commands;
+	Lecture teacher;
 
 	// PANELS
 	JPanel containerPanel = new JPanel(new GridBagLayout());
@@ -28,22 +39,26 @@ public class PanelModTeachProf extends JPanel {
 	JLabel name = new JLabel("Name:");
 	JLabel surname = new JLabel("Surname:");
 	JLabel email = new JLabel("E-Mail:");
-	JLabel id = new JLabel("ID:");
 	JLabel department = new JLabel("Department:");
 
 	JTextField nameField = new JTextField(20);
 	JTextField surnameField = new JTextField(20);
 	JTextField emailField = new JTextField(20);
-	JTextField idField = new JTextField(20);
 	JTextField departmentField = new JTextField(20);
 
 	// BUTTONS
 	JButton backButton = new JButton("Back");
 	JButton modifyButton = new JButton("Modify");
 
-	protected PanelModTeachProf() {
+	protected PanelModTeachProf(Lecture user) {
+		
+		this.teacher = user;
+		
+		commands = AdminCommands.getInstance();
 		this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 		GridBagConstraints gbc = new GridBagConstraints();
+		
+		setValues(user);
 
 		// COMPONENT: COLUMN 0, ROW 0
 
@@ -106,7 +121,7 @@ public class PanelModTeachProf extends JPanel {
 		gbc.gridy = 3;
 		gbc.insets = new Insets(5, 5, 5, 5);
 		gbc.anchor = GridBagConstraints.LINE_END;
-		containerPanel.add(id, gbc);
+		containerPanel.add(department, gbc);
 
 		// COMPONENT: COLUMN 1, ROW 3
 
@@ -115,25 +130,19 @@ public class PanelModTeachProf extends JPanel {
 		gbc.gridy = 3;
 		gbc.insets = new Insets(5, 0, 5, 5);
 		gbc.anchor = GridBagConstraints.LINE_START;
-		containerPanel.add(idField, gbc);
-
-		// COMPONENT: COLUMN 0, ROW 3
-
-		gbc = new GridBagConstraints();
-		gbc.gridx = 0;
-		gbc.gridy = 4;
-		gbc.insets = new Insets(5, 5, 5, 5);
-		gbc.anchor = GridBagConstraints.LINE_END;
-		containerPanel.add(department, gbc);
-
-		// COMPONENT: COLUMN 1, ROW 3
-
-		gbc = new GridBagConstraints();
-		gbc.gridx = 1;
-		gbc.gridy = 4;
-		gbc.insets = new Insets(5, 0, 5, 5);
-		gbc.anchor = GridBagConstraints.LINE_START;
 		containerPanel.add(departmentField, gbc);
+		
+		modifyButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				 Lecture tempTeacher = new Lecture(teacher.getId());
+				 tempTeacher.setName(nameField.getText());
+				 tempTeacher.setSurname(surnameField.getText());
+				 tempTeacher.setDepartment(departmentField.getText());
+				 tempTeacher.setEmail(emailField.getText());
+				 commands.modifyUserData(tempTeacher);
+			}
+
+		});
 
 		title.setFont(title.getFont().deriveFont(25.0f));
 		titlePanel.add(title);
@@ -152,12 +161,12 @@ public class PanelModTeachProf extends JPanel {
 
 	}
 
-	protected void setValues(String name, String surname, String email, String id) {
+	protected void setValues(Lecture user) {
 
-		nameField.setText(name);
-		surnameField.setText(surname);
-		emailField.setText(email);
-		idField.setText(id);
+		nameField.setText(user.getName());
+		surnameField.setText(user.getSurname());
+		emailField.setText(user.getEmail());
+		departmentField.setText(user.getDepartment());
 
 	}
 

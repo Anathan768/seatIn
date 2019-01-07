@@ -5,6 +5,7 @@ import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.HashMap;
 
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
@@ -18,10 +19,15 @@ import javax.swing.SwingUtilities;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
 
+import seatInAdmin.AdminCommands;
+import seatInServer.JDBC.Beans.Course;
+
 @SuppressWarnings("serial")
 public class PanelDownloadStats extends JPanel {
 
 	Component c = this;
+	AdminCommands commands;
+	HashMap<Course, Integer> hashDownloads;
 
 	// PANELS
 	JPanel titlePanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
@@ -42,6 +48,10 @@ public class PanelDownloadStats extends JPanel {
 
 	protected PanelDownloadStats() {
 
+		commands = AdminCommands.getInstance();
+
+		hashDownloads = new HashMap<>(commands.viewTotalNumberDownloadsForEachCourse());
+
 		this.setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
 		this.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -56,6 +66,7 @@ public class PanelDownloadStats extends JPanel {
 				frame.getContentPane().removeAll();
 				frame.getContentPane().add(new PanelGeneralStats());
 				frame.pack();
+				frame.setLocationRelativeTo(null);
 				frame.getContentPane().validate();
 			}
 
@@ -100,12 +111,15 @@ public class PanelDownloadStats extends JPanel {
 	}
 
 	private void fillTable(DefaultTableModel model) {
+		for (HashMap.Entry<Course, Integer> entry : hashDownloads.entrySet()) {
 
-		model.addRow(new Object[] { "Astrologia", "33" });
-		model.addRow(new Object[] { "Astrologia", "33" });
-		model.addRow(new Object[] { "Astrologia", "33" });
-		model.addRow(new Object[] { "Astrologia", "3" });
-		model.addRow(new Object[] { "Astrologia", "456" });
+			String course = entry.getKey().getName();
+			Integer value = entry.getValue();
+
+			// TODO timestamp
+
+			model.addRow(new Object[] { course, value });
+		}
 
 	}
 

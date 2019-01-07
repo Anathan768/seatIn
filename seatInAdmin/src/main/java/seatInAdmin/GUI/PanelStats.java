@@ -7,6 +7,9 @@ import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Timestamp;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 import javax.swing.Box;
 import javax.swing.BoxLayout;
@@ -18,10 +21,14 @@ import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 import javax.swing.border.EmptyBorder;
 
+import seatInAdmin.AdminCommands;
+import seatInServer.JDBC.Beans.Course;
+
 @SuppressWarnings("serial")
 public class PanelStats extends JPanel {
-	
+
 	Component c = this;
+	AdminCommands commands;
 
 	// PANELS
 	JPanel gridPanel = new JPanel(new GridBagLayout());
@@ -34,7 +41,7 @@ public class PanelStats extends JPanel {
 	JLabel title = new JLabel("Course Statistics");
 	JLabel usersLabel = new JLabel("Connected users: ");
 	JLabel avgConnectedLabel = new JLabel("Average Connection Time: ");
-	JLabel avgDownloadsTitle = new JLabel("Average Downloads: (gg/mm/yyyy)");
+	JLabel avgDownloadsTitle = new JLabel("Average Downloads: (yyyy-mm-dd)");
 	JLabel fromLabel = new JLabel("From: ");
 	JLabel toLabel = new JLabel("To: ");
 	JLabel avgDownloadsLabel = new JLabel("Total Downloads: ");
@@ -47,7 +54,14 @@ public class PanelStats extends JPanel {
 	JButton avgButton = new JButton("Search");
 	JButton backButton = new JButton("Back");
 
-	protected PanelStats() {
+	protected PanelStats(Course course) {
+
+		commands = AdminCommands.getInstance();
+
+		usersLabel.setText(usersLabel.getText() + commands.viewTotalNumberConnectedUsers());
+
+		avgConnectedLabel
+				.setText(avgConnectedLabel.getText() + commands.viewAverageConnectionTimeOfStudentsToTheCoursePage());
 
 		title.setFont(title.getFont().deriveFont(25.0f));
 		this.setBorder((new EmptyBorder(5, 5, 10, 5)));
@@ -126,45 +140,62 @@ public class PanelStats extends JPanel {
 		gbc.anchor = GridBagConstraints.LINE_START;
 		gridPanel.add(toField, gbc);
 
-
-		
-		
 		avgDownloadsLabel.setText(avgDownloadsLabel.getText() + "0");
-		
+
 		avgDownloadsLabel.setVisible(false);
-		
-		
+
 		avgButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
+				if(fromField.getText().equals("") || toField.getText().equals("")) {
+						return;
+				}
+				
+				SimpleDateFormat sdf = new SimpleDateFormat("yyyy-mm-dd");
+				Timestamp fromTime = null;
+				Timestamp toTime = null;
+				try {
+					
+					fromTime = new Timestamp(sdf.parse(fromField.getText()).getTime());
+					toTime = new Timestamp(sdf.parse(toField.getText()).getTime());
+				} catch (ParseException ex) {
+					ex.printStackTrace();
+				}
+
+
+				
+				
+				avgDownloadsLabel.setText("Total Downloads: " + commands
+						.viewTotalNumberOfUsersHaveDownloadOneOrMoreResourcesInTimeIntervals(fromTime, toTime));
 
 				avgDownloadsLabel.setVisible(true);
-				JFrame frame = (JFrame)SwingUtilities.getWindowAncestor(c);
+				JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(c);
 				frame.pack();
 
 			}
 		});
-		
+
 		backButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JFrame frame = (JFrame)SwingUtilities.getWindowAncestor(c);
+				JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(c);
 				frame.getContentPane().removeAll();
-				frame.getContentPane().add(new PanelStats());
+				frame.getContentPane().add(new PanelCourse(course));
 				frame.pack();
+				frame.setLocationRelativeTo(null);
 				frame.getContentPane().validate();
 
 			}
 		});
-		
 
 		titlePanel.add(title);
 
 		buttonPanel.add(avgButton);
 		buttonPanel.add(Box.createHorizontalStrut(100));
 		buttonPanel.add(backButton);
-		
+
 		totalPanel.add(Box.createHorizontalStrut(20));
 		totalPanel.add(avgDownloadsLabel);
-		
+
 		this.add(titlePanel);
 		this.add(bodyPanel);
 		this.add(gridPanel);

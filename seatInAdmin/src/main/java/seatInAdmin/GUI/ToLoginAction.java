@@ -21,6 +21,7 @@ public class ToLoginAction extends AbstractAction {
 		frame.getContentPane().removeAll();
 		frame.getContentPane().add(new PanelLogin());
 		frame.pack();
+		frame.setLocationRelativeTo(null);
 		frame.getContentPane().validate();
 
 	}

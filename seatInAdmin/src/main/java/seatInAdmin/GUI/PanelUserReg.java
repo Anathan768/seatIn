@@ -17,12 +17,14 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 
+import seatInAdmin.AdminCommands;
 
 @SuppressWarnings("serial")
 public class PanelUserReg extends JPanel {
-	
+
 	Component c = this;
-	
+	AdminCommands commands;
+
 	// PANELS
 	JPanel titlePanel = new JPanel();
 	JPanel insertionPanel = new JPanel(new GridBagLayout());
@@ -38,29 +40,33 @@ public class PanelUserReg extends JPanel {
 	JTextField courseField = new JTextField(15);
 
 	// JBUTTON
-	JButton signInButton = new JButton("Sign In");
+	JButton signButton = new JButton("Sign");
 	JButton backButton = new JButton("Back");
-	
-	protected PanelUserReg(){
-		
-		
+
+	protected PanelUserReg() {
+
+		commands = AdminCommands.getInstance();
+
 		this.setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
-		
-		signInButton.addActionListener(new ActionListener() {
+
+		signButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				commands.registrationAtCourse(Integer.parseInt(idField.getText()), Integer.parseInt(idField.getText()));
+				
 				JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(c);
 				frame.getContentPane().removeAll();
 				frame.getContentPane().add(new PanelMenu());
 				frame.pack();
+				frame.setLocationRelativeTo(null);
 				frame.getContentPane().validate();
 			}
 
 		});
 
 		title.setFont(title.getFont().deriveFont(20.0f));
-		
+
 		backButton.addActionListener(new ToMenuAction(c));
-		
+
 		GridBagConstraints gbc = new GridBagConstraints();
 
 		// COMPONENT: COLUMN 0, ROW 0
@@ -98,19 +104,17 @@ public class PanelUserReg extends JPanel {
 		gbc.insets = new Insets(5, 0, 5, 5);
 		gbc.anchor = GridBagConstraints.LINE_START;
 		insertionPanel.add(courseField, gbc);
-		
+
 		titlePanel.add(title);
-		
-		buttonPanel.add(signInButton);
+
+		buttonPanel.add(signButton);
 		buttonPanel.add(Box.createHorizontalStrut(75));
 		buttonPanel.add(backButton);
-		
+
 		this.add(titlePanel);
 		this.add(insertionPanel);
 		this.add(buttonPanel);
-		
-		
+
 	}
-	
-	
+
 }

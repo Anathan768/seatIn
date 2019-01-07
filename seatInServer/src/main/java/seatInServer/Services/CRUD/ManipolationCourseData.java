@@ -85,6 +85,7 @@ public class ManipolationCourseData {
 	 */
 	public String modifyCourseInfo(Course course) {
 		int degreeCourse = select.selectDegreeCourseIdByName(course.getDegreeCourse());
+		logger.debug("Init modify");
 		return update.modifyCourseInfo(course, degreeCourse);
 	}
 	/**

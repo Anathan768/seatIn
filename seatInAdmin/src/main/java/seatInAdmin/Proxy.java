@@ -35,14 +35,24 @@ public class Proxy {
 		Object result = null;
 		
 		try {
-			
 			result = input.readObject();
-		
 		}catch(IOException e) {
 			e.printStackTrace();
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
 		return result;
+	}
+	/**
+	 * Chiusura connessione con il server.
+	 */
+	protected void close() {
+		try {
+			this.output.close();
+			this.input.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
 	}
 }

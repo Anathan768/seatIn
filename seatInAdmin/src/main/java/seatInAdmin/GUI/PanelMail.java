@@ -1,5 +1,6 @@
 package seatInAdmin.GUI;
 
+import java.awt.Component;
 import java.awt.FlowLayout;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -17,8 +18,16 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
+import seatInAdmin.AdminCommands;
+import seatInAdmin.Items;
+import seatInServer.JDBC.Beans.User;
+
 @SuppressWarnings("serial")
 public class PanelMail extends JPanel {
+
+	Component c = this;
+	AdminCommands commands;
+	User user = Items.getUserData();
 
 	// PANELS
 	JPanel titlePanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
@@ -29,7 +38,8 @@ public class PanelMail extends JPanel {
 	// LABELS
 	JLabel reciverLabel = new JLabel("To:");
 	JLabel subjectLabel = new JLabel("Subject:");
-	JLabel passwordLabel = new JLabel("EMail Password:");
+	JLabel passwordLabel = new JLabel("Sender EMail Password:");
+	JLabel mailAdressLabel = new JLabel("Sender EMail:");
 
 	// BUTTONS
 	JButton sendButton = new JButton("Send");
@@ -38,11 +48,11 @@ public class PanelMail extends JPanel {
 	// FIELDS & AREAS
 	JTextField reciverField = new JTextField(25);
 	JTextField subjectField = new JTextField(25);
-	JTextField passwordField = new JPasswordField(15);
+	JTextField mailAdressField = new JTextField(25);
+	JPasswordField passwordField = new JPasswordField(15);
 	JTextArea mail = new JTextArea(10, 30);
 
 	protected PanelMail() {
-		
 
 		this.setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
 		this.setBorder((new EmptyBorder(5, 5, 5, 5)));
@@ -53,7 +63,7 @@ public class PanelMail extends JPanel {
 			public void actionPerformed(ActionEvent e) {
 
 				sendAction();
-				
+
 			}
 		});
 
@@ -95,6 +105,24 @@ public class PanelMail extends JPanel {
 		gbc.anchor = GridBagConstraints.LINE_START;
 		infoPanel.add(subjectField, gbc);
 
+		// COMPONENT: COLUMN 0, ROW 1
+
+		gbc = new GridBagConstraints();
+		gbc.gridx = 0;
+		gbc.gridy = 2;
+		gbc.insets = new Insets(5, 5, 5, 5);
+		gbc.anchor = GridBagConstraints.LINE_END;
+		infoPanel.add(mailAdressLabel, gbc);
+
+		// COMPONENT: COLUMN 1, ROW 1
+
+		gbc = new GridBagConstraints();
+		gbc.gridx = 1;
+		gbc.gridy = 2;
+		gbc.insets = new Insets(5, 0, 5, 5);
+		gbc.anchor = GridBagConstraints.LINE_START;
+		infoPanel.add(mailAdressField, gbc);
+
 		passwordPanel.add(passwordLabel);
 		passwordPanel.add(passwordField);
 
@@ -110,7 +138,7 @@ public class PanelMail extends JPanel {
 	}
 
 	protected void sendAction() {
-		
+
 		System.out.println("standard");
 
 	}

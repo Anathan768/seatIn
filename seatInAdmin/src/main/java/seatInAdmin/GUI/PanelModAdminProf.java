@@ -1,36 +1,20 @@
 package seatInAdmin.GUI;
 
 import java.awt.BorderLayout;
-import java.awt.Component;
 import java.awt.FlowLayout;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.sql.Timestamp;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-import javax.swing.SwingUtilities;
 import javax.swing.border.EmptyBorder;
 
-import seatInAdmin.AdminCommands;
-import seatInServer.JDBC.Beans.Student;
-
 @SuppressWarnings("serial")
-public class PanelModStdProf extends JPanel {
-	
-	Component c = this;
-	
-	AdminCommands commands;
-	Student student;
+public class PanelModAdminProf extends JPanel {
 
 	// PANELS
 	JPanel containerPanel = new JPanel(new GridBagLayout());
@@ -39,32 +23,25 @@ public class PanelModStdProf extends JPanel {
 	JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
 
 	// LABELS
-	JLabel title = new JLabel("STUDENT");
+	JLabel title = new JLabel("TEACHER");
 
 	JLabel name = new JLabel("Name:");
 	JLabel surname = new JLabel("Surname:");
 	JLabel email = new JLabel("E-Mail:");
-	JLabel adress = new JLabel("Adress:");
-	JLabel registration = new JLabel("Registration:");
-	JLabel career = new JLabel("Career Status:");
+	JLabel id = new JLabel("ID:");
+	JLabel department = new JLabel("Department:");
 
 	JTextField nameField = new JTextField(20);
 	JTextField surnameField = new JTextField(20);
 	JTextField emailField = new JTextField(20);
-	JTextField adressField = new JTextField(20);
-	JTextField registrationField = new JTextField(20);
-	JTextField careerField = new JTextField(20);
+	JTextField idField = new JTextField(20);
+	JTextField departmentField = new JTextField(20);
 
 	// BUTTONS
 	JButton backButton = new JButton("Back");
 	JButton modifyButton = new JButton("Modify");
 
-	protected PanelModStdProf(Student studentM) {
-		
-		commands = AdminCommands.getInstance();
-				
-		this.student = studentM;
-		setValues(student);
+	protected PanelModAdminProf() {
 		this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 		GridBagConstraints gbc = new GridBagConstraints();
 
@@ -129,7 +106,7 @@ public class PanelModStdProf extends JPanel {
 		gbc.gridy = 3;
 		gbc.insets = new Insets(5, 5, 5, 5);
 		gbc.anchor = GridBagConstraints.LINE_END;
-		containerPanel.add(adress, gbc);
+		containerPanel.add(id, gbc);
 
 		// COMPONENT: COLUMN 1, ROW 3
 
@@ -138,67 +115,25 @@ public class PanelModStdProf extends JPanel {
 		gbc.gridy = 3;
 		gbc.insets = new Insets(5, 0, 5, 5);
 		gbc.anchor = GridBagConstraints.LINE_START;
-		containerPanel.add(adressField, gbc);
+		containerPanel.add(idField, gbc);
 
-		// COMPONENT: COLUMN 0, ROW 4
+		// COMPONENT: COLUMN 0, ROW 3
 
 		gbc = new GridBagConstraints();
 		gbc.gridx = 0;
 		gbc.gridy = 4;
 		gbc.insets = new Insets(5, 5, 5, 5);
 		gbc.anchor = GridBagConstraints.LINE_END;
-		containerPanel.add(registration, gbc);
+		containerPanel.add(department, gbc);
 
-		// COMPONENT: COLUMN 1, ROW 4
+		// COMPONENT: COLUMN 1, ROW 3
 
 		gbc = new GridBagConstraints();
 		gbc.gridx = 1;
 		gbc.gridy = 4;
 		gbc.insets = new Insets(5, 0, 5, 5);
 		gbc.anchor = GridBagConstraints.LINE_START;
-		containerPanel.add(registrationField, gbc);
-		
-		// COMPONENT: COLUMN 0, ROW 5
-
-		gbc = new GridBagConstraints();
-		gbc.gridx = 0;
-		gbc.gridy = 5;
-		gbc.insets = new Insets(5, 5, 5, 5);
-		gbc.anchor = GridBagConstraints.LINE_END;
-		containerPanel.add(career, gbc);
-
-		// COMPONENT: COLUMN 1, ROW 5
-
-		gbc = new GridBagConstraints();
-		gbc.gridx = 1;
-		gbc.gridy = 5;
-		gbc.insets = new Insets(5, 0, 5, 5);
-		gbc.anchor = GridBagConstraints.LINE_START;
-		containerPanel.add(careerField, gbc);
-		
-		modifyButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-
-				 student.setName(nameField.getText());
-				 student.setSurname(surnameField.getText());
-				 student.setEmail(emailField.getText());
-				 student.setDegreeCourse(adressField.getText());
-				 student.setCareerStatus('p');
-
-				 
-				 commands.modifyUserData(student);
-				 
-				 JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(c);
-					frame.getContentPane().removeAll();
-					frame.getContentPane().add(new PanelProfileStd(student));
-					frame.pack();
-					frame.setLocationRelativeTo(null);
-					frame.getContentPane().validate();
-
-			}
-
-		});
-
+		containerPanel.add(departmentField, gbc);
 
 		title.setFont(title.getFont().deriveFont(25.0f));
 		titlePanel.add(title);
@@ -207,19 +142,7 @@ public class PanelModStdProf extends JPanel {
 		backPanel.add(backButton, BorderLayout.EAST);
 		backPanel.setBorder((new EmptyBorder(5, 5, 5, 5)));
 
-		backButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-
-				JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(c);
-				frame.getContentPane().removeAll();
-				frame.getContentPane().add(new PanelProfileStd(student));
-				frame.pack();
-				frame.setLocationRelativeTo(null);
-				frame.getContentPane().validate();
-
-			}
-
-		});
+		backButton.addActionListener(new ToMenuAction(this));
 		this.setBorder((new EmptyBorder(5, 5, 5, 5)));
 
 		this.add(titlePanel, BorderLayout.PAGE_START);
@@ -229,14 +152,12 @@ public class PanelModStdProf extends JPanel {
 
 	}
 
-	protected void setValues(Student student) {
+	protected void setValues(String name, String surname, String email, String id) {
 
-		nameField.setText(student.getName());
-		surnameField.setText(student.getSurname());
-		emailField.setText(student.getEmail());
-		adressField.setText(student.getDegreeCourse());
-		registrationField.setText(String.valueOf(student.getRegistrationYear()));
-		careerField.setText(String.valueOf(student.getCareerStatus()));
+		nameField.setText(name);
+		surnameField.setText(surname);
+		emailField.setText(email);
+		idField.setText(id);
 
 	}
 

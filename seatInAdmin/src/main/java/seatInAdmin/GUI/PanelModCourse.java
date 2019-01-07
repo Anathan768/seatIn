@@ -1,22 +1,35 @@
 package seatInAdmin.GUI;
 
 import java.awt.BorderLayout;
+import java.awt.Component;
 import java.awt.FlowLayout;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.Box;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import javax.swing.SwingUtilities;
 import javax.swing.border.EmptyBorder;
+
+import seatInAdmin.AdminCommands;
+import seatInServer.JDBC.Beans.Course;
 
 @SuppressWarnings("serial")
 public class PanelModCourse extends JPanel {
+
+	Component c = this;
+	AdminCommands commands;
+	Course course;
 
 	// PANELS
 	JPanel titlePanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
@@ -24,11 +37,10 @@ public class PanelModCourse extends JPanel {
 	JPanel buttonPanel = new JPanel();
 
 	// LABELS
-	JLabel titleLabel = new JLabel("Action Name");
+	JLabel titleLabel = new JLabel("Modify Course");
 	JLabel nameLabel = new JLabel("Title:");
 	JLabel descriptionLabel = new JLabel("Description:");
 	JLabel degreeLabel = new JLabel("Course Degree:");
-	JLabel fromLabel = new JLabel("Active to:");
 
 	// BUTTONS
 	JButton actionButton = new JButton("Modify");
@@ -37,17 +49,19 @@ public class PanelModCourse extends JPanel {
 	// FIELDS & AREAS
 	JTextArea descriptionArea = new JTextArea(10, 20);
 	JTextField nameField = new JTextField(20);
-	JTextField fromField = new JTextField(20);
 	JTextField degreeField = new JTextField(20);
 
 	// CHECKBOX
 	JCheckBox isActiveBox = new JCheckBox("Active");
 
-	protected PanelModCourse() {
+	protected PanelModCourse(Course courseToMod) {
+
+		this.course = courseToMod;
+		commands = AdminCommands.getInstance();
 
 		this.setLayout(new BorderLayout());
 		this.setBorder((new EmptyBorder(5, 5, 5, 5)));
-		
+
 		titleLabel.setFont(titleLabel.getFont().deriveFont(20.0f));
 
 		GridBagConstraints gbc = new GridBagConstraints();
@@ -104,7 +118,7 @@ public class PanelModCourse extends JPanel {
 		gbc.gridy = 3;
 		gbc.insets = new Insets(5, 5, 5, 5);
 		gbc.anchor = GridBagConstraints.LINE_START;
-		generalPanel.add(fromLabel, gbc);
+		generalPanel.add(degreeLabel, gbc);
 
 		// COMPONENT: COLUMN 1, ROW 3
 
@@ -113,37 +127,66 @@ public class PanelModCourse extends JPanel {
 		gbc.gridy = 3;
 		gbc.insets = new Insets(5, 0, 5, 5);
 		gbc.anchor = GridBagConstraints.LINE_START;
-		generalPanel.add(fromField, gbc);
-		
-		// COMPONENT: COLUMN 0, ROW 4
-
-		gbc = new GridBagConstraints();
-		gbc.gridx = 0;
-		gbc.gridy = 4;
-		gbc.insets = new Insets(5, 5, 5, 5);
-		gbc.anchor = GridBagConstraints.LINE_START;
-		generalPanel.add(degreeLabel, gbc);
-
-		// COMPONENT: COLUMN 1, ROW 4
-
-		gbc = new GridBagConstraints();
-		gbc.gridx = 1;
-		gbc.gridy = 4;
-		gbc.insets = new Insets(5, 0, 5, 5);
-		gbc.anchor = GridBagConstraints.LINE_START;
 		generalPanel.add(degreeField, gbc);
-		
-		
+
+		actionButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				courseToMod.setId(course.getId());
+				courseToMod.setName(nameField.getText());
+				courseToMod.setActive(isActiveBox.isSelected());
+				
+				System.out.println("IsActive: "+isActiveBox.isSelected());
+				System.out.println("IsActive: "+courseToMod.isActive());
+				
+				//TODO seguenti due righe sono da tolgiere dopo la fase di testing 
+				courseToMod.setDegreeCourse(degreeField.getText());
+				courseToMod.setDescription(descriptionArea.getText()); 
+				String temp = commands.modifyCourseData(courseToMod);
+
+				if (temp.equals("ACCEPT")) {
+					JOptionPane.showMessageDialog(null, "Course updated!");
+					JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(c);
+					frame.getContentPane().removeAll();
+					frame.getContentPane().add(new PanelModCourse(courseToMod));
+					frame.pack();
+					frame.setLocationRelativeTo(null);
+					frame.getContentPane().validate();
+					
+				} else {
+					JOptionPane.showOptionDialog(new JFrame(), "Modifie not Legal", "", JOptionPane.DEFAULT_OPTION,
+							JOptionPane.ERROR_MESSAGE, null, new Object[] {}, null);
+				}
+			}
+
+		});
+
+		backButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(c);
+				frame.getContentPane().removeAll();
+				frame.getContentPane().add(new PanelCourseAdmin(course));
+				frame.pack();
+				frame.setLocationRelativeTo(null);
+				frame.getContentPane().validate();
+			}
+
+		});
+
+		nameField.setText(course.getName());
+		degreeField.setText(course.getDegreeCourse());
+		isActiveBox.setSelected(course.isActive());
+		descriptionArea.setText(course.getDescription());
+
 		titlePanel.add(titleLabel);
-		
+
 		buttonPanel.add(actionButton);
 		buttonPanel.add(Box.createHorizontalStrut(50));
 		buttonPanel.add(backButton);
-		
+
 		this.add(titlePanel, BorderLayout.PAGE_START);
 		this.add(generalPanel, BorderLayout.CENTER);
 		this.add(buttonPanel, BorderLayout.PAGE_END);
-
 
 	}
 
