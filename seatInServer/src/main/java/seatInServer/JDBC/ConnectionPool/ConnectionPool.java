@@ -13,7 +13,8 @@ import org.apache.logging.log4j.Logger;
 public class ConnectionPool {
 	
 	private final static Logger logger = LogManager.getLogger(getCurrentClassName());
-	private static Configuration config= new Configuration("localhost","dbSeatIn","postgres","13579sorc768");
+	private static Configuration config;
+	//= new Configuration("localhost","dbSeatIn","postgres","13579sorc768");
 	private static ConnectionPool pool = new ConnectionPool();
 	private static LinkedBlockingQueue<Connection> connections = new LinkedBlockingQueue<Connection>(100);
 	private int usedConnections = 0;
@@ -37,12 +38,12 @@ public class ConnectionPool {
 	 * @throws SQLException se i dati inseriti sono sbagliati. 
 	 */
 	public static void setConfigurations(String db_host, String db_username, String db_password) throws SQLException {
-		//config = new Configuration(db_host, "template1", db_username, db_password);
-		//Connection testConn = openConnection();
-		//config = new InitDataBase(db_host, db_username, db_password).createIfNotExist(testConn);
+		config = new Configuration(db_host, "template1", db_username, db_password);
+		Connection testConn = openConnection();
+		config = new InitDataBase(db_host, db_username, db_password).createIfNotExist(testConn);
 	}
 	
-	private Connection openConnection() throws SQLException{
+	private static Connection openConnection() throws SQLException{
 		Connection conn = null;
 			conn = DriverManager.getConnection(config.getURL(), config.getUsername(), config.getPassword());
 		return conn;

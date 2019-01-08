@@ -1,0 +1,54 @@
+07/01/2019 18:59:42 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Return connection
+07/01/2019 18:59:42 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+07/01/2019 19:00:11 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Return connection
+07/01/2019 19:00:11 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+07/01/2019 19:01:05 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Return connection
+07/01/2019 19:01:05 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+07/01/2019 19:02:51 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Return connection
+07/01/2019 19:02:51 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+07/01/2019 19:03:46 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Return connection
+07/01/2019 19:03:46 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+07/01/2019 19:06:33 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Return connection
+07/01/2019 19:06:33 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+07/01/2019 19:08:14 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Return connection
+07/01/2019 19:08:14 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+07/01/2019 19:09:50 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Return connection
+07/01/2019 19:09:50 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+07/01/2019 19:11:30 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Return connection
+07/01/2019 19:11:30 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+07/01/2019 19:12:10 DEBUG seatInServer.JDBC.ExecuteSelect--> getConnection
+07/01/2019 19:12:10 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Return connection
+07/01/2019 19:12:10 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+07/01/2019 19:13:29 DEBUG seatInServer.JDBC.ExecuteSelect--> getConnection
+07/01/2019 19:13:29 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> create connection
+07/01/2019 19:13:29 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+07/01/2019 19:15:59 DEBUG seatInServer.JDBC.ExecuteSelect--> getConnection
+07/01/2019 19:15:59 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> create connection
+07/01/2019 19:15:59 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+07/01/2019 19:15:59 DEBUG seatInServer.JDBC.ExecuteSelect--> have connection
+07/01/2019 19:15:59 DEBUG seatInServer.JDBC.ExecuteSelect--> Go to query 
+07/01/2019 19:15:59 DEBUG seatInServer.JDBC.ExecuteSelect--> Result: org.postgresql.jdbc.PgResultSet@65b104b9
+07/01/2019 19:15:59 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> putback connection
+07/01/2019 19:15:59 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Get connection
+07/01/2019 19:15:59 DEBUG seatInServer.JDBC.ExecuteUpdate--> Result of insert: 1
+07/01/2019 19:15:59 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> putback connection
+07/01/2019 19:16:57 DEBUG seatInServer.JDBC.ExecuteSelect--> getConnection
+07/01/2019 19:16:57 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> create connection
+07/01/2019 19:16:57 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+07/01/2019 19:16:57 DEBUG seatInServer.JDBC.ExecuteSelect--> have connection
+07/01/2019 19:16:57 DEBUG seatInServer.JDBC.ExecuteSelect--> Go to query 
+07/01/2019 19:16:57 DEBUG seatInServer.JDBC.ExecuteSelect--> Result: org.postgresql.jdbc.PgResultSet@6d167f58
+07/01/2019 19:16:57 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> putback connection
+07/01/2019 19:16:57 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Get connection
+07/01/2019 19:16:57 DEBUG seatInServer.JDBC.ExecuteUpdate--> Result of insert: 1
+07/01/2019 19:16:57 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> putback connection
+07/01/2019 19:18:58 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Create connection
+07/01/2019 19:18:58 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+07/01/2019 19:18:58 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Putback connection
+07/01/2019 19:18:58 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Get connection
+07/01/2019 19:18:58 DEBUG seatInServer.JDBC.ExecuteUpdate--> Result of insert: 1
+07/01/2019 19:18:58 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Putback connection
+07/01/2019 19:20:17 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Create connection
+07/01/2019 19:20:17 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
+07/01/2019 19:20:32 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Create connection
+07/01/2019 19:20:32 DEBUG seatInServer.JDBC.ConnectionPool.ConnectionPool--> Inizializzazione nuova connessione al database.
