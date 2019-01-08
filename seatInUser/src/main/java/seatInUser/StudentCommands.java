@@ -14,9 +14,16 @@ import seatInServer.JDBC.Beans.User;
 public class StudentCommands {
 
     protected Proxy server = getServerConnection();
+    private static StudentCommands studCommands = new StudentCommands();
 
-    public StudentCommands() {
+    protected StudentCommands() {
 
+    }
+    
+    public static StudentCommands getInstance() {
+    	if(studCommands == null)
+    		studCommands = new StudentCommands();
+    	return studCommands;
     }
     /**
      * Operazione di autenticazione di un utente.

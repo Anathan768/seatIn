@@ -13,9 +13,17 @@ import java.util.Collection;
 public class LectureCommands extends StudentCommands{
 
     private Proxy server = super.server;
+    private static LectureCommands lecCommands = new LectureCommands();
 
-    public LectureCommands() {
-
+    private LectureCommands() {
+    	super();
+    }
+    
+    public static LectureCommands getInstance() {
+    	if(lecCommands == null)
+    		lecCommands = new LectureCommands();
+    	
+    	return lecCommands;
     }
     /**
      * Aggiunge una sezione/sotto-sezione ad un corso.
