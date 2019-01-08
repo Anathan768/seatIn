@@ -14,9 +14,8 @@ public class ConnectionPool {
 	
 	private final static Logger logger = LogManager.getLogger(getCurrentClassName());
 	private static Configuration config;
-	//= new Configuration("localhost","dbSeatIn","postgres","13579sorc768");
 	private static ConnectionPool pool = new ConnectionPool();
-	private static LinkedBlockingQueue<Connection> connections = new LinkedBlockingQueue<Connection>(100);
+	private static LinkedBlockingQueue<Connection> connections = new LinkedBlockingQueue<Connection>();
 	private int usedConnections = 0;
 	
 
@@ -37,15 +36,14 @@ public class ConnectionPool {
 	 * @param db_password -- password del profilo utente del db.
 	 * @throws SQLException se i dati inseriti sono sbagliati. 
 	 */
-	public static void setConfigurations(String db_host, String db_username, String db_password) throws SQLException {
-		config = new Configuration(db_host, "template1", db_username, db_password);
-		Connection testConn = openConnection();
-		config = new InitDataBase(db_host, db_username, db_password).createIfNotExist(testConn);
+	public static void setConfigurations(String db_host, String db_name, String db_username, String db_password) throws SQLException {
+		config = new Configuration(db_host, db_name, db_username, db_password);
+		openConnection();
 	}
 	
 	private static Connection openConnection() throws SQLException{
 		Connection conn = null;
-			conn = DriverManager.getConnection(config.getURL(), config.getUsername(), config.getPassword());
+		conn = DriverManager.getConnection(config.getURL(), config.getUsername(), config.getPassword());
 		return conn;
 	}
 	/**
@@ -60,10 +58,10 @@ public class ConnectionPool {
 				if(usedConnections < 100) {
 					if(connections.size() >= 1) {
 						newConn = connections.take();
-						logger.debug("Get connection...");
+						//logger.debug("Get connection...");
 					}else {
 						newConn = openConnection();
-						logger.debug("Open connection...");
+						//logger.debug("Open connection...:"+connections.size()+"/"+usedConnections);
 					}
 					usedConnections++;
 					break;
@@ -86,8 +84,8 @@ public class ConnectionPool {
 	public synchronized void putbackConnection(Connection conn) {
 		try {
 			connections.add(conn);
-			logger.debug("Putback connection");
 			usedConnections--;
+			//logger.debug("Putback connection:"+connections.size()+"/"+usedConnections);
 			notify();
 		}catch(NullPointerException e) {
 			logger.debug("Errore restituzione connessione al ConnctionPool: "+e);

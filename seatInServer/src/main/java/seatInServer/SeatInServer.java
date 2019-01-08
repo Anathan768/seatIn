@@ -26,7 +26,7 @@ public class SeatInServer {
 			server = new ServerSocket(8080);
 			logger.info("Server started: "+server);
 		} catch (IOException e) {
-			logger.debug("Creazione SocketServer fallito: "+e);
+			logger.debug("Creation SocketServer failed: "+e);
 		}		
 	}
 	
@@ -36,10 +36,10 @@ public class SeatInServer {
 		while(true) {
 			try {
 				Socket clientSocket = server.accept();
-				logger.info("Connesione del cliente: "+clientSocket+"\n");
+				logger.info("Client connected: "+clientSocket+"\n");
 				new Thread(new Skeleton(clientSocket)).start();
 			} catch (Exception e) {
-				logger.debug("Connessione del cliente fallita: "+e);
+				logger.debug("Client connect failed: "+e);
 				e.printStackTrace();
 				break;
 			}

@@ -5,7 +5,7 @@
 		   <PatternLayout pattern="%d{HH:mm} %-1p --> %msg%n"/>
         </Console>
 		
-		<RollingFile name="File" fileName="logs/log.log" filePattern="logs/%d{MM-dd-yyyy}-info%i.log" immediateFlush="true">
+		<RollingFile name="File" fileName="logs/TRACE/trace.log" filePattern="logs/%d{MM-dd-yyyy}-info%i.log" immediateFlush="true">
 			<PatternLayout pattern="%d{dd/MM/yyy HH:mm:ss} %-1p %logger{36}--> %msg%n"/>
 			<Policies>
 				<TimeBasedTriggeringPolicy/>
@@ -14,7 +14,7 @@
 			<DefaultRolloverStrategy max="20"/>
 		</RollingFile>
 		
-		<RollingFile name="DebugTrace" fileName="logs/Trace/trace.log" filePattern="logs/Trace/%d{MM-dd-yyyy}-debug%i.log" immediateFlush="true">
+		<RollingFile name="DebugTrace" fileName="logs/DEBUG/debug.log" filePattern="logs/Trace/%d{MM-dd-yyyy}-debug%i.log" immediateFlush="true">
 			<PatternLayout pattern="%d{dd/MM/yyy HH:mm:ss} %-1p %logger{36}--> %msg%n"/>
 			<Policies>
 				<TimeBasedTriggeringPolicy/>

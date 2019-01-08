@@ -40,6 +40,7 @@ public class StudentController extends Thread{
 			Object result = null;
 			
 			try {
+				logger.debug("Student Controller Start work...");
 				//1) Ricevimento del comando da parte del cliente
 				input = (String) objectInput.readObject();
 			
@@ -98,8 +99,10 @@ public class StudentController extends Thread{
 				try {
 					logger.debug("Chiusura connessione cliente! "+clientSocket);
 					clientSocket.close();
+					isActive = false;
 				} catch (IOException e1) {
 					logger.debug("Errore durante chiusura connessione: "+e);
+					isActive = false;
 				}
 			}
 		}

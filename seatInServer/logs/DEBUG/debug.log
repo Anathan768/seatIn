@@ -1,0 +1,41 @@
+08/01/2019 21:10:58 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectUserByEmail 
+08/01/2019 21:10:58 INFO seatInServer.SeatInServer--> Server started: ServerSocket[addr=0.0.0.0/0.0.0.0,localport=8080]
+08/01/2019 21:11:02 INFO seatInServer.SeatInServer--> Client connected: Socket[addr=/127.0.0.1,port=65401,localport=8080]
+
+08/01/2019 21:11:02 DEBUG seatInServer.Controllers.Skeleton--> Initialize connection with client: Socket[addr=/127.0.0.1,port=65401,localport=8080]
+08/01/2019 21:11:02 DEBUG seatInServer.Controllers.Skeleton--> Skeleton Start work...
+08/01/2019 21:11:04 DEBUG seatInServer.Controllers.Skeleton--> Login-> admin2@domain.com: pass
+08/01/2019 21:11:04 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectUserByEmail 
+08/01/2019 21:11:04 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
+08/01/2019 21:11:04 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectUserTypeById 
+08/01/2019 21:11:04 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllCoursesLiableByUser 
+08/01/2019 21:11:04 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
+08/01/2019 21:11:52 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectUserTypeById 
+08/01/2019 21:11:52 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectUserById 
+08/01/2019 21:11:52 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
+08/01/2019 21:12:13 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectUserTypeById 
+08/01/2019 21:12:13 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllCoursesLiableByUser 
+08/01/2019 21:12:13 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
+08/01/2019 21:12:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectUserTypeById 
+08/01/2019 21:12:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectUserById 
+08/01/2019 21:12:17 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
+08/01/2019 21:12:19 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectUserTypeById 
+08/01/2019 21:12:19 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectUserById 
+08/01/2019 21:12:19 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
+08/01/2019 21:12:20 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectUserTypeById 
+08/01/2019 21:12:20 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectUserById 
+08/01/2019 21:12:20 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
+08/01/2019 21:12:34 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectUserTypeById 
+08/01/2019 21:12:34 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectUserById 
+08/01/2019 21:12:34 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
+08/01/2019 21:12:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectUserTypeById 
+08/01/2019 21:12:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllCoursesLiableByUser 
+08/01/2019 21:12:41 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
+08/01/2019 21:12:53 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectDegreeCourseIdByName 
+08/01/2019 21:12:53 DEBUG seatInServer.JDBC.ExecuteUpdate--> Method name: insertCourse 
+08/01/2019 21:12:53 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
+08/01/2019 21:12:53 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectUserTypeById 
+08/01/2019 21:12:53 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllCoursesLiableByUser 
+08/01/2019 21:12:53 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
+08/01/2019 21:15:05 DEBUG seatInServer.Controllers.AdminController--> Cliente si è disconesso: java.net.SocketException: Connection reset
+08/01/2019 21:15:05 INFO seatInServer.Controllers.AdminController--> Chiusura connessione cliente! Socket[addr=/127.0.0.1,port=65401,localport=8080]

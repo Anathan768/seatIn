@@ -15,7 +15,7 @@ public class Configuration {
 		this.DB_NAME = db_name;
 		this.DB_USERNAME = db_username;
 		this.DB_PASSWORD = db_password;
-		this.URL = "jdbc:postgresql://"+DB_HOST+":5432/"+DB_NAME;
+		this.URL = "jdbc:postgresql://"+DB_HOST+"/"+DB_NAME;
 	}
 	
 	protected String getHost() {

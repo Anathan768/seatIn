@@ -87,7 +87,7 @@ public class ExecuteUpdate {
 				stmt.setString(11, String.valueOf(careerStatus));
 			
 			stmt.executeUpdate();
-			
+			logger.debug("Method name: insertUser ");	
 		}catch(SQLException e ) {
 			logger.debug("Errore esecuzione insertUser: "+e);
 		}finally {
@@ -124,6 +124,7 @@ public class ExecuteUpdate {
 			else
 				stmt.setInt(5, degreeCourseId);
 			stmt.executeUpdate();
+			logger.debug("Method name: insertCourse ");	
 			result = positive;
 		}catch(SQLException e) {
 			logger.debug("Errore esecuzione insertCourse: "+e);
@@ -150,7 +151,7 @@ public class ExecuteUpdate {
 			stmt.setString(2, email);
 			
 			stmt.executeUpdate();
-		
+			logger.debug("Method name: blockAccount ");	
 		}catch(SQLException e) {
 			logger.debug("Errore esecuzione blockAccount: "+e);
 		}finally {
@@ -174,11 +175,11 @@ public class ExecuteUpdate {
 			stmt = conn.prepareStatement(query);
 			stmt.setInt(1, userId);
 			
-			int result1 = stmt.executeUpdate();
-			logger.debug("Result: "+result1);
+			stmt.executeUpdate();
+			logger.debug("Method name: unlockAccount ");
 			result = positive;
 		}catch(SQLException e) {
-			logger.debug("unlockAccount è fallito: "+e);
+			logger.debug("Errore esecuzione unlockAccount: "+e);
 		}finally{
 			closeResources(stmt, conn);
 		}
@@ -211,7 +212,7 @@ public class ExecuteUpdate {
 			
 			stmtPswd.executeUpdate();
 			stmtCode.executeUpdate();
-			
+			logger.debug("Method name: updatePasswordAndActivationCode ");
 		}catch(SQLException e) {
 			logger.debug("Errore esecuzione aggiornamento Password e ActivationCode: "+e);
 		}finally {
@@ -242,10 +243,10 @@ public class ExecuteUpdate {
 			stmt.setInt(6, course.getId());
 			
 			stmt.executeUpdate();
-			//TODO da testare il funzionamento  
+			logger.debug("Method name: modifyCourseInfo "); 
 			result = positive;
 		}catch(SQLException e) {
-			logger.debug("Errore esecuzione updateCourseInfo: "+e);
+			logger.debug("Errore esecuzione modifyCourseInfo: "+e);
 		}finally {
 			closeResources(stmt, conn);
 		}
@@ -279,6 +280,7 @@ public class ExecuteUpdate {
 			stmt.setInt(7, section.getId());
 			
 			stmt.executeUpdate();
+			logger.debug("Method name: modifyCourceSection "); 
 			result = positive;
 		}catch(SQLException e) {
 			logger.debug("errore esecuzione modifyCourceSection: "+e);
@@ -306,6 +308,7 @@ public class ExecuteUpdate {
 			stmt.setString(2, resource.getDescription());
 			stmt.setInt(3, resource.getId());
 			stmt.executeUpdate();
+			logger.debug("Method name: modifySectionResource "); 
 			result = positive;
 		}catch(SQLException e) {
 			logger.debug("errore esecuzione modifySectionResource: "+e);
@@ -331,9 +334,10 @@ public class ExecuteUpdate {
 			stmt.setInt(1, sectionId);
 			
 			stmt.executeUpdate();
+			logger.debug("Method name: deleteCourseSection "); 
 			result = positive;
 		}catch(SQLException e) {
-			logger.debug("Errore esecuzione changeUserType: "+e);
+			logger.debug("Errore esecuzione deleteCourseSection: "+e);
 		}finally {
 			closeResources(stmt, conn);
 		}
@@ -356,9 +360,10 @@ public class ExecuteUpdate {
 			stmt.setInt(1, resourceId);
 			
 			stmt.executeUpdate();
+			logger.debug("Method name: deleteSectionResource "); 
 			result = positive;
 		}catch(SQLException e) {
-			logger.debug("Errore esecuzione changeUserType: "+e);
+			logger.debug("Errore esecuzione deleteSectionResource: "+e);
 		}finally {
 			closeResources(stmt, conn);
 		}
@@ -381,9 +386,10 @@ public class ExecuteUpdate {
 			stmt.setInt(1, fileId);
 			
 			stmt.executeUpdate();
+			logger.debug("Method name: deleteResourceFile "); 
 			result = positive;
 		}catch(SQLException e) {
-			logger.debug("Errore esecuzione changeUserType: "+e);
+			logger.debug("Errore esecuzione deleteResourceFile: "+e);
 		}finally {
 			closeResources(stmt, conn);
 		}
@@ -412,7 +418,7 @@ public class ExecuteUpdate {
 		stmt.setString(3, user.getEmail());
 		stmt.setInt(4, user.getId());
 		stmt.executeUpdate();
-		
+		logger.debug("Method name: modifyUserInfo. General info ");
 		if(user instanceof Student) {
 			profileQuery = "UPDATE profiles SET degree_course_id=?, career_status=? WHERE user_id=?;";
 			stmt = conn.prepareStatement(profileQuery);
@@ -422,6 +428,7 @@ public class ExecuteUpdate {
 			stmt.setString(2, String.valueOf(st.getCareerStatus()));
 			stmt.setInt(3, user.getId());
 			stmt.executeUpdate();
+			logger.debug("Method name: modifyUserInfo. Student info ");
 		}
 		if(user instanceof Lecture || user instanceof Admin) {
 			profileQuery = "UPDATE profiles SET department_id = ? WHERE user_id=?;";
@@ -431,6 +438,7 @@ public class ExecuteUpdate {
 			stmt.setInt(1, departmentId);
 			stmt.setInt(2, user.getId());
 			stmt.executeUpdate();
+			logger.debug("Method name: modifyUserInfo. Lecture and Admin info ");
 		}
 		result = positive;
 	}catch(SQLException e) {
@@ -456,9 +464,9 @@ public class ExecuteUpdate {
 			stmt.setInt(2, userId);
 			
 			stmt.executeUpdate();
-			
+			logger.debug("Method name: modifyUserType ");
 		}catch(SQLException e) {
-			logger.debug("Errore esecuzione changeUserType: "+e);
+			logger.debug("Errore esecuzione modifyUserType: "+e);
 		}finally {
 			closeResources(stmt, conn);
 		}
@@ -493,6 +501,7 @@ public class ExecuteUpdate {
 			stmt.setInt(2, courseId);
 			
 			stmt.executeUpdate();
+			logger.debug("Method name: registrationUserAtCourse ");
 			result = positive;
 		}catch(SQLException e) {
 			logger.debug("errore esecuzione registrationUserAtCourse: "+e);
@@ -531,6 +540,7 @@ public class ExecuteUpdate {
 			stmt.setInt(7, section.getCourseId());
 			
 			rs = stmt.executeQuery();
+			logger.debug("Method name: addSectionToCourse ");
 			while(rs.next()){
 				sectionId = rs.getInt("id");
 			}
@@ -562,6 +572,7 @@ public class ExecuteUpdate {
 			stmt.setInt(3, resource.getModuleId());
 			
 			rs = stmt.executeQuery();
+			logger.debug("Method name: addResourceToCourseSection ");
 			while(rs.next()) {
 				resourceId = rs.getInt("id");
 			}
@@ -593,12 +604,13 @@ public class ExecuteUpdate {
 			stmt.setInt(2, resourceId);
 			
 			rs = stmt.executeQuery();
+			logger.debug("Method name: addFileToCourseResource ");
 			while(rs.next()) {
 				fileId = rs.getInt("id");
 			}
 			
 		}catch(SQLException e) {
-			logger.debug("Errore addResourceToCourseSection: "+e);
+			logger.debug("Errore addFileToCourseResource: "+e);
 		}finally {
 			closeResources(stmt, conn);
 		}
@@ -624,6 +636,7 @@ public class ExecuteUpdate {
 			stmt.setInt(2, userId);
 			
 			stmt.executeUpdate();
+			logger.debug("Method name: activationUserAccount ");
 			result = positive;
 		}catch(SQLException e) {
 			logger.debug("Errore activationUserAccount: "+e);

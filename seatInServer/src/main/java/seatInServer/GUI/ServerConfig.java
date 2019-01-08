@@ -34,15 +34,15 @@ public class ServerConfig extends JPanel implements ActionListener {
 	// LABELS
 	JLabel title = new JLabel("CONNECTION SETTINGS");
 	JLabel hostLabel = new JLabel("Host: ");
-	//JLabel dbNameLabel = new JLabel("Database Name: ");
+	JLabel dbNameLabel = new JLabel("Database Name: ");
 	JLabel userLabel = new JLabel("User: ");
 	JLabel passLabel = new JLabel("Password: ");
 
 	// FIELDS
-	JTextField hostField = new JTextField("localhost",15);
-	//JTextField dbNameField = new JTextField(15);
+	JTextField hostField = new JTextField("localhost:5432",15);
+	JTextField dbNameField = new JTextField("dbSeatIn",15);
 	JTextField userField = new JTextField("postgres",15);
-	JTextField passField = new JPasswordField(15);
+	JTextField passField = new JPasswordField("13579sorc768",15);
 
 	// BUTTONS
 	JButton connectButton = new JButton("Connect");
@@ -87,7 +87,7 @@ public class ServerConfig extends JPanel implements ActionListener {
 		gbc.gridy = 1;
 		gbc.insets = new Insets(5, 5, 5, 5);
 		gbc.anchor = GridBagConstraints.LINE_END;
-		//panel1.add(dbNameLabel, gbc);
+		panel1.add(dbNameLabel, gbc);
 
 		// COMPONENT: COLUMN 1, ROW 1
 
@@ -96,7 +96,7 @@ public class ServerConfig extends JPanel implements ActionListener {
 		gbc.gridy = 1;
 		gbc.insets = new Insets(5, 0, 5, 5);
 		gbc.anchor = GridBagConstraints.LINE_START;
-		//panel1.add(dbNameField, gbc);
+		panel1.add(dbNameField, gbc);
 
 		// COMPONENT: COLUMN 0, ROW 2
 
@@ -145,13 +145,14 @@ public class ServerConfig extends JPanel implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		String db_host = hostField.getText();
+		String db_name = dbNameField.getText();
 		String db_username = userField.getText();
 		String db_password = passField.getText();
 		
 		boolean temp = true;
 		
 		try {
-			ConnectionPool.setConfigurations(db_host, db_username, db_password);
+			ConnectionPool.setConfigurations(db_host,db_name, db_username, db_password);
 			temp = true;
 		} catch (SQLException e1) {
 			temp = false;

@@ -67,6 +67,7 @@ public class ExecuteSelect {
 			stmt.setInt(1, userId);
 			
 			rs = stmt.executeQuery();
+			//logger.debug("Method name: selectUserTypeById ");
 			while(rs.next()) {
 				userType = rs.getInt("group_id");
 			}
@@ -103,7 +104,7 @@ public class ExecuteSelect {
 			stmt = conn.prepareStatement(query);
 			stmt.setString(1, email);
 			rs = stmt.executeQuery();
-			
+			logger.debug("Method name: selectUserByEmail ");
 			while(rs.next()) {	
 				user = new User(rs.getInt("id"));
 				user.setSurname(rs.getString("surname"));
@@ -153,7 +154,7 @@ public class ExecuteSelect {
 			stmt = conn.prepareStatement(query);
 			stmt.setInt(1, userId);
 			rs = stmt.executeQuery();
-			
+			logger.debug("Method name: selectUserById ");
 			while(rs.next()) {
 				if(userType == 3) {
 					Student student = new Student(rs.getInt("id"));					
@@ -214,7 +215,7 @@ public class ExecuteSelect {
 			stmt = conn.prepareStatement(query);
 			stmt.setInt(1, courseId);
 			rs = stmt.executeQuery();
-			
+			logger.debug("Method name: selectCourseById ");
 			while(rs.next()) {
 				course = new Course();
 				course.setId(rs.getInt("id"));
@@ -250,6 +251,7 @@ public class ExecuteSelect {
 			stmt = conn.prepareStatement(query);
 			stmt.setString(1, degreeCourseName);
 			rs = stmt.executeQuery();
+			logger.debug("Method name: selectDegreeCourseIdByName ");
 			while(rs.next()) {
 				id_degreeCourse = rs.getInt("id");
 			}
@@ -279,7 +281,7 @@ public class ExecuteSelect {
 			stmt = conn.prepareStatement(query);
 			stmt.setString(1, departmentName);
 			rs = stmt.executeQuery();
-			
+			logger.debug("Method name: selectDepartementIdByName ");
 			while(rs.next()) {
 				departmentId = rs.getInt("id");
 			}
@@ -310,7 +312,7 @@ public class ExecuteSelect {
 			stmt = conn.prepareStatement(query);
 			stmt.setInt(1, courseId);
 			rs = stmt.executeQuery();
-			
+			logger.debug("Method name: selectLecturesEmailByCourseId ");
 			while(rs.next()) {
 				lecturesEmail.add(rs.getString("email"));
 			}
@@ -341,7 +343,7 @@ public class ExecuteSelect {
 			stmt = conn.prepareStatement(query);
 			stmt.setInt(1, courseId);
 			rs = stmt.executeQuery();
-		
+			logger.debug("Method name: selectAllStudentsWhoFollowDeterminedCourse ");
 			while(rs.next()) {
 				result.add(rs.getString("email"));
 			}
@@ -368,7 +370,7 @@ public class ExecuteSelect {
 			conn = pool.getConnection();
 			stmt = conn.createStatement();
 			rs = stmt.executeQuery(query);
-		
+			logger.debug("Method name: selectAllCourses ");
 			while(rs.next()) {
 				Course course = new Course();
 				course.setId(rs.getInt("id"));
@@ -418,7 +420,7 @@ public class ExecuteSelect {
 			stmt = conn.prepareStatement(query);
 			stmt.setInt(1, userId);
 			rs = stmt.executeQuery();
-		
+			logger.debug("Method name: selectAllCoursesLiableByUser ");
 			while(rs.next()) {
 				Course course = new Course();
 				course.setId(rs.getInt("id"));
@@ -453,7 +455,7 @@ public class ExecuteSelect {
 			stmt = conn.prepareStatement(query);
 			stmt.setInt(1, courseId);
 			rs = stmt.executeQuery();
-			
+			logger.debug("Method name: selectAllCourseSections ");
 			while(rs.next()) {
 				Section section = new Section();
 				section.setId(rs.getInt("id"));
@@ -493,7 +495,7 @@ public class ExecuteSelect {
 			stmt = conn.prepareStatement(query);
 			stmt.setInt(1, sectionId);
 			rs = stmt.executeQuery();
-			
+			logger.debug("Method name: selectAllSectionResources ");
 			while(rs.next()) {
 				Resource resource = new Resource();
 				resource.setId(rs.getInt("id"));
@@ -530,7 +532,7 @@ public class ExecuteSelect {
 			stmt = conn.prepareStatement(query);
 			stmt.setInt(1, resourceId);
 			rs = stmt.executeQuery();
-					
+			logger.debug("Method name: selectAllResourceFiles ");	
 			result = new LinkedList<ResourceFile>();
 			while(rs.next()) {
 				ResourceFile file = new ResourceFile();
@@ -570,12 +572,12 @@ public class ExecuteSelect {
 			stmt = conn.prepareStatement(query);
 			stmt.setInt(1, fileId);
 			rs = stmt.executeQuery();
-			
+			logger.debug("Method name: selectPathToFile ");
 			while(rs.next()) {
 				result = rs.getString("file");
 			}
 		}catch(SQLException e) {
-			logger.debug("Errore esecuzione selectAllSectionOfCourse: "+e);
+			logger.debug("Errore esecuzione selectPathToFile: "+e);
 		}finally {
 			closeResources(rs, stmt, conn);
 		}
@@ -598,13 +600,13 @@ public class ExecuteSelect {
 			conn = pool.getConnection();
 			stmt = conn.prepareStatement(query);
 			rs = stmt.executeQuery();
-			
+			logger.debug("Method name: selectTotalNumberConnectedUsers ");
 			while(rs.next()) {
 				result = rs.getInt("count");
 			}
 			
 		}catch(SQLException e) {
-			logger.debug("Errore esecuzione selectTotalNumberConnectedUsersAreViewingCourseContent: "+e);
+			logger.debug("Errore esecuzione selectTotalNumberConnectedUsers: "+e);
 		}finally {
 			closeResources(rs, stmt, conn);
 		}
@@ -633,7 +635,7 @@ public class ExecuteSelect {
 			stmt.setTimestamp(2, end);
 			
 			rs = stmt.executeQuery();
-			
+			logger.debug("Method name: selectTotalNumberOfUsersHaveDownloadOneOrMoreResoursesInTimeIntervals ");
 			while(rs.next()) {
 				result = rs.getInt("count");
 			}
@@ -662,13 +664,13 @@ public class ExecuteSelect {
 			conn = pool.getConnection();
 			stmt = conn.prepareStatement(query);
 			rs = stmt.executeQuery();
-						
+			logger.debug("Method name: selectAverageConnectionTimeOfStudentsToTheCoursePage ");		
 			while(rs.next()) {
 				result = rs.getDouble("avg");
 			}
 			
 		}catch(SQLException e) {
-			logger.debug("Errore esecuzione getAverageConnectionTimeOfStudentsToTheCoursePage: "+e);
+			logger.debug("Errore esecuzione selectAverageConnectionTimeOfStudentsToTheCoursePage: "+e);
 		}finally {
 			closeResources(rs, stmt, conn);
 		}
@@ -694,7 +696,7 @@ public class ExecuteSelect {
 			stmt.setTimestamp(1, start);
 			stmt.setTimestamp(2, end);
 			rs = stmt.executeQuery();
-						
+			logger.debug("Method name: selectTotalNumberOfAccessesPerCourseInTimeBand ");	
 			while(rs.next()) {
 				result = rs.getInt("count");
 			}
@@ -727,7 +729,7 @@ public class ExecuteSelect {
 			stmt = conn.prepareStatement(query);
 			stmt.setInt(1, courseId);
 			rs = stmt.executeQuery();
-						
+			logger.debug("Method name: selectAverageConnectionTimeOfStudentsPerCourse ");		
 			while(rs.next()) {
 				result = rs.getDouble("avg");
 			}
@@ -763,7 +765,7 @@ public class ExecuteSelect {
 			stmt.setInt(1, courseId);
 			
 			rs = stmt.executeQuery();
-						
+			logger.debug("Method name: selectTotalNumberDownloadsForEachCourse ");		
 			while(rs.next()) {
 				result = rs.getInt("count");
 			}

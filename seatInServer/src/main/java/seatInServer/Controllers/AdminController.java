@@ -43,10 +43,9 @@ public class AdminController extends Thread{
 			Object result = null;
 						
 			try {
-				logger.debug("Admin Controller");
+				logger.debug("Admin Controller start work...");
 				//1) Ricevimento del comando da parte del cliente
 				input = (String) objectInput.readObject();
-				
 				Registration registration = new Registration();
 				ViewData view = new ViewData();
 				ManipolationUserData userData = new ManipolationUserData();
@@ -154,7 +153,6 @@ public class AdminController extends Thread{
 					logger.info("Chiusura connessione cliente! "+clientSocket);
 					clientSocket.close();
 					isActive=false;
-					break;
 				} catch (IOException e1) {
 					logger.debug("Errore durante chiusura connessione: "+e);
 					isActive=false;

@@ -26,7 +26,7 @@ public class Skeleton extends Thread{
 	
 	public Skeleton(Socket clientSocket) throws IOException {
 		this.clientSocket = clientSocket; 
-		logger.debug("Inizializzo la connessione con il cliente: "+clientSocket);
+		logger.debug("Initialize connection with client: "+clientSocket);
 		initializeStreams();
 	}
 
@@ -54,19 +54,19 @@ public class Skeleton extends Thread{
 				//3) Esecuzione della richiesta effettuata
 				switch(command[0]) {
 				case "Login":
-						logger.debug("Execute Login: "+command[1]+" - "+command[2]);
+						logger.debug("Login-> "+command[1]+": "+command[2]);
 						result = login.verifyUserData(command[1],command[2]);
 					break;
 				case "ResetPassword":
-						logger.debug("Execute ResetPassword...");
+						logger.debug("ResetPassword...");
 						reset.execute(command[1]);
 					break;
 				case "ActivationAccount":
-					logger.debug("Execute ActivationAccount...");
+					logger.debug("ActivationAccount...");
 					result = execute.activationUserAccount(Integer.parseInt(command[1]), command[2]);
 					break;				
 				default: 
-					logger.debug("Comando ricevuto non riconosciuto-----Skeleton: "+input);
+					logger.debug("SKELETON: Received command is undefied--> "+input);
 					result = negative;
 				}
 			
@@ -95,7 +95,7 @@ public class Skeleton extends Thread{
 			}
 			
 			}catch(NullPointerException e) {
-				logger.debug("Errore: Parsing comando "+e);
+				logger.debug("SKELETON: Riferimento nullo: "+e);
 			}catch (ClassNotFoundException e) {
 				logger.debug("L'oggetto ricevuto dal cliente è sconosciuto: "+e);
 			}catch(SocketException e) {
@@ -105,8 +105,10 @@ public class Skeleton extends Thread{
 				try {
 					logger.debug("Chiusura connessione cliente! "+clientSocket);
 					clientSocket.close();
+					isActive = false;
 				} catch (IOException e1) {
 					logger.debug("Errore durante chiusura connessione: "+e1);
+					isActive=false;
 				}
 			}
 		}
@@ -120,13 +122,13 @@ public class Skeleton extends Thread{
 		try {
 			this.objectOutput = new ObjectOutputStream(clientSocket.getOutputStream());
 		} catch (IOException e) {
-			logger.debug("Errore: inizializzazione ObjectOutputStream!"+e);
+			logger.debug("Errore: initialize ObjectOutputStream!"+e);
 			throw e;
 		}
 		try {
 			this.objectInput = new ObjectInputStream(clientSocket.getInputStream());
 		} catch (IOException e) {
-			logger.debug("Errore: inizializzazione ObjectInputStream!"+e);
+			logger.debug("Errore: initialize ObjectInputStream!"+e);
 			throw e;
 		}
 	}
