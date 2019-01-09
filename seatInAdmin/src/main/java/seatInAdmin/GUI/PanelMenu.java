@@ -6,7 +6,6 @@ import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
-import java.io.IOException;
 import java.util.Collection;
 
 import javax.swing.BorderFactory;
@@ -26,7 +25,6 @@ import javax.swing.table.DefaultTableModel;
 
 import seatInAdmin.AdminCommands;
 import seatInAdmin.Items;
-import seatInAdmin.SeatInAdmin;
 import seatInServer.JDBC.Beans.Course;
 import seatInServer.JDBC.Beans.User;
 

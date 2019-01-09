@@ -18,7 +18,6 @@ public class PanelResourceAdmin extends PanelResource {
 	protected PanelResourceAdmin(Resource resource, Section sectionFather) {
 		super(resource, sectionFather);
 		
-
 	}
 
 }

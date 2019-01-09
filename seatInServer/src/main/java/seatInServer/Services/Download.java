@@ -52,7 +52,7 @@ public class Download {
 	 * @return byte[] rappresenta il contenuto dello zip che verrà mandato all'user. 
 	 */
 	public byte[] downloadZip(int resourceId) {
-		String zipDirectory = "src/"+resourceId+".zip";
+		String zipDirectory = "CourseResources/"+resourceId+".zip";
 		Collection<ResourceFile> files = select.selectAllResourceFiles(resourceId, true);
 		byte[] zipContent = null;		
 		File zip = new File(zipDirectory);

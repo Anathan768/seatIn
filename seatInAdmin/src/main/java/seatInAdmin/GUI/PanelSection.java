@@ -91,7 +91,7 @@ public class PanelSection extends JPanel {
 
 		Collection<Section> sections = new LinkedList<Section>();
 		for (Section c : sectionList) {
-			if (c.getParentId() != 0) {
+			if (c.getParentId() == newSection.getId()) {
 				sections.add(c);
 			}
 		}
@@ -191,12 +191,12 @@ public class PanelSection extends JPanel {
 			this.add(description);
 		}
 
-		// if (section.getParentId() == null) {
-		this.add(subTitlePanel);
-		this.add(secScroll);
-		this.add(secButtonPanel);
-		secButtonPanel.add(openSecButton);
-		// }
+		 if (section.getParentId() == 0) {
+			this.add(subTitlePanel);
+			this.add(secScroll);
+			this.add(secButtonPanel);
+			secButtonPanel.add(openSecButton);
+		 }
 
 		this.add(subTitlePanel1);
 		this.add(resScroll);

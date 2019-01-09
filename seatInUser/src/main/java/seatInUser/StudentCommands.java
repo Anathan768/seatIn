@@ -29,7 +29,7 @@ public class StudentCommands {
      * Operazione di autenticazione di un utente.
      * @param email dell'utente.
      * @param password dell'utente.
-     * @return  Object -- Se, i dati inseriti sono coretti, ritorna un oggetto di tipo User,
+     * @return  Object -- Se, i dati inseriti sono coretti, ritorna un oggetto di sotto tipo di User,
      * contenente tutte le informazionei relative all'utente autenticato.
      * Se i dati sono sbagliti, ritorna una stringa che indica l'accesso negato(Esempio: DENIED).
      */
@@ -114,6 +114,7 @@ public class StudentCommands {
         String path = "src/";
         byte[] fileContent = (byte[]) this.callServer(command);
         try {
+        	System.out.println(path+fileName+": "+fileId);
             File file = new File(path+fileName);
             Files.write(file.toPath(), fileContent);
             result = "ACCEPT";

@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.net.InetAddress;
 import java.net.Socket;
 
+import seatInUser.GUI.GUI;
+
 public class SeatInUser {
 	private InetAddress addr;
 	private Socket socket;
@@ -14,10 +16,9 @@ public class SeatInUser {
 	private SeatInUser() throws IOException {
 		addr = InetAddress.getByName(null);
 		socket = new Socket(addr, PORT);
-		System.out.println("Connect to address:"+addr+":"+PORT);
 		Proxy connection = new Proxy(socket);
 		setServerConnection(connection);
-		//TODO creare l'oggetto relativo alla finestra del login
+		new GUI();
 	}
 	
 	public static void main(String[] args) throws IOException {
