@@ -1,7 +1,6 @@
 package seatInUser.GUI;
 
 import java.awt.Component;
-import java.util.Collection;
 
 import javax.swing.table.DefaultTableModel;
 

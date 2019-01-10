@@ -13,7 +13,6 @@ import seatInServer.JDBC.Beans.Course;
 import seatInServer.JDBC.Beans.User;
 import seatInUser.Items;
 import seatInUser.LectureCommands;
-import seatInUser.StudentCommands;
 
 @SuppressWarnings("serial")
 public class PanelMenuTeach extends PanelMenu {

@@ -3,11 +3,9 @@ package seatInUser.GUI;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Collection;
-import java.util.LinkedList;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 
@@ -30,7 +28,6 @@ public class PanelSectionTeach extends PanelSection {
 	JButton modifySecButton = new JButton("Modify");
 	JButton addSecButton = new JButton("Add");
 
-	@SuppressWarnings({ "unchecked", "rawtypes" })
 	protected PanelSectionTeach(Section newSection, Course father) {
 		super(newSection, father, false);
 
@@ -47,60 +44,108 @@ public class PanelSectionTeach extends PanelSection {
 
 		deleteResButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				// TODO delete action
+				if (resourceSelection != null) {
+
+					String result = commands.deleteResourceFile(resourceSelection.getId());
+
+					if (result.equals("ACCEPT")) {
+
+						JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(c);
+						frame.getContentPane().removeAll();
+						frame.getContentPane().add(new PanelSectionTeach(newSection, father));
+						frame.pack();
+						frame.getContentPane().validate();
+
+						JOptionPane.showMessageDialog(null, "File Deleted");
+
+					} else {
+
+						JOptionPane.showOptionDialog(new JFrame(), "Failed!", "", JOptionPane.DEFAULT_OPTION,
+								JOptionPane.ERROR_MESSAGE, null, new Object[] {}, null);
+
+					}
+
+				}
 
 			}
 		});
 
 		modifyResButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(c);
-				frame.getContentPane().removeAll();
-				frame.getContentPane().add(new PanelModResource());
-				frame.pack();
-				frame.getContentPane().validate();
+				if (resourceSelection != null) {
+					JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(c);
+					frame.getContentPane().removeAll();
+					frame.getContentPane().add(new PanelModResource(resourceSelection, newSection, father));
+					frame.pack();
+					frame.getContentPane().validate();
+				}
 			}
 		});
 
 		addResButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(c);
-				frame.getContentPane().removeAll();
-				frame.getContentPane().add(new PanelAddResource());
-				frame.pack();
-				frame.getContentPane().validate();
+				if (resourceSelection != null) {
+					JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(c);
+					frame.getContentPane().removeAll();
+					frame.getContentPane().add(new PanelAddResource(newSection, father));
+					frame.pack();
+					frame.getContentPane().validate();
+				}
 			}
 		});
 
 		deleteSecButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				// TODO delete actio
+				if (sectionSelection != null) {
+
+					String result = commands.deleteSectionResource(resourceSelection.getId());
+
+					if (result.equals("ACCEPT")) {
+
+						JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(c);
+						frame.getContentPane().removeAll();
+						frame.getContentPane().add(new PanelSectionTeach(newSection, father));
+						frame.pack();
+						frame.getContentPane().validate();
+
+						JOptionPane.showMessageDialog(null, "File Deleted");
+
+					} else {
+
+						JOptionPane.showOptionDialog(new JFrame(), "Failed!", "", JOptionPane.DEFAULT_OPTION,
+								JOptionPane.ERROR_MESSAGE, null, new Object[] {}, null);
+
+					}
+				}
 			}
 		});
 
 		modifySecButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(c);
-				frame.getContentPane().removeAll();
-				frame.getContentPane().add(new PanelModSection());
-				frame.pack();
-				frame.getContentPane().validate();
+				if (sectionSelection != null) {
+					JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(c);
+					frame.getContentPane().removeAll();
+					frame.getContentPane().add(new PanelModSection(sectionSelection, father));
+					frame.pack();
+					frame.getContentPane().validate();
+				}
 			}
 		});
 
 		addSecButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(c);
-				frame.getContentPane().removeAll();
-				frame.getContentPane().add(new PanelAddSection());
-				frame.pack();
-				frame.getContentPane().validate();
+				if (sectionSelection != null) {
+					JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(c);
+					frame.getContentPane().removeAll();
+					frame.getContentPane().add(new PanelAddSection(father, newSection));
+					frame.pack();
+					frame.getContentPane().validate();
+				}
 			}
 		});
 
 		backButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-
 
 				JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(c);
 				frame.getContentPane().removeAll();
@@ -113,13 +158,15 @@ public class PanelSectionTeach extends PanelSection {
 
 		openSecButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				if (sectionSelection != null) {
 
-				JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(c);
-				frame.getContentPane().removeAll();
-				frame.getContentPane().add(new PanelSectionTeach(sectionSelection, father));
-				frame.pack();
-				frame.setLocationRelativeTo(null);
-				frame.getContentPane().validate();
+					JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(c);
+					frame.getContentPane().removeAll();
+					frame.getContentPane().add(new PanelSectionTeach(sectionSelection, father));
+					frame.pack();
+					frame.setLocationRelativeTo(null);
+					frame.getContentPane().validate();
+				}
 			}
 		});
 
@@ -135,12 +182,12 @@ public class PanelSectionTeach extends PanelSection {
 				}
 			}
 		});
-		
+
 		downloadButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
 				String result = commands.downloadZip(resourceSelection.getId(), resourceSelection.getTitle());
-				
+
 				if (result.equals("ACCEPT")) {
 					JOptionPane.showMessageDialog(null, "Download Completed");
 
@@ -151,8 +198,7 @@ public class PanelSectionTeach extends PanelSection {
 
 			}
 		});
-		
-		
+
 	}
 
 }

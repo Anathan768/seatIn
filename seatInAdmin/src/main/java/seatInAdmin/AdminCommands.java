@@ -149,12 +149,17 @@ public class AdminCommands {
     public String downloadZip(int resourceId, String resourceName){
         String result = "DENIED";
         String command = "DownloadZip/"+resourceId;
+        String directory = "Files/";
         String path = "Files/"+resourceName+".zip";
         server.sendCommand(command);
         byte[] zipContent = (byte[]) server.getResult();
 
-        File zipFile = new File(path);
         try {
+        	File dir = new File(directory);
+            if(!dir.exists())
+                dir.mkdir();
+            
+            File zipFile = new File(path);
             Files.write(zipFile.toPath(), zipContent);
             result = "ACCEPT";
         } catch (IOException e) {

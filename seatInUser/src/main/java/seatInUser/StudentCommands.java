@@ -111,10 +111,13 @@ public class StudentCommands {
     public String downloadFile(int fileId, String fileName) {
         String result = "DENIED";
         String command = "DownloadFile/"+fileId;
-        String path = "src/";
+        String path = "Files/";
         byte[] fileContent = (byte[]) this.callServer(command);
         try {
-        	System.out.println(path+fileName+": "+fileId);
+        	File dir = new File(path);
+            if(!dir.exists())
+                dir.mkdir();
+            
             File file = new File(path+fileName);
             Files.write(file.toPath(), fileContent);
             result = "ACCEPT";
@@ -133,12 +136,17 @@ public class StudentCommands {
     public String downloadZip(int resourceId, String resourceName){
         String result = "DENIED";
         String command = "DownloadZip/"+resourceId;
-        String path = "src/"+resourceName+".zip";
+        String directory = "Files/";
+        String path = "Files/"+resourceName+".zip";
         server.sendCommand(command);
         byte[] zipContent = (byte[]) server.getResult();
-
-        File zipFile = new File(path);
-        try {
+        
+        try {    
+        	File dir = new File(directory);
+            if(!dir.exists())
+                dir.mkdir();
+            
+        	File zipFile = new File(path);
             Files.write(zipFile.toPath(), zipContent);
             result = "ACCEPT";
         } catch (IOException e) {

@@ -3,8 +3,6 @@ package seatInUser.GUI;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 import javax.swing.Box;
 import javax.swing.BoxLayout;
@@ -74,12 +72,7 @@ public class PanelCourse extends JPanel {
 		scroll = new JScrollPane(list);
 		scroll.setPreferredSize(description.getPreferredSize());
 
-		openButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				// new ToSection(c, s, s);
-
-			}
-		});
+		
 
 		functionPanel.add(openButton);
 

@@ -21,8 +21,6 @@ import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 
 import seatInUser.Items;
-import seatInServer.JDBC.Beans.Lecture;
-import seatInServer.JDBC.Beans.Student;
 import seatInServer.JDBC.Beans.User;
 import seatInUser.LectureCommands;
 import seatInUser.StudentCommands;
@@ -40,7 +38,7 @@ public class PanelLogin extends JPanel implements ActionListener {
 	JPanel backPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
 
 	// TEXT FIELDS
-	JTextField userField = new JTextField("student1@domain.com",20);
+	JTextField userField = new JTextField("lecture1@domain.com",20);
 	JPasswordField passwordField = new JPasswordField("pass",20);
 
 	// LABELS

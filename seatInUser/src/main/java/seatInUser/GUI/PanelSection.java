@@ -10,13 +10,11 @@ import java.util.LinkedList;
 import javax.swing.BoxLayout;
 import javax.swing.DefaultListCellRenderer;
 import javax.swing.JButton;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
-import javax.swing.SwingUtilities;
 import javax.swing.border.EmptyBorder;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
@@ -71,7 +69,7 @@ public class PanelSection extends JPanel {
 	SectionListCellRenderer renderer = new SectionListCellRenderer();
 	ResourceListCellRenderer renderer1 = new ResourceListCellRenderer();
 
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	protected PanelSection(Section newSection, Course father, boolean isSection) {
 
 		this.father = father;

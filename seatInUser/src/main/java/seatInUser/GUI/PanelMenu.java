@@ -20,7 +20,6 @@ import javax.swing.table.DefaultTableModel;
 
 
 import seatInServer.JDBC.Beans.Course;
-import seatInServer.JDBC.Beans.Lecture;
 import seatInServer.JDBC.Beans.User;
 import seatInUser.Items;
 

@@ -27,8 +27,8 @@ public class PanelActionBase extends JPanel {
 	JLabel titleLabel = new JLabel("Action Name");
 	JLabel nameLabel = new JLabel("Title:");
 	JLabel descriptionLabel = new JLabel("Description:");
-	JLabel toLabel = new JLabel("Active from:");
-	JLabel fromLabel = new JLabel("Active to:");
+	JLabel toLabel = new JLabel("Active to:");
+	JLabel fromLabel = new JLabel("Active From:");
 
 	// BUTTONS
 	JButton actionButton = new JButton("Action");

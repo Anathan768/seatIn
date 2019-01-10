@@ -5,9 +5,7 @@ import java.awt.Insets;
 
 import javax.swing.JLabel;
 
-import seatInServer.JDBC.Beans.Lecture;
 import seatInServer.JDBC.Beans.Student;
-import seatInServer.JDBC.Beans.User;
 
 @SuppressWarnings("serial")
 public class PanelProfileStd extends PanelProfile {

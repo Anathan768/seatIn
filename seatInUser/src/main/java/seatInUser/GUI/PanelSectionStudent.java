@@ -5,7 +5,6 @@ import java.awt.event.ActionListener;
 import java.util.Collection;
 import java.util.LinkedList;
 
-import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JList;
 import javax.swing.JOptionPane;
@@ -14,7 +13,6 @@ import javax.swing.SwingUtilities;
 import seatInServer.JDBC.Beans.Course;
 import seatInServer.JDBC.Beans.Section;
 import seatInUser.Items;
-import seatInUser.LectureCommands;
 import seatInUser.StudentCommands;
 
 @SuppressWarnings("serial")

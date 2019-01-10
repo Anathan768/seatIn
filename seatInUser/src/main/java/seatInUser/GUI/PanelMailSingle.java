@@ -3,7 +3,6 @@ package seatInUser.GUI;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 
-import seatInServer.JDBC.Beans.Student;
 import seatInServer.JDBC.Beans.User;
 import seatInUser.Items;
 import seatInUser.LectureCommands;

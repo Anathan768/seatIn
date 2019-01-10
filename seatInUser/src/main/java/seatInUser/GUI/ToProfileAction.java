@@ -7,13 +7,13 @@ import javax.swing.AbstractAction;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 
-import seatInServer.JDBC.Beans.Course;
 import seatInServer.JDBC.Beans.Lecture;
 import seatInServer.JDBC.Beans.Student;
 import seatInServer.JDBC.Beans.User;
 import seatInUser.Items;
 import seatInUser.LectureCommands;
 
+@SuppressWarnings("serial")
 public class ToProfileAction extends AbstractAction {
 
 	Component component;

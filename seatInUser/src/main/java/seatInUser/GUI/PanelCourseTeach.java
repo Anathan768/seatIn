@@ -8,6 +8,7 @@ import java.util.LinkedList;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JList;
+import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.SwingUtilities;
 import javax.swing.event.ListSelectionEvent;
@@ -22,7 +23,7 @@ import seatInUser.LectureCommands;
 public class PanelCourseTeach extends PanelCourse {
 
 	Course course;
-	
+
 	JButton statsButton = new JButton("Statistics");
 	JButton addSection = new JButton("Add");
 	JButton modifySection = new JButton("Modify");
@@ -47,12 +48,11 @@ public class PanelCourseTeach extends PanelCourse {
 		}
 		list = new JList(sections.toArray());
 
-
 		scroll = new JScrollPane(list);
 		scroll.setPreferredSize(description.getPreferredSize());
-		
+
 		listPanel.add(scroll);
-		
+
 		list.setCellRenderer(renderer);
 
 		list.addListSelectionListener(new ListSelectionListener() {
@@ -69,19 +69,38 @@ public class PanelCourseTeach extends PanelCourse {
 
 		deleteSection.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				// TODO delete action
+				if (s != null) {
+					String result = commands.deleteCourseSection(s.getId());
+					
+					if (result.equals("ACCEPT")) {
 
+						JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(c);
+						frame.getContentPane().removeAll();
+						frame.getContentPane().add(new PanelCourseTeach(course));
+						frame.pack();
+						frame.getContentPane().validate();
+
+						JOptionPane.showMessageDialog(null, "File Deleted");
+
+					} else {
+
+						JOptionPane.showOptionDialog(new JFrame(), "Failed!", "", JOptionPane.DEFAULT_OPTION,
+								JOptionPane.ERROR_MESSAGE, null, new Object[] {}, null);
+
+					}
+				}
 			}
 		});
 
 		modifySection.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(c);
-				frame.getContentPane().removeAll();
-				frame.getContentPane().add(new PanelModSection());
-				frame.pack();
-				frame.getContentPane().validate();
-
+				if (s != null) {
+					JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(c);
+					frame.getContentPane().removeAll();
+					frame.getContentPane().add(new PanelModSection(s, course));
+					frame.pack();
+					frame.getContentPane().validate();
+				}
 			}
 		});
 
@@ -89,7 +108,7 @@ public class PanelCourseTeach extends PanelCourse {
 			public void actionPerformed(ActionEvent e) {
 				JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(c);
 				frame.getContentPane().removeAll();
-				frame.getContentPane().add(new PanelAddSection());
+				frame.getContentPane().add(new PanelAddSection(course, null));
 				frame.pack();
 				frame.getContentPane().validate();
 
@@ -106,7 +125,7 @@ public class PanelCourseTeach extends PanelCourse {
 
 			}
 		});
-		
+
 		openButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (s != null) {
@@ -119,7 +138,6 @@ public class PanelCourseTeach extends PanelCourse {
 				}
 			}
 		});
-
 
 	}
 

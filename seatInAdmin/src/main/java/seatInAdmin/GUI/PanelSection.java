@@ -13,6 +13,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JList;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
@@ -121,9 +122,15 @@ public class PanelSection extends JPanel {
 
 		downloadButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-
-				commands.downloadZip(resourceSelection.getId(), resourceSelection.getTitle());
-
+				 String result = commands.downloadZip(resourceSelection.getId(), resourceSelection.getTitle());
+			      
+			      if(result.equals("ACCEPT")) {
+			    	  JOptionPane.showMessageDialog(null, "Download Completed");
+			    	  
+			      }else {
+			    	  JOptionPane.showOptionDialog(new JFrame(), "Download Failed", "", JOptionPane.DEFAULT_OPTION,
+								JOptionPane.ERROR_MESSAGE, null, new Object[] {}, null);
+			      }
 			}
 		});
 
