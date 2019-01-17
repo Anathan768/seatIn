@@ -66,13 +66,15 @@ public class PanelModResource extends PanelActionBase {
 				tempResource.setActiveTo(toStamp);
 				tempResource.setDescription(descriptionArea.getText());
 				tempResource.setActive(isActiveBox.isSelected());
+				tempResource.setModuleId(fatherSection.getId());
 
 				String resoult = commands.modifySectionResource(tempResource);
 
 				if (resoult.equals("ACCEPT")) {
+
 					JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(c);
 					frame.getContentPane().removeAll();
-					frame.getContentPane().add(new PanelModResource(resource, fatherSection, course));
+					frame.getContentPane().add(new PanelCourseTeach(course));
 					frame.pack();
 					frame.getContentPane().validate();
 

@@ -34,7 +34,6 @@ D:\EclipseJavaProjects\seatIn\seatInServer\src\main\java\seatInServer\JDBC\Conne
 D:\EclipseJavaProjects\seatIn\seatInServer\src\main\java\seatInServer\Services\EmailSender.java
 D:\EclipseJavaProjects\seatIn\seatInServer\src\main\java\seatInServer\Services\CRUD\ManipolationCourseData.java
 D:\EclipseJavaProjects\seatIn\seatInServer\src\main\java\seatInServer\JDBC\QueryResources.java
-D:\EclipseJavaProjects\seatIn\seatInServer\src\main\java\seatInServer\JDBC\ConnectionPool\InitDataBase.java
 D:\EclipseJavaProjects\seatIn\seatInServer\src\main\java\seatInServer\JDBC\Beans\User.java
 D:\EclipseJavaProjects\seatIn\seatInServer\src\main\java\seatInServer\Services\Login.java
 D:\EclipseJavaProjects\seatIn\seatInServer\src\main\java\seatInServer\GUI\ServerResPsw.java

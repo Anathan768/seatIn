@@ -27,8 +27,8 @@ public class EmailSender {
 	private Session session;
 	private Message initMessage;
 	
-	private String username = ""; //Qui andrebbe inserita l'indirizzo mail vero(cioè esistente) dell'ateneo.
-	private String pswd = ""; //Qui la password dell'account della posta eletronica dell'atteneo.
+	private String username = "aroshka@studenti.uninsubria.it"; //Qui andrebbe inserita l'indirizzo mail vero(cioè esistente) dell'ateneo.
+	private String pswd = "2407Diana1995!"; //Qui la password dell'account della posta eletronica dell'atteneo.
 	
 	public EmailSender() {
 		props = System.getProperties();

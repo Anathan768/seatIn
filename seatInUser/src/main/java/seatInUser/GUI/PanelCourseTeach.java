@@ -73,14 +73,17 @@ public class PanelCourseTeach extends PanelCourse {
 					String result = commands.deleteCourseSection(s.getId());
 					
 					if (result.equals("ACCEPT")) {
-
+						
+						sectionList = commands.viewCourseContent(course.getId(), true);
+						Items.setSectionsOfCourse(sectionList);
+						
 						JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(c);
 						frame.getContentPane().removeAll();
 						frame.getContentPane().add(new PanelCourseTeach(course));
 						frame.pack();
 						frame.getContentPane().validate();
 
-						JOptionPane.showMessageDialog(null, "File Deleted");
+						JOptionPane.showMessageDialog(null, "Section Deleted");
 
 					} else {
 

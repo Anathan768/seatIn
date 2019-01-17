@@ -35,8 +35,8 @@ public class PanelLogin extends JPanel implements ActionListener {
 	JPanel insertionsPanel = new JPanel(new GridBagLayout());
 
 	// TEXT FIELDS
-	JTextField user = new JTextField("admin2@domain.com",20);
-	JPasswordField password = new JPasswordField("pass",20);
+	JTextField user = new JTextField(20);
+	JPasswordField password = new JPasswordField(20);
 
 	// LABELS
 	JLabel eMailLabel = new JLabel("e-mail:");

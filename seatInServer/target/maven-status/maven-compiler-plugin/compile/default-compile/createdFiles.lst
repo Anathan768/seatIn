@@ -6,7 +6,6 @@ seatInServer\JDBC\Beans\Lecture.class
 seatInServer\GUI\ServerMenu$3.class
 seatInServer\Start.class
 seatInServer\Utilities\ResultType.class
-seatInServer\JDBC\ConnectionPool\InitDataBase.class
 seatInServer\GUI\ServerConfig.class
 seatInServer\JDBC\Beans\ResourceFile.class
 seatInServer\JDBC\ConnectionPool\Configuration.class

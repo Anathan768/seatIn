@@ -32,6 +32,7 @@ public class ConnectionPool {
 	/**
 	 * Imposta i dati necessari per la connessione al data base.
 	 * @param db_host -- host del data base.
+	 * @param db_name -- nome del database a cui ci si connette.
 	 * @param db_username -- nome profilo del data base.
 	 * @param db_password -- password del profilo utente del db.
 	 * @throws SQLException se i dati inseriti sono sbagliati. 
@@ -83,11 +84,10 @@ public class ConnectionPool {
 	 */
 	public synchronized void putbackConnection(Connection conn) {
 		try {
-			connections.add(conn);
+			connections.put(conn);
 			usedConnections--;
-			//logger.debug("Putback connection:"+connections.size()+"/"+usedConnections);
 			notify();
-		}catch(NullPointerException e) {
+		}catch(NullPointerException | InterruptedException e) {
 			logger.debug("Errore restituzione connessione al ConnctionPool: "+e);
 		}
 	}	

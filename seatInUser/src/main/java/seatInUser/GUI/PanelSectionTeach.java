@@ -56,7 +56,7 @@ public class PanelSectionTeach extends PanelSection {
 						frame.pack();
 						frame.getContentPane().validate();
 
-						JOptionPane.showMessageDialog(null, "File Deleted");
+						JOptionPane.showMessageDialog(null, "Resource Deleted");
 
 					} else {
 
@@ -84,13 +84,13 @@ public class PanelSectionTeach extends PanelSection {
 
 		addResButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (resourceSelection != null) {
+				
 					JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(c);
 					frame.getContentPane().removeAll();
 					frame.getContentPane().add(new PanelAddResource(newSection, father));
 					frame.pack();
 					frame.getContentPane().validate();
-				}
+				
 			}
 		});
 
@@ -134,13 +134,13 @@ public class PanelSectionTeach extends PanelSection {
 
 		addSecButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (sectionSelection != null) {
+				
 					JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(c);
 					frame.getContentPane().removeAll();
 					frame.getContentPane().add(new PanelAddSection(father, newSection));
 					frame.pack();
 					frame.getContentPane().validate();
-				}
+				
 			}
 		});
 

@@ -1,100 +1,329 @@
-08/01/2019 21:10:58 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectUserByEmail 
-08/01/2019 21:10:58 INFO seatInServer.SeatInServer--> Server started: ServerSocket[addr=0.0.0.0/0.0.0.0,localport=8080]
-08/01/2019 21:11:02 INFO seatInServer.SeatInServer--> Client connected: Socket[addr=/127.0.0.1,port=65401,localport=8080]
+17/01/2019 09:22:55 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectUserByEmail 
+17/01/2019 09:22:55 INFO seatInServer.SeatInServer--> Server started: ServerSocket[addr=0.0.0.0/0.0.0.0,localport=8080]
+17/01/2019 09:23:13 INFO seatInServer.SeatInServer--> Client connected: Socket[addr=/127.0.0.1,port=65070,localport=8080]
 
-08/01/2019 21:11:02 DEBUG seatInServer.Controllers.Skeleton--> Initialize connection with client: Socket[addr=/127.0.0.1,port=65401,localport=8080]
-08/01/2019 21:11:02 DEBUG seatInServer.Controllers.Skeleton--> Skeleton Start work...
-08/01/2019 21:11:04 DEBUG seatInServer.Controllers.Skeleton--> Login-> admin2@domain.com: pass
-08/01/2019 21:11:04 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectUserByEmail 
-08/01/2019 21:11:04 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
-08/01/2019 21:11:04 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectUserTypeById 
-08/01/2019 21:11:04 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllCoursesLiableByUser 
-08/01/2019 21:11:04 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
-08/01/2019 21:11:52 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectUserTypeById 
-08/01/2019 21:11:52 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectUserById 
-08/01/2019 21:11:52 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
-08/01/2019 21:12:13 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectUserTypeById 
-08/01/2019 21:12:13 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllCoursesLiableByUser 
-08/01/2019 21:12:13 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
-08/01/2019 21:12:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectUserTypeById 
-08/01/2019 21:12:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectUserById 
-08/01/2019 21:12:17 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
-08/01/2019 21:12:19 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectUserTypeById 
-08/01/2019 21:12:19 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectUserById 
-08/01/2019 21:12:19 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
-08/01/2019 21:12:20 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectUserTypeById 
-08/01/2019 21:12:20 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectUserById 
-08/01/2019 21:12:20 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
-08/01/2019 21:12:34 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectUserTypeById 
-08/01/2019 21:12:34 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectUserById 
-08/01/2019 21:12:34 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
-08/01/2019 21:12:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectUserTypeById 
-08/01/2019 21:12:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllCoursesLiableByUser 
-08/01/2019 21:12:41 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
-08/01/2019 21:12:53 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectDegreeCourseIdByName 
-08/01/2019 21:12:53 DEBUG seatInServer.JDBC.ExecuteUpdate--> Method name: insertCourse 
-08/01/2019 21:12:53 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
-08/01/2019 21:12:53 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectUserTypeById 
-08/01/2019 21:12:53 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllCoursesLiableByUser 
-08/01/2019 21:12:53 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
-08/01/2019 21:15:05 DEBUG seatInServer.Controllers.AdminController--> Cliente si è disconesso: java.net.SocketException: Connection reset
-08/01/2019 21:15:05 INFO seatInServer.Controllers.AdminController--> Chiusura connessione cliente! Socket[addr=/127.0.0.1,port=65401,localport=8080]
-08/01/2019 21:31:03 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectUserByEmail 
-08/01/2019 21:31:03 INFO seatInServer.SeatInServer--> Server started: ServerSocket[addr=0.0.0.0/0.0.0.0,localport=8080]
-08/01/2019 21:31:25 INFO seatInServer.SeatInServer--> Client connected: Socket[addr=/127.0.0.1,port=49348,localport=8080]
+17/01/2019 09:23:13 DEBUG seatInServer.Controllers.Skeleton--> Initialize connection with client: Socket[addr=/127.0.0.1,port=65070,localport=8080]
+17/01/2019 09:23:13 DEBUG seatInServer.Controllers.Skeleton--> Skeleton Start work...
+17/01/2019 09:23:27 DEBUG seatInServer.Controllers.Skeleton--> Login-> admin2@domain.com: pass
+17/01/2019 09:23:27 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectUserByEmail 
+17/01/2019 09:23:27 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
+17/01/2019 09:23:27 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllCoursesLiableByUser 
+17/01/2019 09:23:27 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
+17/01/2019 09:23:40 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllCourseSections 
+17/01/2019 09:23:40 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:23:40 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:23:40 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:23:40 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:23:40 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:23:40 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:23:40 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:23:40 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:23:40 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:23:40 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:23:40 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:23:40 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:23:40 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:23:40 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:23:40 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:23:40 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:23:40 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:23:40 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:23:40 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:23:40 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:23:40 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:23:40 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:23:40 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:23:40 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
+17/01/2019 09:23:59 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectDegreeCourseIdByName 
+17/01/2019 09:23:59 DEBUG seatInServer.JDBC.ExecuteUpdate--> Method name: modifyCourseInfo 
+17/01/2019 09:23:59 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
+17/01/2019 09:24:14 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllCourseSections 
+17/01/2019 09:24:14 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:24:14 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:24:14 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:24:14 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:24:14 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:24:14 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:24:14 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:24:14 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:24:14 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:24:14 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:24:14 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:24:14 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:24:14 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:24:14 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:24:14 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:24:14 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:24:14 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:24:14 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:24:14 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:24:14 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:24:14 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:24:14 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:24:14 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:24:14 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
+17/01/2019 09:24:15 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllCoursesLiableByUser 
+17/01/2019 09:24:15 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
+17/01/2019 09:24:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllCourseSections 
+17/01/2019 09:24:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:24:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:24:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:24:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:24:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:24:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:24:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:24:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:24:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:24:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:24:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:24:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:24:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:24:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:24:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:24:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:24:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:24:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:24:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:24:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:24:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:24:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:24:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:24:17 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
+17/01/2019 09:25:12 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectDegreeCourseIdByName 
+17/01/2019 09:25:12 DEBUG seatInServer.JDBC.ExecuteUpdate--> Method name: modifyCourseInfo 
+17/01/2019 09:25:12 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
+17/01/2019 09:25:14 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllCourseSections 
+17/01/2019 09:25:14 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:25:14 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:14 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:14 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:14 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:14 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:25:14 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:14 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:14 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:14 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:14 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:25:14 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:14 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:14 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:14 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:14 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:25:14 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:14 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:14 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:14 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:14 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:25:14 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:25:14 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:14 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
+17/01/2019 09:25:16 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllCoursesLiableByUser 
+17/01/2019 09:25:16 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
+17/01/2019 09:25:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllCourseSections 
+17/01/2019 09:25:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:25:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:25:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:25:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:25:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:25:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:25:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:17 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
+17/01/2019 09:25:25 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllCoursesLiableByUser 
+17/01/2019 09:25:25 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
+17/01/2019 09:25:26 INFO seatInServer.Controllers.AdminController--> Chiusura connessione cliente! Socket[addr=/127.0.0.1,port=65070,localport=8080]
+17/01/2019 09:25:30 INFO seatInServer.SeatInServer--> Client connected: Socket[addr=/127.0.0.1,port=65075,localport=8080]
 
-08/01/2019 21:31:25 DEBUG seatInServer.Controllers.Skeleton--> Initialize connection with client: Socket[addr=/127.0.0.1,port=49348,localport=8080]
-08/01/2019 21:31:25 DEBUG seatInServer.Controllers.Skeleton--> Skeleton Start work...
-08/01/2019 21:31:39 DEBUG seatInServer.Controllers.Skeleton--> Login-> admin2@domain.com: pass
-08/01/2019 21:31:39 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectUserByEmail 
-08/01/2019 21:31:40 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
-08/01/2019 21:31:40 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllCoursesLiableByUser 
-08/01/2019 21:31:40 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
-08/01/2019 21:31:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllCourseSections 
-08/01/2019 21:31:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
-08/01/2019 21:31:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
-08/01/2019 21:31:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
-08/01/2019 21:31:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
-08/01/2019 21:31:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
-08/01/2019 21:31:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
-08/01/2019 21:31:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
-08/01/2019 21:31:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
-08/01/2019 21:31:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
-08/01/2019 21:31:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
-08/01/2019 21:31:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
-08/01/2019 21:31:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
-08/01/2019 21:31:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
-08/01/2019 21:31:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
-08/01/2019 21:31:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
-08/01/2019 21:31:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
-08/01/2019 21:31:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
-08/01/2019 21:31:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
-08/01/2019 21:31:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
-08/01/2019 21:31:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
-08/01/2019 21:31:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
-08/01/2019 21:31:41 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
-08/01/2019 21:31:45 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectDegreeCourseIdByName 
-08/01/2019 21:31:45 DEBUG seatInServer.JDBC.ExecuteUpdate--> 1111
-08/01/2019 21:31:45 DEBUG seatInServer.JDBC.ExecuteUpdate--> 2222
-08/01/2019 21:31:45 DEBUG seatInServer.JDBC.ExecuteUpdate--> 33333
-08/01/2019 21:31:45 DEBUG seatInServer.JDBC.ExecuteUpdate--> 44444
-08/01/2019 21:31:45 DEBUG seatInServer.JDBC.ExecuteUpdate--> Method name: modifyCourseInfo 
-08/01/2019 21:31:45 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
-08/01/2019 21:31:47 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectDegreeCourseIdByName 
-08/01/2019 21:31:47 DEBUG seatInServer.JDBC.ExecuteUpdate--> 1111
-08/01/2019 21:31:47 DEBUG seatInServer.JDBC.ExecuteUpdate--> 2222
-08/01/2019 21:31:47 DEBUG seatInServer.JDBC.ExecuteUpdate--> 33333
-08/01/2019 21:31:47 DEBUG seatInServer.JDBC.ExecuteUpdate--> 44444
-08/01/2019 21:31:47 DEBUG seatInServer.JDBC.ExecuteUpdate--> Method name: modifyCourseInfo 
-08/01/2019 21:31:47 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
-08/01/2019 21:31:50 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectDegreeCourseIdByName 
-08/01/2019 21:31:50 DEBUG seatInServer.JDBC.ExecuteUpdate--> 1111
-08/01/2019 21:31:50 DEBUG seatInServer.JDBC.ExecuteUpdate--> 2222
-08/01/2019 21:31:50 DEBUG seatInServer.JDBC.ExecuteUpdate--> 33333
-08/01/2019 21:31:50 DEBUG seatInServer.JDBC.ExecuteUpdate--> 44444
-08/01/2019 21:31:50 DEBUG seatInServer.JDBC.ExecuteUpdate--> Method name: modifyCourseInfo 
-08/01/2019 21:31:50 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
-08/01/2019 21:31:52 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectDegreeCourseIdByName 
-08/01/2019 21:31:52 DEBUG seatInServer.JDBC.ExecuteUpdate--> 1111
-08/01/2019 21:31:52 DEBUG seatInServer.JDBC.ExecuteUpdate--> 2222
-08/01/2019 21:31:52 DEBUG seatInServer.JDBC.ExecuteUpdate--> 33333
+17/01/2019 09:25:30 DEBUG seatInServer.Controllers.Skeleton--> Initialize connection with client: Socket[addr=/127.0.0.1,port=65075,localport=8080]
+17/01/2019 09:25:30 DEBUG seatInServer.Controllers.Skeleton--> Skeleton Start work...
+17/01/2019 09:25:40 DEBUG seatInServer.Controllers.Skeleton--> Login-> admin2@domain.com: pass
+17/01/2019 09:25:40 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectUserByEmail 
+17/01/2019 09:25:40 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
+17/01/2019 09:25:40 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllCoursesLiableByUser 
+17/01/2019 09:25:40 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
+17/01/2019 09:25:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllCourseSections 
+17/01/2019 09:25:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:25:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:25:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:25:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:25:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:25:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:25:41 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:25:41 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
+17/01/2019 09:26:00 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectCourseById 
+17/01/2019 09:26:00 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
+17/01/2019 09:26:00 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllCourseSections 
+17/01/2019 09:26:00 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:26:00 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:00 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:00 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:00 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:00 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:26:00 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:00 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:00 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:00 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:00 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:26:00 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:00 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:00 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:00 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:00 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:26:00 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:00 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:00 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:00 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:00 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:26:00 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:26:00 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:00 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
+17/01/2019 09:26:04 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectCourseById 
+17/01/2019 09:26:04 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
+17/01/2019 09:26:04 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllCourseSections 
+17/01/2019 09:26:04 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:26:04 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:04 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:04 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:04 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:04 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:26:04 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:04 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:04 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:04 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:04 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:26:04 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:04 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:04 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:04 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:04 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:26:04 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:04 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:04 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:04 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:04 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:26:04 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:26:04 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:04 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
+17/01/2019 09:26:15 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectCourseById 
+17/01/2019 09:26:15 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
+17/01/2019 09:26:15 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllCourseSections 
+17/01/2019 09:26:15 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:26:15 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:15 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:15 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:15 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:15 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:26:15 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:15 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:15 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:15 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:15 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:26:15 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:15 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:15 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:15 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:15 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:26:15 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:15 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:15 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:15 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:15 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:26:15 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:26:15 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:15 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
+17/01/2019 09:26:16 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllCoursesLiableByUser 
+17/01/2019 09:26:16 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
+17/01/2019 09:26:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllCourseSections 
+17/01/2019 09:26:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:26:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:26:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:26:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:26:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:26:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllSectionResources 
+17/01/2019 09:26:17 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:17 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
+17/01/2019 09:26:21 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllResourceFiles 
+17/01/2019 09:26:21 DEBUG seatInServer.Services.Download--> Il file non trovato: java.io.FileNotFoundException: classes\CourseResources\18.zip (Impossibile trovare il percorso specificato)
+17/01/2019 09:26:21 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
+17/01/2019 09:26:43 DEBUG seatInServer.Controllers.AdminController--> Cliente si è disconesso: java.net.SocketException: Connection reset
+17/01/2019 09:26:43 INFO seatInServer.Controllers.AdminController--> Chiusura connessione cliente! Socket[addr=/127.0.0.1,port=65075,localport=8080]
+17/01/2019 09:39:36 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectDepartementIdByName 
+17/01/2019 09:39:36 DEBUG seatInServer.JDBC.ExecuteUpdate--> Method name: insertUser 
+17/01/2019 09:40:04 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectUserByEmail 
+17/01/2019 09:40:23 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectUserByEmail 
+17/01/2019 09:40:59 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectUserByEmail 
+17/01/2019 09:41:16 DEBUG seatInServer.JDBC.ExecuteUpdate--> Method name: activationUserAccount 
+17/01/2019 09:41:16 INFO seatInServer.SeatInServer--> Server started: ServerSocket[addr=0.0.0.0/0.0.0.0,localport=8080]
+17/01/2019 09:42:02 INFO seatInServer.SeatInServer--> Client connected: Socket[addr=/127.0.0.1,port=60342,localport=8080]
+
+17/01/2019 09:42:02 DEBUG seatInServer.Controllers.Skeleton--> Initialize connection with client: Socket[addr=/127.0.0.1,port=60342,localport=8080]
+17/01/2019 09:42:02 DEBUG seatInServer.Controllers.Skeleton--> Skeleton Start work...
+17/01/2019 09:42:11 DEBUG seatInServer.Controllers.Skeleton--> Login-> admin1@gmail.com: pass
+17/01/2019 09:42:11 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectUserByEmail 
+17/01/2019 09:42:11 DEBUG seatInServer.Controllers.Skeleton--> Skeleton Start work...
+17/01/2019 09:42:20 DEBUG seatInServer.Controllers.Skeleton--> Login-> admin1@domain.com: pass
+17/01/2019 09:42:20 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectUserByEmail 
+17/01/2019 09:42:20 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
+17/01/2019 09:42:20 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllCoursesLiableByUser 
+17/01/2019 09:42:20 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
+17/01/2019 09:42:24 INFO seatInServer.Controllers.AdminController--> Chiusura connessione cliente! Socket[addr=/127.0.0.1,port=60342,localport=8080]
+17/01/2019 09:42:25 INFO seatInServer.SeatInServer--> Client connected: Socket[addr=/127.0.0.1,port=60343,localport=8080]
+
+17/01/2019 09:42:25 DEBUG seatInServer.Controllers.Skeleton--> Initialize connection with client: Socket[addr=/127.0.0.1,port=60343,localport=8080]
+17/01/2019 09:42:25 DEBUG seatInServer.Controllers.Skeleton--> Skeleton Start work...
+17/01/2019 09:42:36 DEBUG seatInServer.Controllers.Skeleton--> Login-> admin2@domain.com: pass
+17/01/2019 09:42:36 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectUserByEmail 
+17/01/2019 09:42:36 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
+17/01/2019 09:42:36 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllCoursesLiableByUser 
+17/01/2019 09:42:36 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
+17/01/2019 09:45:11 DEBUG seatInServer.JDBC.ExecuteSelect--> Method name: selectAllCoursesLiableByUser 
+17/01/2019 09:45:11 DEBUG seatInServer.Controllers.AdminController--> Admin Controller start work...
+17/01/2019 09:48:12 DEBUG seatInServer.Controllers.AdminController--> Cliente si è disconesso: java.net.SocketException: Connection reset
+17/01/2019 09:48:12 INFO seatInServer.Controllers.AdminController--> Chiusura connessione cliente! Socket[addr=/127.0.0.1,port=60343,localport=8080]

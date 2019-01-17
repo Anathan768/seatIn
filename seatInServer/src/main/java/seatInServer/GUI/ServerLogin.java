@@ -36,8 +36,8 @@ public class ServerLogin extends JPanel implements ActionListener{
 	JLabel password = new JLabel("Password: ");
 	
 	//FIELDS
-	JTextField emailField = new JTextField("admin1@domain.com",15);
-	JPasswordField passwordField = new JPasswordField("pass",15);
+	JTextField emailField = new JTextField(15);
+	JPasswordField passwordField = new JPasswordField(15);
 	
 	//BUTTONS
 	JButton nextButton = new JButton("Next");

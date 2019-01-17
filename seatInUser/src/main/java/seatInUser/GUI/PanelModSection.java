@@ -72,7 +72,7 @@ public class PanelModSection extends PanelActionBase {
 
 					JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(c);
 					frame.getContentPane().removeAll();
-					frame.getContentPane().add(new PanelModSection(section, course));
+					frame.getContentPane().add(new PanelModSection(tempSection, course));
 					frame.pack();
 					frame.getContentPane().validate();
 

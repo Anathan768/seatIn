@@ -62,7 +62,7 @@ public class PanelAddResource extends PanelActionBase {
 				tempResource.setActiveTo(toStamp);
 				tempResource.setDescription(descriptionArea.getText());
 				tempResource.setActive(isActiveBox.isSelected());
-				
+				tempResource.setModuleId(section.getId());
 				
 				int newID = commands.addResourceToSection(tempResource);
 				
@@ -70,9 +70,11 @@ public class PanelAddResource extends PanelActionBase {
 					
 					JOptionPane.showMessageDialog(null, "Update Completed");
 					
+					
+					
 					JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(c);
 					frame.getContentPane().removeAll();
-					frame.getContentPane().add(new PanelSectionTeach(section, father));
+					frame.getContentPane().add(new PanelCourseTeach(father));
 					frame.pack();
 					frame.getContentPane().validate();
 

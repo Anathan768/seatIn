@@ -40,9 +40,9 @@ public class ServerConfig extends JPanel implements ActionListener {
 
 	// FIELDS
 	JTextField hostField = new JTextField("localhost:5432",15);
-	JTextField dbNameField = new JTextField("dbSeatIn",15);
-	JTextField userField = new JTextField("postgres",15);
-	JTextField passField = new JPasswordField("13579sorc768",15);
+	JTextField dbNameField = new JTextField(15);
+	JTextField userField = new JTextField(15);
+	JTextField passField = new JPasswordField(15);
 
 	// BUTTONS
 	JButton connectButton = new JButton("Connect");

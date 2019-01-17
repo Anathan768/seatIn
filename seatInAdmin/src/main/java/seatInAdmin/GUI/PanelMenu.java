@@ -52,7 +52,7 @@ public class PanelMenu extends JPanel {
 	JLabel titleLabel = new JLabel("Menu Options");
 
 	// BUTTONS
-	JButton logoutButton = new JButton("Logout");
+	JButton logoutButton = new JButton("Exit");
 
 	JButton globalMail = new JButton("EMail to Course");
 	JButton studentMail = new JButton("EMail to Students");
